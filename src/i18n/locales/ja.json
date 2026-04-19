@@ -269,7 +269,9 @@
     "partnerships": "Partnerships",
     "media": "Media",
     "strategic": "Strategic Inquiries",
-    "cta": "Begin a conversation"
+    "cta": "Begin a conversation",
+    "ctaPending": "Begin a conversation",
+    "pendingNote": "The institutional contact address is being finalized and will be published before launch."
   },
   "footer": {
     "rights": "All rights reserved.",
