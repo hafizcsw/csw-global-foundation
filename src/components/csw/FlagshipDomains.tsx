@@ -30,6 +30,9 @@ export const FlagshipDomains = () => {
             <p className="mt-8 max-w-xl text-sm md:text-base leading-[1.8] text-ink/60">
               {t("home.domains.body")}
             </p>
+            <p className="mt-6 max-w-xl font-mono text-[10px] tracking-[0.24em] uppercase text-ink-muted">
+              {t("home.domains.note")}
+            </p>
           </div>
         </div>
 
