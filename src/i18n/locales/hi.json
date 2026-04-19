@@ -277,5 +277,11 @@
     "rights": "All rights reserved.",
     "parent": "CSW Global is the parent company.",
     "language": "Language"
+  },
+  "theme": {
+    "toLight": "लाइट मोड पर स्विच करें",
+    "toDark": "डार्क मोड पर स्विच करें",
+    "light": "लाइट",
+    "dark": "डार्क"
   }
 }

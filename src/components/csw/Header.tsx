@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_ITEMS = [
   { key: "about", to: "/about" },
@@ -65,7 +66,8 @@ export const Header = () => {
             </NavLink>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
           <LanguageSwitcher />
         </div>
       </div>
