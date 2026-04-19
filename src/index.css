@@ -11,65 +11,60 @@
    Bugatti Blue (the institutional accent). All colors HSL. */
 
 @layer base {
-  /* Light (Day) — atelier whitepaper: cool ivory + ink + Bugatti Blue */
+  /* Light (Day) — institutional graphite + warm gold (still serious, not corporate-bright) */
   :root {
-    --background: 220 15% 96%;
-    --foreground: 220 18% 10%;
+    --background: 30 10% 96%;
+    --foreground: 220 14% 8%;
 
-    --card: 220 20% 98%;
-    --card-foreground: 220 18% 10%;
+    --card: 30 14% 98%;
+    --card-foreground: 220 14% 8%;
 
-    --popover: 220 20% 98%;
-    --popover-foreground: 220 18% 10%;
+    --popover: 30 14% 98%;
+    --popover-foreground: 220 14% 8%;
 
-    --primary: 220 18% 10%;
-    --primary-foreground: 220 15% 96%;
+    --primary: 220 14% 8%;
+    --primary-foreground: 30 10% 96%;
 
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 220 18% 10%;
+    --secondary: 30 8% 92%;
+    --secondary-foreground: 220 14% 8%;
 
-    --muted: 220 14% 90%;
-    --muted-foreground: 220 8% 38%;
+    --muted: 30 8% 90%;
+    --muted-foreground: 220 6% 38%;
 
-    --accent: 211 100% 32%;
-    --accent-foreground: 220 15% 96%;
+    --accent: 38 55% 45%;
+    --accent-foreground: 30 10% 96%;
 
     --destructive: 350 70% 38%;
-    --destructive-foreground: 220 15% 96%;
+    --destructive-foreground: 30 10% 96%;
 
-    --border: 220 12% 80%;
-    --input: 220 12% 80%;
-    --ring: 211 100% 32%;
+    --border: 30 8% 80%;
+    --input: 30 8% 80%;
+    --ring: 38 55% 45%;
 
-    /* Brand semantic — light */
-    --hairline: 220 10% 76%;
-    --hairline-soft: 220 10% 88%;
-    --ink: 220 18% 10%;
-    --ink-soft: 220 12% 28%;
-    --ink-muted: 220 8% 45%;
-    --parchment: 220 20% 98%;
-    --obsidian: 220 25% 6%;
-    --obsidian-soft: 220 14% 92%;
+    --hairline: 30 6% 76%;
+    --hairline-soft: 30 8% 88%;
+    --ink: 220 14% 8%;
+    --ink-soft: 220 10% 24%;
+    --ink-muted: 220 6% 42%;
+    --parchment: 30 14% 98%;
+    --obsidian: 220 18% 5%;
+    --obsidian-soft: 30 8% 92%;
 
-    /* `gold` slot now carries Bugatti Blue (institutional accent) */
-    --gold: 211 100% 32%;          /* Bugatti Blue — primary accent */
-    --gold-soft: 211 90% 25%;      /* deep accent */
-    --gold-glow: 211 100% 45%;     /* lit accent */
+    /* Warm metallic gold (institutional, not yellow) */
+    --gold: 38 55% 45%;
+    --gold-soft: 38 50% 32%;
+    --gold-glow: 40 70% 60%;
 
-    /* Bordeaux — rare ceremonial accent (EB monogram red) */
-    --bordeaux: 350 70% 32%;
-    --bordeaux-soft: 350 60% 26%;
+    --bordeaux: 350 60% 32%;
+    --bordeaux-soft: 350 55% 26%;
 
-    /* Carbon — engineered surface */
-    --carbon: 220 14% 14%;
+    --carbon: 220 12% 12%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(115deg, hsl(220 20% 97%) 0%, hsl(220 20% 97%) 50%, hsl(211 100% 32%) 50%, hsl(211 100% 22%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 6%) 0%, hsl(220 18% 8%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold-glow)), hsl(var(--gold)) 50%, hsl(var(--gold-soft)));
     --gradient-fade: linear-gradient(180deg, transparent, hsl(var(--background)));
     --gradient-split: linear-gradient(90deg, hsl(var(--obsidian)) 0%, hsl(var(--obsidian)) 50%, hsl(var(--gold)) 50%, hsl(var(--gold-soft)) 100%);
 
-    /* Shadows */
     --shadow-elegant: 0 30px 80px -30px hsl(220 30% 15% / 0.18);
     --shadow-gold: 0 0 0 1px hsl(var(--gold) / 0.35), 0 24px 60px -25px hsl(var(--gold) / 0.30);
     --shadow-card: 0 1px 0 hsl(var(--hairline)) inset, 0 20px 50px -30px hsl(220 20% 15% / 0.15);
@@ -77,66 +72,66 @@
     --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
     --radius: 0;
 
-    --sidebar-background: 220 20% 98%;
-    --sidebar-foreground: 220 12% 28%;
-    --sidebar-primary: 220 18% 10%;
-    --sidebar-primary-foreground: 220 15% 96%;
-    --sidebar-accent: 220 14% 92%;
-    --sidebar-accent-foreground: 220 18% 10%;
-    --sidebar-border: 220 12% 80%;
-    --sidebar-ring: 211 100% 32%;
+    --sidebar-background: 30 14% 98%;
+    --sidebar-foreground: 220 10% 24%;
+    --sidebar-primary: 220 14% 8%;
+    --sidebar-primary-foreground: 30 10% 96%;
+    --sidebar-accent: 30 8% 92%;
+    --sidebar-accent-foreground: 220 14% 8%;
+    --sidebar-border: 30 8% 80%;
+    --sidebar-ring: 38 55% 45%;
   }
 
-  /* Dark (Night) — Molsheim midnight: pure carbon black + Bugatti blue */
+  /* Dark (Night) — pure carbon black + warm metallic gold (Bugatti-grade) */
   .dark {
-    --background: 220 25% 5%;
-    --foreground: 220 15% 94%;
+    --background: 220 18% 5%;
+    --foreground: 30 10% 94%;
 
-    --card: 220 22% 7%;
-    --card-foreground: 220 15% 94%;
+    --card: 220 16% 7%;
+    --card-foreground: 30 10% 94%;
 
-    --popover: 220 22% 8%;
-    --popover-foreground: 220 15% 94%;
+    --popover: 220 16% 8%;
+    --popover-foreground: 30 10% 94%;
 
-    --primary: 220 15% 94%;
-    --primary-foreground: 220 25% 5%;
+    --primary: 30 10% 94%;
+    --primary-foreground: 220 18% 5%;
 
-    --secondary: 220 18% 10%;
-    --secondary-foreground: 220 15% 94%;
+    --secondary: 220 14% 10%;
+    --secondary-foreground: 30 10% 94%;
 
-    --muted: 220 16% 12%;
-    --muted-foreground: 220 8% 60%;
+    --muted: 220 12% 12%;
+    --muted-foreground: 30 6% 60%;
 
-    --accent: 211 95% 52%;
-    --accent-foreground: 220 25% 5%;
+    --accent: 38 65% 55%;
+    --accent-foreground: 220 18% 5%;
 
     --destructive: 350 70% 50%;
-    --destructive-foreground: 220 15% 94%;
+    --destructive-foreground: 30 10% 94%;
 
-    --border: 220 16% 16%;
-    --input: 220 16% 16%;
-    --ring: 211 95% 52%;
+    --border: 220 12% 16%;
+    --input: 220 12% 16%;
+    --ring: 38 65% 55%;
 
-    --hairline: 220 14% 22%;
-    --hairline-soft: 220 18% 12%;
-    --ink: 220 15% 94%;
-    --ink-soft: 220 10% 70%;
-    --ink-muted: 220 8% 50%;
-    --parchment: 220 15% 96%;
-    --obsidian: 220 30% 3%;
-    --obsidian-soft: 220 22% 8%;
+    --hairline: 220 10% 22%;
+    --hairline-soft: 220 14% 12%;
+    --ink: 30 10% 94%;
+    --ink-soft: 30 8% 70%;
+    --ink-muted: 220 6% 50%;
+    --parchment: 30 10% 94%;
+    --obsidian: 220 22% 3%;
+    --obsidian-soft: 220 16% 8%;
 
-    /* Bugatti Blue (lifted for dark contrast) */
-    --gold: 211 95% 52%;
-    --gold-soft: 211 80% 38%;
-    --gold-glow: 211 100% 65%;
+    /* Warm gold (lifted for dark contrast) */
+    --gold: 38 65% 55%;
+    --gold-soft: 38 55% 38%;
+    --gold-glow: 42 80% 68%;
 
-    --bordeaux: 350 75% 45%;
-    --bordeaux-soft: 350 65% 32%;
+    --bordeaux: 350 70% 45%;
+    --bordeaux-soft: 350 60% 32%;
 
-    --carbon: 220 14% 8%;
+    --carbon: 220 12% 8%;
 
-    --gradient-hero: linear-gradient(115deg, hsl(220 25% 4%) 0%, hsl(220 25% 4%) 50%, hsl(211 90% 22%) 50%, hsl(211 95% 14%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 22% 3%) 0%, hsl(220 18% 5%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold-glow)), hsl(var(--gold)) 50%, hsl(var(--gold-soft)));
     --gradient-fade: linear-gradient(180deg, transparent, hsl(var(--background)));
     --gradient-split: linear-gradient(90deg, hsl(var(--obsidian)) 0%, hsl(var(--obsidian)) 50%, hsl(var(--gold)) 50%, hsl(var(--gold-soft)) 100%);
@@ -145,14 +140,14 @@
     --shadow-gold: 0 0 0 1px hsl(var(--gold) / 0.35), 0 24px 60px -25px hsl(var(--gold) / 0.45);
     --shadow-card: 0 1px 0 hsl(var(--hairline)) inset, 0 30px 60px -40px hsl(0 0% 0% / 0.8);
 
-    --sidebar-background: 220 22% 7%;
-    --sidebar-foreground: 220 10% 70%;
-    --sidebar-primary: 220 15% 94%;
-    --sidebar-primary-foreground: 220 25% 5%;
-    --sidebar-accent: 220 16% 12%;
-    --sidebar-accent-foreground: 220 15% 94%;
-    --sidebar-border: 220 16% 16%;
-    --sidebar-ring: 211 95% 52%;
+    --sidebar-background: 220 16% 7%;
+    --sidebar-foreground: 30 8% 70%;
+    --sidebar-primary: 30 10% 94%;
+    --sidebar-primary-foreground: 220 18% 5%;
+    --sidebar-accent: 220 12% 12%;
+    --sidebar-accent-foreground: 30 10% 94%;
+    --sidebar-border: 220 12% 16%;
+    --sidebar-ring: 38 65% 55%;
   }
 }
 
@@ -169,7 +164,7 @@
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "ss01", "cv11", "calt", "tnum";
     background:
-      radial-gradient(ellipse 60% 40% at 85% 0%, hsl(var(--gold) / 0.10), transparent 70%),
+      radial-gradient(ellipse 50% 35% at 90% 5%, hsl(var(--gold) / 0.06), transparent 70%),
       hsl(var(--background));
     background-attachment: fixed;
     transition: background-color 600ms var(--ease-luxury), color 600ms var(--ease-luxury);
