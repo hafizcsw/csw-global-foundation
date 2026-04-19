@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-hypercar.jpg";
+import heroVideo from "@/assets/hero-sovereign.mp4.asset.json";
 
 export const Hero = () => {
   const { t } = useTranslation();
@@ -9,24 +9,25 @@ export const Hero = () => {
       id="top"
       className="relative w-full h-[100svh] min-h-[640px] overflow-hidden bg-obsidian text-ink -mt-20"
     >
-      {/* Full-bleed cinematic image */}
-      <img
-        src={heroImage}
-        alt=""
-        aria-hidden="true"
-        width={1920}
-        height={1080}
+      {/* Cinematic abstract video — sovereign atmosphere */}
+      <video
+        src={heroVideo.url}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover object-center select-none"
-        draggable={false}
+        aria-hidden="true"
       />
 
-      {/* Tonal vignette — preserve image, deepen edges */}
+      {/* Tonal grade — preserve atmosphere, deepen edges for type legibility */}
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, hsl(220 30% 3% / 0.55) 0%, hsl(220 30% 3% / 0) 30%, hsl(220 30% 3% / 0) 60%, hsl(220 30% 3% / 0.85) 100%)",
+            "linear-gradient(180deg, hsl(220 30% 3% / 0.5) 0%, hsl(220 30% 3% / 0) 25%, hsl(220 30% 3% / 0) 55%, hsl(220 30% 3% / 0.92) 100%)",
         }}
       />
       <div
@@ -34,12 +35,15 @@ export const Hero = () => {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, hsl(220 30% 3% / 0.55) 0%, hsl(220 30% 3% / 0) 40%)",
+            "linear-gradient(90deg, hsl(220 30% 3% / 0.65) 0%, hsl(220 30% 3% / 0) 45%)",
         }}
       />
 
-      {/* Top-left spec coordinate */}
-      <div className="absolute top-28 start-6 md:start-12 lg:start-20 z-10 reveal-soft" style={{ animationDelay: "200ms" }}>
+      {/* Top-left: institutional reference mark */}
+      <div
+        className="absolute top-28 start-6 md:start-12 lg:start-20 z-10 reveal-soft"
+        style={{ animationDelay: "300ms" }}
+      >
         <div className="flex items-start gap-3">
           <span className="mt-[6px] h-px w-8 bg-ink/60" />
           <div>
@@ -53,22 +57,25 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Top-right series mark */}
-      <div className="absolute top-28 end-6 md:end-12 lg:end-20 z-10 reveal-soft text-end" style={{ animationDelay: "300ms" }}>
+      {/* Top-right: series + coordinates */}
+      <div
+        className="absolute top-28 end-6 md:end-12 lg:end-20 z-10 reveal-soft text-end"
+        style={{ animationDelay: "400ms" }}
+      >
         <div className="font-mono text-[10px] tracking-[0.3em] text-ink/60 uppercase">
           {t("hero.specSeries")}
         </div>
         <div className="mt-1 font-mono text-[10px] tracking-[0.3em] text-ink/40">
-          48° 32′ N · 7° 28′ E
+          {t("hero.specCoords")}
         </div>
       </div>
 
-      {/* Headline — bottom-left, hairline serif, massive */}
+      {/* Bottom-anchored sovereign headline */}
       <div className="absolute inset-x-0 bottom-0 z-10">
         <div className="container-csw pb-16 md:pb-20 lg:pb-24">
           <div
             className="reveal-soft mb-8 flex items-center gap-4"
-            style={{ animationDelay: "500ms" }}
+            style={{ animationDelay: "600ms" }}
           >
             <span className="h-px w-12 bg-ink" />
             <span className="font-mono text-[10px] tracking-[0.36em] uppercase text-ink/80">
@@ -79,7 +86,7 @@ export const Hero = () => {
           <h1
             className="reveal display font-light text-ink tracking-[-0.035em] leading-[0.88] text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[10rem] xl:text-[12rem] max-w-[18ch]"
             style={{
-              animationDelay: "650ms",
+              animationDelay: "800ms",
               fontWeight: 300,
             }}
           >
@@ -88,7 +95,7 @@ export const Hero = () => {
 
           <div
             className="reveal mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-10"
-            style={{ animationDelay: "950ms" }}
+            style={{ animationDelay: "1100ms" }}
           >
             <p className="max-w-md text-sm md:text-base text-ink/70 leading-[1.8]">
               {t("hero.subheadline")}
