@@ -1,7 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { ArrowUpRight } from "lucide-react";
 
 const LANES = ["partnerships", "media", "strategic", "careers"] as const;
+
+// Door 1 §8.3: institutional contact email is unresolved.
+// Set CONTACT_EMAIL only when a cleared, approved address is provided.
+// While null, the CTA renders as a non-shipping pending state — no fabricated address.
+const CONTACT_EMAIL: string | null = null;
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -34,10 +38,27 @@ export const Contact = () => {
         </div>
 
         <div className="mt-16">
-          <a href="mailto:contact@cswglobal.com" className="group inline-flex items-center gap-3 bg-parchment text-ink px-8 py-4 text-xs uppercase tracking-[0.22em] hover:bg-gold hover:text-ink transition-colors">
-            {t("contact.cta")}
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          {CONTACT_EMAIL ? (
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="group inline-flex items-center gap-3 bg-parchment text-ink px-8 py-4 text-xs uppercase tracking-[0.22em] hover:bg-gold hover:text-ink transition-colors"
+            >
+              {t("contact.cta")}
+            </a>
+          ) : (
+            <div
+              role="status"
+              aria-live="polite"
+              className="inline-flex flex-col gap-2 border border-parchment/30 px-8 py-4"
+            >
+              <span className="text-xs uppercase tracking-[0.22em] text-parchment/80">
+                {t("contact.ctaPending")}
+              </span>
+              <span className="text-xs text-parchment/60 max-w-md leading-relaxed normal-case tracking-normal">
+                {t("contact.pendingNote")}
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </section>
