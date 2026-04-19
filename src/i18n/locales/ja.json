@@ -27,7 +27,28 @@
     "headline": "Building the next generation of global companies.",
     "subheadline": "CSW Global is the parent company behind a growing portfolio of AI-native ventures, built for long-term value, operational leverage, and intelligent global expansion.",
     "primaryCta": "Explore Portfolio",
-    "secondaryCta": "About CSW Global"
+    "secondaryCta": "About CSW Global",
+    "specMark": "アトリエ · 精密機関",
+    "specSeries": "シリーズ — CSW.GLOBAL",
+    "specRef": "参照 · 2025/01",
+    "specs": {
+      "est": {
+        "label": "設立",
+        "value": "2024"
+      },
+      "ventures": {
+        "label": "事業",
+        "value": "06"
+      },
+      "markets": {
+        "label": "市場",
+        "value": "世界"
+      },
+      "discipline": {
+        "label": "分野",
+        "value": "AI-NATIVE"
+      }
+    }
   },
   "proof": {
     "items": [
