@@ -171,7 +171,7 @@ export const Header = () => {
             </span>
           </button>
 
-          <Link to="/" className="font-serif text-xl tracking-[0.18em] uppercase text-parchment hover:text-gold transition-colors duration-500">
+          <Link to="/" className="font-sans font-light text-base md:text-lg tracking-[0.42em] uppercase text-parchment hover:text-gold transition-colors duration-500">
             {t("brand.name")}
           </Link>
 
