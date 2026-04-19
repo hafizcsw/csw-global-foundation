@@ -1,0 +1,38 @@
+import { useTranslation } from "react-i18next";
+import { SUPPORTED_LANGUAGES } from "@/i18n";
+import { Check, Globe } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+export const LanguageSwitcher = () => {
+  const { i18n, t } = useTranslation();
+  const current = SUPPORTED_LANGUAGES.find((l) => l.code === i18n.language) ?? SUPPORTED_LANGUAGES[0];
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-ink transition-colors"
+        aria-label={t("footer.language")}
+      >
+        <Globe className="h-3.5 w-3.5" />
+        <span>{current.label}</span>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="min-w-[200px] max-h-[60vh] overflow-y-auto">
+        {SUPPORTED_LANGUAGES.map((lang) => (
+          <DropdownMenuItem
+            key={lang.code}
+            onClick={() => i18n.changeLanguage(lang.code)}
+            className="flex items-center justify-between text-sm cursor-pointer"
+          >
+            <span>{lang.label}</span>
+            {lang.code === current.code && <Check className="h-3.5 w-3.5 text-gold" />}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
