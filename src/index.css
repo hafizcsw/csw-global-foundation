@@ -1,95 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* CSW Global — Institutional design system.
-   All colors HSL. No ad-hoc colors in components. */
+/* CSW Global — Luxury Dark institutional system (Door 2 V2).
+   All colors HSL. Obsidian + champagne gold + ivory parchment.
+   No ad-hoc colors in components — semantic tokens only. */
 
 @layer base {
   :root {
-    /* Neutral luxury palette — deep ink, warm parchment, restrained accent */
-    --background: 36 20% 96%;
-    --foreground: 220 25% 10%;
+    /* Obsidian base — deep neutral with warm undertone */
+    --background: 30 8% 6%;
+    --foreground: 36 30% 92%;
 
-    --card: 36 20% 98%;
-    --card-foreground: 220 25% 10%;
+    --card: 30 8% 8%;
+    --card-foreground: 36 30% 92%;
 
-    --popover: 36 20% 98%;
-    --popover-foreground: 220 25% 10%;
+    --popover: 30 10% 9%;
+    --popover-foreground: 36 30% 92%;
 
-    --primary: 220 25% 10%;
-    --primary-foreground: 36 20% 96%;
+    --primary: 36 30% 92%;
+    --primary-foreground: 30 8% 6%;
 
-    --secondary: 36 14% 90%;
-    --secondary-foreground: 220 25% 10%;
+    --secondary: 30 8% 11%;
+    --secondary-foreground: 36 30% 92%;
 
-    --muted: 36 14% 92%;
-    --muted-foreground: 220 10% 38%;
+    --muted: 30 8% 12%;
+    --muted-foreground: 36 12% 60%;
 
-    --accent: 35 30% 50%;
-    --accent-foreground: 36 20% 98%;
+    --accent: 38 55% 60%;
+    --accent-foreground: 30 8% 6%;
 
-    --destructive: 0 60% 40%;
-    --destructive-foreground: 36 20% 98%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 36 30% 92%;
 
-    --border: 220 12% 86%;
-    --input: 220 12% 86%;
-    --ring: 220 25% 10%;
+    --border: 30 8% 16%;
+    --input: 30 8% 16%;
+    --ring: 38 55% 60%;
 
-    --hairline: 220 15% 80%;
-    --ink: 220 25% 10%;
-    --ink-soft: 220 18% 22%;
-    --parchment: 36 20% 96%;
-    --gold: 35 30% 50%;
+    /* Brand semantic tokens */
+    --hairline: 36 14% 22%;
+    --hairline-soft: 30 8% 14%;
+    --ink: 36 30% 92%;            /* primary text on dark */
+    --ink-soft: 36 14% 70%;       /* body text */
+    --ink-muted: 36 8% 50%;       /* captions */
+    --parchment: 36 30% 96%;      /* light surfaces (rare inversions) */
+    --obsidian: 30 8% 4%;         /* deepest surface */
+    --obsidian-soft: 30 8% 9%;    /* card surface */
+    --gold: 38 55% 60%;           /* champagne gold accent */
+    --gold-soft: 38 40% 48%;
+    --gold-glow: 38 70% 70%;
+
+    /* Gradients */
+    --gradient-hero: radial-gradient(ellipse at 30% 0%, hsl(38 30% 18% / 0.35), transparent 60%), linear-gradient(180deg, hsl(30 8% 7%), hsl(30 8% 5%));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-glow)), hsl(var(--gold)) 50%, hsl(var(--gold-soft)));
+    --gradient-fade: linear-gradient(180deg, transparent, hsl(var(--background)));
+
+    /* Shadows */
+    --shadow-elegant: 0 30px 80px -30px hsl(0 0% 0% / 0.6);
+    --shadow-gold: 0 0 0 1px hsl(var(--gold) / 0.25), 0 20px 60px -25px hsl(var(--gold) / 0.25);
+    --shadow-card: 0 1px 0 hsl(var(--hairline)) inset, 0 30px 60px -40px hsl(0 0% 0% / 0.7);
+
+    /* Motion */
+    --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
 
     --radius: 0.125rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 30 8% 8%;
+    --sidebar-foreground: 36 14% 70%;
+    --sidebar-primary: 36 30% 92%;
+    --sidebar-primary-foreground: 30 8% 6%;
+    --sidebar-accent: 30 8% 12%;
+    --sidebar-accent-foreground: 36 30% 92%;
+    --sidebar-border: 30 8% 16%;
+    --sidebar-ring: 38 55% 60%;
   }
 
+  /* .dark kept identical — luxury is dark-by-default */
   .dark {
-    --background: 220 25% 7%;
-    --foreground: 36 20% 94%;
-
-    --card: 220 24% 9%;
-    --card-foreground: 36 20% 94%;
-
-    --popover: 220 24% 9%;
-    --popover-foreground: 36 20% 94%;
-
-    --primary: 36 20% 94%;
-    --primary-foreground: 220 25% 10%;
-
-    --secondary: 220 20% 14%;
-    --secondary-foreground: 36 20% 94%;
-
-    --muted: 220 18% 14%;
-    --muted-foreground: 36 10% 65%;
-
-    --accent: 35 35% 60%;
-    --accent-foreground: 220 25% 10%;
-
-    --destructive: 0 50% 45%;
-    --destructive-foreground: 36 20% 94%;
-
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 36 20% 94%;
-
-    --hairline: 220 15% 22%;
-    --ink: 36 20% 94%;
-    --ink-soft: 36 14% 78%;
-    --parchment: 220 25% 7%;
-    --gold: 35 35% 60%;
+    --background: 30 8% 6%;
+    --foreground: 36 30% 92%;
   }
 }
 
@@ -100,36 +91,117 @@
   html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    background: hsl(var(--background));
   }
   body {
     @apply bg-background text-foreground font-sans;
-    font-feature-settings: "ss01", "cv11";
+    font-feature-settings: "ss01", "cv11", "calt";
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(38 25% 14% / 0.45), transparent 70%),
+      hsl(var(--background));
+    background-attachment: fixed;
   }
   ::selection {
-    background: hsl(var(--ink));
-    color: hsl(var(--parchment));
+    background: hsl(var(--gold));
+    color: hsl(var(--obsidian));
   }
 }
 
 @layer components {
   .container-csw {
-    @apply mx-auto w-full max-w-[1320px] px-6 md:px-10 lg:px-16;
+    @apply mx-auto w-full max-w-[1400px] px-6 md:px-12 lg:px-20;
   }
   .eyebrow {
-    @apply text-[11px] font-medium uppercase tracking-[0.22em] text-muted-foreground;
+    @apply text-[10px] font-medium uppercase tracking-[0.32em] text-gold;
+  }
+  .eyebrow-muted {
+    @apply text-[10px] font-medium uppercase tracking-[0.32em] text-ink-muted;
   }
   .display {
-    @apply font-serif font-light tracking-[-0.01em] leading-[1.05];
+    @apply font-serif font-light tracking-[-0.015em] leading-[1.02] text-ink;
   }
-  .hairline {
-    @apply border-t;
-    border-color: hsl(var(--hairline));
+  .hairline-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--hairline)) 20%, hsl(var(--hairline)) 80%, transparent);
+  }
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.6) 50%, transparent);
+  }
+  .gold-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .luxury-card {
+    background: linear-gradient(180deg, hsl(var(--obsidian-soft)), hsl(var(--background)));
+    border: 1px solid hsl(var(--hairline));
+    transition: border-color 600ms var(--ease-luxury), transform 600ms var(--ease-luxury), box-shadow 600ms var(--ease-luxury);
+  }
+  .luxury-card:hover {
+    border-color: hsl(var(--gold) / 0.5);
+    box-shadow: var(--shadow-gold);
+  }
+  .gold-rule {
+    position: relative;
+  }
+  .gold-rule::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    height: 1px;
+    width: 48px;
+    background: hsl(var(--gold));
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: luxuryReveal 1100ms var(--ease-luxury) forwards;
+  }
+  .reveal-soft {
+    opacity: 0;
+    animation: luxuryFade 900ms var(--ease-luxury) forwards;
+  }
+  .btn-luxury {
+    @apply inline-flex items-center gap-3 px-8 py-4 text-[11px] uppercase tracking-[0.28em] transition-all duration-500;
+    background: hsl(var(--ink));
+    color: hsl(var(--obsidian));
+    border: 1px solid hsl(var(--ink));
+  }
+  .btn-luxury:hover {
+    background: hsl(var(--gold));
+    border-color: hsl(var(--gold));
+    color: hsl(var(--obsidian));
+    box-shadow: var(--shadow-gold);
+  }
+  .btn-ghost-luxury {
+    @apply inline-flex items-center gap-3 px-8 py-4 text-[11px] uppercase tracking-[0.28em] transition-all duration-500;
+    background: transparent;
+    color: hsl(var(--ink));
+    border: 1px solid hsl(var(--hairline));
+  }
+  .btn-ghost-luxury:hover {
+    border-color: hsl(var(--gold));
+    color: hsl(var(--gold));
   }
 }
 
+@keyframes luxuryReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes luxuryFade {
+  to { opacity: 1; }
+}
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 /* RTL / Arabic typography override.
-   Cormorant Garamond + Inter have no Arabic glyphs, which breaks shaping.
-   Use platform Arabic system stack and neutralize negative tracking for RTL. */
+   Cormorant Garamond + Inter have no Arabic glyphs — fallback breaks shaping.
+   Use Noto Arabic stack and neutralize negative tracking for RTL. */
 [dir="rtl"] {
   font-family: "Noto Naskh Arabic", "Geeza Pro", "Tahoma", system-ui, sans-serif;
   letter-spacing: 0 !important;
