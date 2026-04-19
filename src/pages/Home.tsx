@@ -173,7 +173,7 @@ const Home = () => {
           {t("home.reach.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] max-w-[18ch] mb-8"
+          className="font-display uppercase text-parchment leading-[0.95] text-[1.75rem] md:text-[2.5rem] lg:text-[3.25rem] max-w-[20ch] mb-8"
           style={{ fontWeight: 600 }}
         >
           {t("home.reach.title")}
