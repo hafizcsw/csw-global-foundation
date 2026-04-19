@@ -374,9 +374,10 @@
 [dir="rtl"] h1,
 [dir="rtl"] h2,
 [dir="rtl"] h3 {
-  font-family: "Noto Naskh Arabic", "Amiri", "Geeza Pro", "Times New Roman", serif;
+  /* Bugatti-equivalent display for Arabic: clean geometric Kufi (not Naskh serif) */
+  font-family: "Noto Kufi Arabic", "Noto Sans Arabic", "Geeza Pro", system-ui, sans-serif;
   letter-spacing: 0 !important;
-  line-height: 1.45 !important;
+  line-height: 1.4 !important;
   font-weight: 500;
   word-spacing: 0.02em;
 }
