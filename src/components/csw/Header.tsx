@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
@@ -16,7 +16,10 @@ const NAV_ITEMS = [
 
 export const Header = () => {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const isFilmHero = pathname === "/";
+  const useInverse = isFilmHero;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -35,10 +38,10 @@ export const Header = () => {
     >
       <div className="container-csw flex items-center justify-between h-20">
         <Link to="/" className="flex items-baseline gap-3 group">
-          <span className="font-serif text-xl tracking-wide text-ink group-hover:text-gold transition-colors duration-500">
+          <span className={`font-serif text-xl tracking-wide transition-colors duration-500 ${useInverse ? "text-parchment group-hover:text-gold" : "text-ink group-hover:text-gold"}`}>
             {t("brand.name")}
           </span>
-          <span className="hidden md:inline text-[10px] uppercase tracking-[0.32em] text-ink-muted">
+          <span className={`hidden md:inline text-[10px] uppercase tracking-[0.32em] ${useInverse ? "text-parchment/55" : "text-ink-muted"}`}>
             {t("brand.tagline")}
           </span>
         </Link>
@@ -51,7 +54,9 @@ export const Header = () => {
                 `relative text-[11px] uppercase tracking-[0.24em] transition-colors duration-500 py-2 ${
                   isActive
                     ? "text-gold"
-                    : "text-ink-soft hover:text-ink"
+                    : useInverse
+                      ? "text-parchment/65 hover:text-parchment"
+                      : "text-ink-soft hover:text-ink"
                 }`
               }
             >
@@ -66,7 +71,7 @@ export const Header = () => {
             </NavLink>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
+        <div className={`flex items-center gap-3 ${useInverse ? "text-parchment" : ""}`}>
           <ThemeToggle />
           <LanguageSwitcher />
         </div>
