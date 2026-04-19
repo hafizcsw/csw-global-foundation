@@ -181,11 +181,15 @@
     background-attachment: fixed;
     transition: background-color 600ms var(--ease-luxury), color 600ms var(--ease-luxury);
   }
-  /* Display serif refinement — optical sizing, contextual & discretionary
-     ligatures, kerning, geometric precision on large headlines. */
-  .display, .font-serif, h1, h2, h3 {
+  /* Bugatti-grade display: Antonio condensed sans, uppercase, geometric precision. */
+  .display, h1, h2, h3 {
+    font-family: "Antonio", "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    line-height: 0.95;
     font-optical-sizing: auto;
-    font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "ss01", "ss02", "lnum";
+    font-feature-settings: "kern", "liga", "calt", "ss01", "lnum";
     font-variant-numeric: lining-nums proportional-nums;
     text-rendering: geometricPrecision;
   }
