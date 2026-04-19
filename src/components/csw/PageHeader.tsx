@@ -6,35 +6,45 @@ interface PageHeaderProps {
   bodyKey?: string;
 }
 
+/**
+ * Bugatti-grade page header — full-width dark cinematic band.
+ * Antonio uppercase title, hairline rule, generous breathing room.
+ */
 export const PageHeader = ({ eyebrowKey, titleKey, bodyKey }: PageHeaderProps) => {
   const { t } = useTranslation();
   return (
-    <section className="relative border-b border-hairline-soft overflow-hidden bg-gradient-hero">
+    <section className="relative overflow-hidden bg-obsidian text-parchment">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 start-1/3 h-[400px] w-[400px] rounded-full blur-3xl opacity-30"
-        style={{ background: "radial-gradient(circle, hsl(var(--gold) / 0.18), transparent 60%)" }}
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 50% at 50% 30%, hsl(220 28% 12%) 0%, hsl(220 22% 4%) 70%)",
+        }}
       />
-      <div className="container-csw relative pt-32 pb-24 md:pt-44 md:pb-32">
-        <div className="max-w-4xl">
-          <div className="flex items-center gap-3 mb-10 reveal-soft" style={{ animationDelay: "100ms" }}>
-            <span className="h-px w-12 bg-gold animate-gold-pulse" />
-            <span className="eyebrow">{t(eyebrowKey)}</span>
+      <div className="container-csw relative pt-40 pb-28 md:pt-52 md:pb-36">
+        <div className="max-w-5xl">
+          <div
+            className="font-mono text-[10px] tracking-[0.4em] uppercase text-parchment/60 mb-10 reveal-soft"
+            style={{ animationDelay: "100ms" }}
+          >
+            {t(eyebrowKey)}
           </div>
           <h1
-            className="display text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] reveal"
-            style={{ animationDelay: "200ms" }}
+            className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[5rem] lg:text-[7rem] xl:text-[8rem] reveal"
+            style={{ animationDelay: "250ms", fontWeight: 700, letterSpacing: "0.005em" }}
           >
             {t(titleKey)}
           </h1>
           {bodyKey && (
             <p
-              className="mt-10 text-base md:text-lg text-ink-soft leading-[1.8] max-w-2xl reveal"
-              style={{ animationDelay: "450ms" }}
+              className="mt-12 text-base md:text-lg text-parchment/70 leading-[1.85] max-w-2xl reveal"
+              style={{ animationDelay: "500ms" }}
             >
               {t(bodyKey)}
             </p>
           )}
+          <div className="mt-14 h-px w-24 bg-parchment/40" />
         </div>
       </div>
     </section>

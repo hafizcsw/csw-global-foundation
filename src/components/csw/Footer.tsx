@@ -12,36 +12,44 @@ const FOOTER_NAV = [
   { key: "contact", to: "/contact" },
 ] as const;
 
+/**
+ * Bugatti-grade footer — pure obsidian, Antonio brand mark, hairline grid.
+ */
 export const Footer = () => {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
   return (
-    <footer className="relative border-t border-hairline bg-card">
-      <div className="gold-divider" />
-      <div className="container-csw py-20 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12">
-        <div className="md:col-span-4 flex flex-col gap-5">
-          <div className="flex items-baseline gap-3">
-            <span className="font-serif text-2xl text-ink">{t("brand.name")}</span>
-            <span className="text-[10px] uppercase tracking-[0.32em] text-gold">
-              {t("brand.tagline")}
+    <footer className="relative bg-obsidian text-parchment border-t border-parchment/15">
+      <div className="container-csw py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-14">
+        <div className="md:col-span-5 flex flex-col gap-6">
+          <Link to="/" className="inline-block">
+            <span
+              className="font-display uppercase text-3xl md:text-4xl text-parchment"
+              style={{ fontWeight: 700, letterSpacing: "0.16em" }}
+            >
+              {t("brand.name")}
             </span>
-          </div>
-          <p className="text-sm text-ink-soft max-w-sm leading-[1.8]">{t("footer.parent")}</p>
+          </Link>
+          <p className="text-sm text-parchment/60 max-w-sm leading-[1.85]">{t("footer.parent")}</p>
         </div>
-        <nav className="md:col-span-5 flex flex-wrap content-start gap-x-8 gap-y-4">
+        <nav className="md:col-span-4 flex flex-col gap-4">
+          <div className="font-mono text-[10px] tracking-[0.36em] uppercase text-parchment/45 mb-2">
+            {t("nav.menu", { defaultValue: "Menu" })}
+          </div>
           {FOOTER_NAV.map((item) => (
             <Link
               key={item.key}
               to={item.to}
-              className="text-[11px] uppercase tracking-[0.24em] text-ink-soft hover:text-gold transition-colors duration-500"
+              className="font-display uppercase text-lg md:text-xl text-parchment/85 hover:text-parchment transition-colors duration-500"
+              style={{ fontWeight: 600, letterSpacing: "0.04em" }}
             >
               {t(`nav.${item.key}`)}
             </Link>
           ))}
         </nav>
-        <div className="md:col-span-3 flex flex-col items-start md:items-end gap-5">
+        <div className="md:col-span-3 flex flex-col items-start md:items-end gap-6">
           <LanguageSwitcher />
-          <span className="text-[11px] uppercase tracking-[0.22em] text-ink-muted">
+          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-parchment/45">
             © {year} · {t("footer.rights")}
           </span>
         </div>
