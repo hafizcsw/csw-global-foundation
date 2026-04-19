@@ -7,7 +7,7 @@ export const Developments = () => {
   const { t } = useTranslation();
   const items = t("developments.items", { returnObjects: true }) as Item[];
   return (
-    <section className="relative border-b border-hairline-soft bg-obsidian-soft/40">
+    <section className="relative border-b border-hairline-soft bg-secondary/50">
       <div className="container-csw py-32 md:py-40">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div className="max-w-2xl">

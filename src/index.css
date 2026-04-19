@@ -47,8 +47,12 @@
     --ink-soft: 220 12% 26%;
     --ink-muted: 220 8% 44%;
     --parchment: 30 14% 98%;
-    --obsidian: 220 18% 5%;
-    --obsidian-soft: 30 8% 92%;
+    /* `obsidian` stays a true deep tone in BOTH modes — reserved for
+       cinematic surfaces (Hero film bed, scrolled Header, video overlays)
+       which must read dark so footage and gold accents register.
+       Non-cinematic sections use bg-background / bg-card / bg-secondary. */
+    --obsidian: 220 22% 4%;
+    --obsidian-soft: 220 18% 8%;
 
     /* Warm metallic gold (institutional, not yellow) */
     --gold: 38 55% 45%;

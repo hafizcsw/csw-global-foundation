@@ -9,7 +9,7 @@ export const OperatingModel = () => {
   return (
     <section
       id="operating-model"
-      className="relative border-b border-hairline-soft bg-obsidian"
+      className="relative border-b border-hairline-soft bg-card"
     >
       <div
         aria-hidden
@@ -30,7 +30,7 @@ export const OperatingModel = () => {
           {steps.map((step, i) => (
             <li
               key={i}
-              className="grid grid-cols-12 gap-6 py-10 md:py-14 border-b border-hairline group hover:bg-obsidian-soft/40 transition-colors duration-700 px-2"
+              className="grid grid-cols-12 gap-6 py-10 md:py-14 border-b border-hairline group hover:bg-secondary/50 transition-colors duration-700 px-2"
             >
               <div className="col-span-2 md:col-span-1 text-[10px] uppercase tracking-[0.32em] text-gold pt-3">
                 {String(i + 1).padStart(2, "0")}

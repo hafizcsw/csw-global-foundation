@@ -4,7 +4,7 @@ import { SUPPORTED_LANGUAGES } from "@/i18n";
 export const GlobalOutlook = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative border-b border-hairline-soft bg-obsidian-soft/40">
+    <section className="relative border-b border-hairline-soft bg-secondary/50">
       <div className="container-csw py-32 md:py-40 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         <div className="lg:col-span-6">
           <div className="flex items-center gap-3 mb-8">
@@ -21,7 +21,7 @@ export const GlobalOutlook = () => {
             {SUPPORTED_LANGUAGES.map((l) => (
               <span
                 key={l.code}
-                className="px-5 py-3 border border-hairline text-sm text-ink-soft hover:text-gold hover:border-gold transition-all duration-500 bg-obsidian-soft"
+                className="px-5 py-3 border border-hairline text-sm text-ink-soft hover:text-gold hover:border-gold transition-all duration-500 bg-secondary"
               >
                 {l.label}
               </span>

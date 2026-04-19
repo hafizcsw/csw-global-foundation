@@ -8,7 +8,7 @@ const CONTACT_EMAIL: string | null = null;
 export const Contact = () => {
   const { t } = useTranslation();
   return (
-    <section id="contact" className="relative border-b border-hairline-soft bg-obsidian">
+    <section id="contact" className="relative border-b border-hairline-soft bg-card">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-40"
@@ -34,7 +34,7 @@ export const Contact = () => {
             <div
               key={c}
               id={c === "careers" ? "careers" : undefined}
-              className="scroll-mt-24 bg-obsidian p-8 md:p-10 group hover:bg-obsidian-soft transition-colors duration-700"
+              className="scroll-mt-24 bg-card p-8 md:p-10 group hover:bg-secondary transition-colors duration-700"
             >
               <div className="text-[10px] uppercase tracking-[0.32em] text-gold mb-5">
                 {t(`contact.lanes.${c}.title`)}

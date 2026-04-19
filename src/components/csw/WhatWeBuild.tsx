@@ -7,7 +7,7 @@ export const WhatWeBuild = () => {
   const { t } = useTranslation();
   const sectors = t("whatWeBuild.sectors", { returnObjects: true }) as Sector[];
   return (
-    <section className="relative border-b border-hairline-soft bg-obsidian-soft/40">
+    <section className="relative border-b border-hairline-soft bg-secondary/50">
       <div className="container-csw py-32 md:py-40">
         <SectionHeader
           eyebrow={t("whatWeBuild.eyebrow")}
