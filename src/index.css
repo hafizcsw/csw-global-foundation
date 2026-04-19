@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600;6..96,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600;6..96,700&family=Inter+Tight:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -43,9 +43,9 @@
 
     --hairline: 30 6% 76%;
     --hairline-soft: 30 8% 88%;
-    --ink: 220 14% 8%;
-    --ink-soft: 220 10% 24%;
-    --ink-muted: 220 6% 42%;
+    --ink: 220 16% 11%;
+    --ink-soft: 220 12% 26%;
+    --ink-muted: 220 8% 44%;
     --parchment: 30 14% 98%;
     --obsidian: 220 18% 5%;
     --obsidian-soft: 30 8% 92%;
@@ -114,10 +114,10 @@
 
     --hairline: 220 10% 22%;
     --hairline-soft: 220 14% 12%;
-    --ink: 30 10% 94%;
-    --ink-soft: 30 8% 70%;
-    --ink-muted: 220 6% 50%;
-    --parchment: 30 10% 94%;
+    --ink: 30 8% 90%;
+    --ink-soft: 30 6% 72%;
+    --ink-muted: 220 6% 52%;
+    --parchment: 30 10% 90%;
     --obsidian: 220 22% 3%;
     --obsidian-soft: 220 16% 8%;
 
@@ -157,17 +157,47 @@
   }
   html {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-synthesis: none;
+    -webkit-text-size-adjust: 100%;
     background: hsl(var(--background));
   }
   body {
     @apply bg-background text-foreground font-sans;
-    font-feature-settings: "ss01", "cv11", "calt", "tnum";
+    font-weight: 400;
+    font-size: 15.5px;
+    line-height: 1.65;
+    letter-spacing: -0.005em;
+    font-feature-settings: "ss01", "cv11", "calt", "kern", "liga", "clig", "tnum" 0, "lnum";
+    font-variant-numeric: lining-nums proportional-nums;
     background:
       radial-gradient(ellipse 50% 35% at 90% 5%, hsl(var(--gold) / 0.06), transparent 70%),
       hsl(var(--background));
     background-attachment: fixed;
     transition: background-color 600ms var(--ease-luxury), color 600ms var(--ease-luxury);
+  }
+  /* Display serif refinement — optical sizing, contextual & discretionary
+     ligatures, kerning, geometric precision on large headlines. */
+  .display, .font-serif, h1, h2, h3 {
+    font-optical-sizing: auto;
+    font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "ss01", "ss02", "lnum";
+    font-variant-numeric: lining-nums proportional-nums;
+    text-rendering: geometricPrecision;
+  }
+  /* Monospace numerics — tabular & lining for institutional spec labels */
+  .font-mono, code, kbd, samp {
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: "tnum", "zero", "ss01";
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Paragraph readability */
+  p {
+    text-wrap: pretty;
+  }
+  /* Headlines: balance for fewer orphans on multi-line titles */
+  h1, h2, h3, .display {
+    text-wrap: balance;
   }
   ::selection {
     background: hsl(var(--gold));
@@ -321,25 +351,51 @@
   100% { background-position: 200% 0; }
 }
 
-/* RTL / Arabic typography override. */
+/* RTL / Arabic typography — calibrated scale, line-height, weight.
+   Arabic glyphs render visually smaller than Latin at the same px,
+   so we lift size + line-height, neutralize Latin tracking, and
+   route display to Naskh (editorial) and body to Sans Arabic (clean). */
 [dir="rtl"] {
-  font-family: "Noto Naskh Arabic", "Geeza Pro", "Tahoma", system-ui, sans-serif;
+  font-family: "Noto Sans Arabic", "Noto Naskh Arabic", "Geeza Pro", "Tahoma", system-ui, sans-serif;
   letter-spacing: 0 !important;
+  font-feature-settings: "kern", "calt", "liga";
+}
+[dir="rtl"] body {
+  font-size: 16.5px;
+  line-height: 1.85;
+  font-weight: 400;
 }
 [dir="rtl"] .display,
-[dir="rtl"] .font-serif {
+[dir="rtl"] .font-serif,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3 {
   font-family: "Noto Naskh Arabic", "Amiri", "Geeza Pro", "Times New Roman", serif;
   letter-spacing: 0 !important;
+  line-height: 1.45 !important;
+  font-weight: 500;
+  word-spacing: 0.02em;
 }
 [dir="rtl"] .font-sans,
-[dir="rtl"] body {
+[dir="rtl"] body,
+[dir="rtl"] p {
   font-family: "Noto Sans Arabic", "Noto Naskh Arabic", system-ui, sans-serif;
+}
+[dir="rtl"] p {
+  line-height: 1.95 !important;
 }
 [dir="rtl"] .eyebrow,
 [dir="rtl"] .eyebrow-muted,
 [dir="rtl"] .spec-label,
 [dir="rtl"] .btn-luxury,
-[dir="rtl"] .btn-ghost-luxury {
-  font-family: "Noto Sans Arabic", system-ui, sans-serif;
-  letter-spacing: 0.08em !important;
+[dir="rtl"] .btn-ghost-luxury,
+[dir="rtl"] .font-mono {
+  font-family: "Noto Kufi Arabic", "Noto Sans Arabic", system-ui, sans-serif;
+  letter-spacing: 0.06em !important;
+  font-weight: 500;
+}
+/* Latin numerals inside RTL stay tabular & lining */
+[dir="rtl"] .font-mono,
+[dir="rtl"] [class*="tabular"] {
+  font-variant-numeric: tabular-nums lining-nums;
 }
