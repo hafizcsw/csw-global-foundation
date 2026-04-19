@@ -277,5 +277,11 @@
     "rights": "All rights reserved.",
     "parent": "CSW Global is the parent company.",
     "language": "Language"
+  },
+  "theme": {
+    "toLight": "Passer au mode clair",
+    "toDark": "Passer au mode sombre",
+    "light": "Clair",
+    "dark": "Sombre"
   }
 }
