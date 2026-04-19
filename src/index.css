@@ -47,8 +47,12 @@
     --ink-soft: 220 12% 26%;
     --ink-muted: 220 8% 44%;
     --parchment: 30 14% 98%;
-    --obsidian: 220 18% 5%;
-    --obsidian-soft: 30 8% 92%;
+    /* In light mode, "obsidian" surfaces become refined warm off-white panels
+       so dark-themed sections (Header/Footer/Hero overlays) don't punch
+       black holes through the page. Text inside still uses --ink which is
+       dark in light mode, so contrast stays correct. */
+    --obsidian: 30 12% 94%;
+    --obsidian-soft: 30 10% 90%;
 
     /* Warm metallic gold (institutional, not yellow) */
     --gold: 38 55% 45%;
