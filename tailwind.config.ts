@@ -12,11 +12,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        // Bugatti-style: single geometric sans for body AND display.
-        // `serif` token kept for code stability but remapped to the same sans
-        // (thin, wide-tracked usage at the component level via font-light + tracking).
+        // Bugatti-grade: Antonio for display (condensed geometric sans),
+        // Inter Tight for body. Serif token remapped to Antonio for stability.
         sans: ["Inter Tight", "ui-sans-serif", "system-ui", "sans-serif"],
-        serif: ["Inter Tight", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["Antonio", "Inter Tight", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Antonio", "Inter Tight", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       colors: {
