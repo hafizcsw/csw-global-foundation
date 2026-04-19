@@ -43,21 +43,21 @@ export const Header = () => {
     setMenuOpen(false);
   }, [pathname]);
 
-  // On the homepage the header lives ONLY over the cinematic hero.
-  // Once the user scrolls past the hero, the entire header (brand + tools)
-  // disappears so the chaptered world reads cleanly. The MENU trigger inside
-  // the hero remains the single entry point to navigation.
-  const hideOnScroll = isFilmHero && scrolled;
+  // On the homepage the header sits ABSOLUTELY over the cinematic hero,
+  // so it scrolls away with the hero and never reappears. The MENU trigger
+  // inside the hero is the single entry point to navigation.
+  // On all other pages the header stays sticky as usual.
+  const positionClass = isFilmHero
+    ? "absolute top-0 left-0 right-0 z-40"
+    : "sticky top-0 z-40";
 
   return (
     <>
       <header
-        className={`sticky top-0 z-40 transition-all duration-700 ${
-          hideOnScroll
-            ? "opacity-0 -translate-y-full pointer-events-none"
-            : scrolled
-              ? "bg-obsidian/85 backdrop-blur-xl border-b border-hairline shadow-elegant"
-              : "bg-transparent border-b border-transparent"
+        className={`${positionClass} transition-all duration-700 ${
+          !isFilmHero && scrolled
+            ? "bg-obsidian/85 backdrop-blur-xl border-b border-hairline shadow-elegant"
+            : "bg-transparent border-b border-transparent"
         }`}
       >
         {bugattiMode ? (
