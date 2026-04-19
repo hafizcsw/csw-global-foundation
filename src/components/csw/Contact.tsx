@@ -25,7 +25,7 @@ export const Contact = () => {
               <div className="text-[11px] uppercase tracking-[0.22em] text-gold mb-3">
                 {t(`contact.${c}`)}
               </div>
-              <div className="font-serif text-xl text-parchment">CSW Global</div>
+              <div className="font-serif text-xl text-parchment">{t("brand.name")}</div>
             </div>
           ))}
         </div>
