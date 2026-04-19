@@ -27,7 +27,28 @@
     "headline": "نبني الجيل القادم من الشركات العالمية.",
     "subheadline": "CSW Global هي الشركة الأم لمحفظة متنامية من الشركات الأصلية في الذكاء الاصطناعي، مصممة لتحقيق قيمة طويلة الأمد، ورافعة تشغيلية، وتوسع عالمي ذكي.",
     "primaryCta": "استكشف المحفظة",
-    "secondaryCta": "عن CSW Global"
+    "secondaryCta": "عن CSW Global",
+    "specMark": "أتيليه · مؤسسة بمعايير دقيقة",
+    "specSeries": "السلسلة — CSW.GLOBAL",
+    "specRef": "مرجع · ٢٠٢٥/٠١",
+    "specs": {
+      "est": {
+        "label": "التأسيس",
+        "value": "٢٠٢٤"
+      },
+      "ventures": {
+        "label": "المشاريع",
+        "value": "٠٦"
+      },
+      "markets": {
+        "label": "الأسواق",
+        "value": "عالمية"
+      },
+      "discipline": {
+        "label": "التخصص",
+        "value": "AI-NATIVE"
+      }
+    }
   },
   "proof": {
     "items": [

@@ -12,8 +12,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        serif: ["Cormorant Garamond", "ui-serif", "Georgia", "serif"],
+        sans: ["Inter Tight", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["Bodoni Moda", "ui-serif", "Didot", "Georgia", "serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -38,6 +39,11 @@ export default {
           soft: "hsl(var(--gold-soft))",
           glow: "hsl(var(--gold-glow))",
         },
+        bordeaux: {
+          DEFAULT: "hsl(var(--bordeaux))",
+          soft: "hsl(var(--bordeaux-soft))",
+        },
+        carbon: "hsl(var(--carbon))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

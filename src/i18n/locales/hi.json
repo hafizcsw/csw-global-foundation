@@ -27,7 +27,28 @@
     "headline": "Building the next generation of global companies.",
     "subheadline": "CSW Global is the parent company behind a growing portfolio of AI-native ventures, built for long-term value, operational leverage, and intelligent global expansion.",
     "primaryCta": "Explore Portfolio",
-    "secondaryCta": "About CSW Global"
+    "secondaryCta": "About CSW Global",
+    "specMark": "एटेलियर · सटीक संस्थान",
+    "specSeries": "श्रृंखला — CSW.GLOBAL",
+    "specRef": "संदर्भ · 2025/01",
+    "specs": {
+      "est": {
+        "label": "स्थापना",
+        "value": "2024"
+      },
+      "ventures": {
+        "label": "उद्यम",
+        "value": "06"
+      },
+      "markets": {
+        "label": "बाज़ार",
+        "value": "वैश्विक"
+      },
+      "discipline": {
+        "label": "विषय",
+        "value": "AI-NATIVE"
+      }
+    }
   },
   "proof": {
     "items": [
