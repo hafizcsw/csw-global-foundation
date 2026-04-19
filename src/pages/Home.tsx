@@ -6,6 +6,9 @@ import { Portfolio } from "@/components/csw/Portfolio";
 import { OperatingModel } from "@/components/csw/OperatingModel";
 import { GlobalOutlook } from "@/components/csw/GlobalOutlook";
 import { FounderNote } from "@/components/csw/FounderNote";
+import { Developments } from "@/components/csw/Developments";
+import { Careers } from "@/components/csw/Careers";
+import { Contact } from "@/components/csw/Contact";
 
 const Home = () => (
   <>
@@ -17,6 +20,9 @@ const Home = () => (
     <OperatingModel />
     <GlobalOutlook />
     <FounderNote />
+    <Developments />
+    <Careers />
+    <Contact />
   </>
 );
 
