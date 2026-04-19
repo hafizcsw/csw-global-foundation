@@ -71,12 +71,12 @@ export const Header = () => {
               </span>
             </button>
 
-            {/* Brand — absolutely centered to the viewport line */}
+            {/* Brand — absolutely centered, Bugatti-style thin wide-tracked sans */}
             <Link
               to="/"
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group"
             >
-              <span className="font-serif text-base md:text-lg tracking-[0.32em] uppercase text-parchment group-hover:text-gold transition-colors duration-500 whitespace-nowrap">
+              <span className="font-sans font-light text-base md:text-lg tracking-[0.42em] uppercase text-parchment group-hover:text-gold transition-colors duration-500 whitespace-nowrap">
                 {t("brand.name")}
               </span>
             </Link>
@@ -171,7 +171,7 @@ export const Header = () => {
             </span>
           </button>
 
-          <Link to="/" className="font-serif text-xl tracking-[0.18em] uppercase text-parchment hover:text-gold transition-colors duration-500">
+          <Link to="/" className="font-sans font-light text-base md:text-lg tracking-[0.42em] uppercase text-parchment hover:text-gold transition-colors duration-500">
             {t("brand.name")}
           </Link>
 
