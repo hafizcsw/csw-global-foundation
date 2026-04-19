@@ -1,6 +1,6 @@
 # Door 2 — Design System / UX / Page Design
 
-Status: **OPEN — spec in progress.**
+Status: **NEAR-CLOSE — revision r2 applied; awaiting acknowledgement.**
 Owner: CSW Global
 Scope: Canonical design system, component inventory, multilingual + RTL UI rules, wireframes for every primary template, and the hi-fi production order. Door 3 implements against this document. Any change requires a Door 2 re-open.
 
@@ -272,8 +272,19 @@ CTAStrip → Contact
 ### 4.3 Portfolio index `/portfolio`
 ```
 PageHeader: PORTFOLIO — Companies operated under CSW Global.
-Filter row: [All] [Education] [Financial] [Commerce] [Mobility] [AI] [Future]
-            Status: [All] [In Development] [In Operation] [Scaling]
+Domain filter row (approved Door 1 taxonomy, exact labels):
+  [All]
+  [Access & Opportunity]
+  [Mobility & Services]
+  [Commerce & Consumer Platforms]
+  [Financial Enablement]
+  [AI & Digital Infrastructure]
+  [Strategic Future Ventures]
+Status filter row: [All] [In Development] [In Operation] [Scaling]
+
+Note: domain labels are the canonical Door 1 taxonomy. No short-label
+substitutions are approved. If a label wraps on mobile, it wraps —
+relabeling is not permitted without re-opening Door 1.
 ─────────────────────────────────────────────
 PortfolioCard grid (2 cols desktop, 1 col mobile, hairline grid)
 ─────────────────────────────────────────────
@@ -350,16 +361,17 @@ PageHeader: CAREERS — For builders, operators, and specialists.
 Lead paragraph
 Section: Hiring posture (3 short blocks: Operators / Specialists / Builders)
 Section: How we work (3 short blocks)
-CTAStrip → Contact (careers lane)
+CTAStrip → Contact — routes to /contact#careers (Careers Inquiry lane).
 ```
 
 ### 4.11 Contact `/contact`
 ```
-PageHeader: CONTACT — For partnerships, media, and strategic inquiries.
-Three lanes (3-up, hairline grid):
-  Partnerships    Media    Strategic Inquiries
-  ▒ short blurb ▒ short blurb ▒ short blurb
-  ▸ email        ▸ email   ▸ email
+PageHeader: CONTACT — For partnerships, media, strategic inquiries, and careers.
+Four lanes (4-up desktop / 2-up tablet / 1-up mobile, hairline grid):
+  Partnerships   Media   Strategic Inquiries   Careers Inquiry
+  ▒ blurb        ▒ blurb ▒ blurb               ▒ blurb
+  ▸ email        ▸ email ▸ email               ▸ email
+The Careers lane is anchored at #careers so /careers CTA deep-links here.
 ─────────────────────────────────────────────
 Institutional address block (when available; scaffold otherwise)
 ```
@@ -413,6 +425,23 @@ Door 2 closes when:
 - [x] Multilingual + RTL rules written (§3).
 - [x] ASCII wireframes for all primary templates written (§4).
 - [x] Hi-fi production order written (§5).
+- [x] Portfolio taxonomy labels reconciled with Door 1 (r2 fix).
+- [x] Careers → Contact routing reconciled (Careers Inquiry lane added) (r2 fix).
 - [ ] You acknowledge the spec or request revisions.
 
 On acknowledgement: **Door 2 → CLOSED**, Door 3 opens and implements against this document. No design decisions are made inside Door 3.
+
+---
+
+## 7. Revision log
+
+- **r1** — Initial spec (tokens, components, RTL rules, wireframes, production order).
+- **r2** — Two blocking fixes applied:
+  1. `/portfolio` filter labels replaced with the exact Door 1 taxonomy
+     (Access & Opportunity · Mobility & Services · Commerce & Consumer Platforms
+     · Financial Enablement · AI & Digital Infrastructure · Strategic Future Ventures).
+     No short-label substitutions approved.
+  2. `/contact` extended to **four lanes** — Partnerships, Media,
+     Strategic Inquiries, **Careers Inquiry** (anchored `#careers`).
+     `/careers` CTA now deep-links to `/contact#careers`, resolving the
+     careers-lane mismatch.
