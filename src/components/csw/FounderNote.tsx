@@ -1,36 +1,37 @@
 import { useTranslation } from "react-i18next";
 
+/**
+ * Bugatti-grade founder note — full editorial chamber, Antonio condensed.
+ */
 export const FounderNote = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative border-b border-hairline-soft bg-card">
+    <section className="relative bg-obsidian text-parchment overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 50%, hsl(var(--gold) / 0.1), transparent 60%)",
+            "radial-gradient(ellipse 60% 50% at 50% 50%, hsl(220 25% 10%) 0%, hsl(220 22% 4%) 80%)",
         }}
       />
-      <div className="container-csw relative py-32 md:py-44">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-12">
-            <span className="h-px w-10 bg-gold" />
-            <span className="eyebrow">{t("founder.eyebrow")}</span>
-            <span className="h-px w-10 bg-gold" />
+      <div className="container-csw relative py-32 md:py-48">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="font-mono text-[10px] tracking-[0.4em] uppercase text-parchment/55 mb-12">
+            {t("founder.eyebrow")}
           </div>
-          <span className="block font-serif text-7xl md:text-8xl text-gold leading-none mb-4" aria-hidden>
-            &ldquo;
-          </span>
-          <blockquote className="display text-2xl md:text-4xl lg:text-5xl text-ink leading-[1.35]">
+          <blockquote
+            className="font-display uppercase text-parchment leading-[1.05] text-[1.75rem] md:text-[3rem] lg:text-[4rem]"
+            style={{ fontWeight: 600, letterSpacing: "0.005em" }}
+          >
             {t("founder.body")}
           </blockquote>
-          <div className="mt-12 inline-flex items-center gap-4">
-            <span className="h-px w-8 bg-gold" />
-            <span className="text-[11px] uppercase tracking-[0.32em] text-gold">
+          <div className="mt-16 inline-flex items-center gap-4">
+            <span className="h-px w-10 bg-parchment/50" />
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-parchment/70">
               {t("founder.attribution")}
             </span>
-            <span className="h-px w-8 bg-gold" />
+            <span className="h-px w-10 bg-parchment/50" />
           </div>
         </div>
       </div>
