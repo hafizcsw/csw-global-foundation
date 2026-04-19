@@ -1,281 +1,281 @@
 {
   "meta": {
-    "title": "CSW Global — Building the next generation of global companies",
-    "description": "CSW Global is the parent company behind a growing portfolio of AI-native ventures built for long-term value, operational leverage, and intelligent global expansion."
+    "title": "CSW Global — بناء الجيل القادم من الشركات العالمية",
+    "description": "CSW Global هي الشركة الأم لمحفظة متنامية من الشركات الأصلية في الذكاء الاصطناعي، مبنية لتحقيق قيمة طويلة الأمد، ورافعة تشغيلية، وتوسع عالمي ذكي."
   },
   "nav": {
-    "about": "About",
-    "portfolio": "Portfolio",
-    "ourModel": "Our Model",
-    "leadership": "Leadership",
-    "news": "News",
-    "careers": "Careers",
-    "contact": "Contact"
+    "about": "نبذة عنا",
+    "portfolio": "المحفظة",
+    "ourModel": "نموذجنا",
+    "leadership": "القيادة",
+    "news": "الأخبار",
+    "careers": "الوظائف",
+    "contact": "تواصل"
   },
   "brand": {
     "name": "CSW Global",
-    "tagline": "Parent Company"
+    "tagline": "الشركة الأم"
   },
   "pageStub": {
-    "eyebrow": "In Preparation",
-    "title": "This section is being prepared.",
-    "body": "This page is part of the approved CSW Global architecture and will be populated with cleared institutional content before public launch.",
-    "back": "Return to home"
+    "eyebrow": "قيد الإعداد",
+    "title": "هذا القسم قيد الإعداد.",
+    "body": "هذه الصفحة جزء من البنية المعتمدة لـ CSW Global، وسيتم تعبئتها بمحتوى مؤسسي معتمد قبل الإطلاق العام.",
+    "back": "العودة إلى الرئيسية"
   },
   "hero": {
-    "eyebrow": "Parent Company · Venture Builder",
-    "headline": "Building the next generation of global companies.",
-    "subheadline": "CSW Global is the parent company behind a growing portfolio of AI-native ventures, built for long-term value, operational leverage, and intelligent global expansion.",
-    "primaryCta": "Explore Portfolio",
-    "secondaryCta": "About CSW Global"
+    "eyebrow": "شركة أم · باني شركات",
+    "headline": "نبني الجيل القادم من الشركات العالمية.",
+    "subheadline": "CSW Global هي الشركة الأم لمحفظة متنامية من الشركات الأصلية في الذكاء الاصطناعي، مصممة لتحقيق قيمة طويلة الأمد، ورافعة تشغيلية، وتوسع عالمي ذكي.",
+    "primaryCta": "استكشف المحفظة",
+    "secondaryCta": "عن CSW Global"
   },
   "proof": {
     "items": [
-      "Parent Company",
-      "Venture Builder",
-      "AI-Native Operations",
-      "Global Ambition",
-      "Shared Infrastructure"
+      "شركة أم",
+      "باني شركات",
+      "عمليات أصيلة بالذكاء الاصطناعي",
+      "طموح عالمي",
+      "بنية تحتية مشتركة"
     ]
   },
   "thesis": {
-    "eyebrow": "Our Thesis",
-    "title": "A structured system for building and operating companies.",
-    "body": "CSW Global is not a collection of brands. It is an integrated operating platform that combines strategic discipline, technology, AI systems, and execution depth to design ventures with structural advantages from inception.",
+    "eyebrow": "أطروحتنا",
+    "title": "نظام منظَّم لبناء الشركات وتشغيلها.",
+    "body": "CSW Global ليست مجموعة من العلامات التجارية. إنها منصة تشغيل متكاملة تجمع بين الانضباط الاستراتيجي، والتكنولوجيا، وأنظمة الذكاء الاصطناعي، وعمق التنفيذ، لتصميم شركات تتمتع بمزايا هيكلية منذ التأسيس.",
     "pillars": [
       {
-        "title": "Strategy",
-        "body": "Long-horizon thinking applied to sectors with structural opportunity."
+        "title": "الاستراتيجية",
+        "body": "تفكير بأفق طويل يُطبَّق على القطاعات ذات الفرص الهيكلية."
       },
       {
-        "title": "Technology",
-        "body": "AI-native foundations embedded into every venture from day one."
+        "title": "التكنولوجيا",
+        "body": "أسس أصيلة في الذكاء الاصطناعي مدمجة في كل شركة منذ اليوم الأول."
       },
       {
-        "title": "Operations",
-        "body": "Disciplined execution supported by shared infrastructure and standards."
+        "title": "العمليات",
+        "body": "تنفيذ منضبط مدعوم ببنية تحتية مشتركة ومعايير موحدة."
       }
     ]
   },
   "whatWeBuild": {
-    "eyebrow": "What We Build",
-    "title": "Sectors of focus.",
-    "body": "We build companies in domains where intelligent systems, operational depth, and global readiness create durable advantage.",
+    "eyebrow": "ما الذي نبنيه",
+    "title": "قطاعات التركيز.",
+    "body": "نبني شركات في مجالات تخلق فيها الأنظمة الذكية، والعمق التشغيلي، والجاهزية العالمية ميزة دائمة.",
     "sectors": [
       {
-        "title": "Access & Opportunity",
-        "body": "Platforms that expand access to learning, credentials, and economic mobility."
+        "title": "الوصول والفرص",
+        "body": "منصات توسّع الوصول إلى التعلم والشهادات والحراك الاقتصادي."
       },
       {
-        "title": "Financial Enablement",
-        "body": "Infrastructure that makes capital, credit, and financial services more accessible."
+        "title": "التمكين المالي",
+        "body": "بنية تحتية تجعل رأس المال والائتمان والخدمات المالية أكثر إتاحة."
       },
       {
-        "title": "Commerce & Consumer Platforms",
-        "body": "Modern retail and consumer experiences powered by intelligent operations."
+        "title": "التجارة ومنصات المستهلك",
+        "body": "تجارب تجزئة ومستهلك حديثة مدعومة بعمليات ذكية."
       },
       {
-        "title": "Mobility & Services",
-        "body": "Solutions for movement, relocation, and cross-border life transitions."
+        "title": "التنقل والخدمات",
+        "body": "حلول للتنقل والانتقال والتحولات الحياتية العابرة للحدود."
       },
       {
-        "title": "AI & Digital Infrastructure",
-        "body": "Internal and external systems that make companies measurably more effective."
+        "title": "الذكاء الاصطناعي والبنية الرقمية",
+        "body": "أنظمة داخلية وخارجية تجعل الشركات أكثر فعالية بشكل قابل للقياس."
       },
       {
-        "title": "Strategic Future Ventures",
-        "body": "Categories under active research where CSW Global will deploy next."
+        "title": "شركات استراتيجية مستقبلية",
+        "body": "فئات قيد البحث الفعّال حيث ستنشر CSW Global جهودها لاحقًا."
       }
     ]
   },
   "portfolio": {
-    "eyebrow": "Portfolio",
-    "title": "Companies operated under CSW Global.",
-    "body": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
-    "statusLabel": "Status",
-    "sectorLabel": "Sector",
-    "relationshipLabel": "Relationship",
-    "viewAll": "View full portfolio",
+    "eyebrow": "المحفظة",
+    "title": "الشركات المُشغَّلة ضمن CSW Global.",
+    "body": "تُبنى كل شركة وتُدعَم من قِبل الشركة الأم عبر القدرات المشتركة، وهيكل رأس المال، والإشراف الاستراتيجي.",
+    "statusLabel": "الحالة",
+    "sectorLabel": "القطاع",
+    "relationshipLabel": "العلاقة",
+    "viewAll": "عرض المحفظة الكاملة",
     "filters": {
-      "all": "All Domains",
-      "access": "Access & Opportunity",
-      "mobility": "Mobility & Services",
-      "commerce": "Commerce & Consumer Platforms",
-      "financial": "Financial Enablement",
-      "ai": "AI & Digital Infrastructure",
-      "future": "Strategic Future Ventures"
+      "all": "كل المجالات",
+      "access": "الوصول والفرص",
+      "mobility": "التنقل والخدمات",
+      "commerce": "التجارة ومنصات المستهلك",
+      "financial": "التمكين المالي",
+      "ai": "الذكاء الاصطناعي والبنية الرقمية",
+      "future": "شركات استراتيجية مستقبلية"
     },
     "companies": [
       {
-        "name": "Venture One",
-        "sector": "Access & Opportunity",
-        "status": "In Operation",
-        "description": "An AI-native platform expanding access to learning and verifiable credentials.",
-        "relationship": "Wholly owned subsidiary"
+        "name": "الشركة الأولى",
+        "sector": "الوصول والفرص",
+        "status": "قيد التشغيل",
+        "description": "منصة أصيلة في الذكاء الاصطناعي تُوسّع الوصول إلى التعلم والشهادات الموثَّقة.",
+        "relationship": "شركة تابعة مملوكة بالكامل"
       },
       {
-        "name": "Venture Two",
-        "sector": "Financial Enablement",
-        "status": "Scaling",
-        "description": "Infrastructure broadening access to financial products across emerging markets.",
-        "relationship": "Operated by CSW Global"
+        "name": "الشركة الثانية",
+        "sector": "التمكين المالي",
+        "status": "في مرحلة التوسع",
+        "description": "بنية تحتية توسّع الوصول إلى المنتجات المالية في الأسواق الناشئة.",
+        "relationship": "تُشغَّل من قِبل CSW Global"
       },
       {
-        "name": "Venture Three",
-        "sector": "Commerce & Consumer Platforms",
-        "status": "In Operation",
-        "description": "A consumer commerce business built on intelligent operations and brand depth.",
-        "relationship": "Wholly owned subsidiary"
+        "name": "الشركة الثالثة",
+        "sector": "التجارة ومنصات المستهلك",
+        "status": "قيد التشغيل",
+        "description": "نشاط تجاري للمستهلك مبني على عمليات ذكية وعمق في العلامة التجارية.",
+        "relationship": "شركة تابعة مملوكة بالكامل"
       },
       {
-        "name": "Venture Four",
-        "sector": "Mobility & Services",
-        "status": "In Development",
-        "description": "Services supporting cross-border relocation and life transition workflows.",
-        "relationship": "Incubated by CSW Global"
+        "name": "الشركة الرابعة",
+        "sector": "التنقل والخدمات",
+        "status": "قيد التطوير",
+        "description": "خدمات تدعم سير عمل الانتقال العابر للحدود والتحولات الحياتية.",
+        "relationship": "محتضنة من قِبل CSW Global"
       }
     ]
   },
   "operatingModel": {
-    "eyebrow": "Operating Model",
-    "title": "How CSW Global builds companies.",
-    "body": "A repeatable system applied with discipline across every venture.",
+    "eyebrow": "النموذج التشغيلي",
+    "title": "كيف تبني CSW Global شركاتها.",
+    "body": "نظام قابل للتكرار يُطبَّق بانضباط على كل شركة.",
     "steps": [
       {
-        "title": "Identify Structural Opportunity",
-        "body": "We study sectors where intelligent systems and operational depth can produce durable advantage."
+        "title": "تحديد الفرصة الهيكلية",
+        "body": "ندرس القطاعات التي يمكن فيها للأنظمة الذكية والعمق التشغيلي أن ينتجا ميزة دائمة."
       },
       {
-        "title": "Design the Venture Framework",
-        "body": "We define the business architecture, market positioning, and operating model before deployment."
+        "title": "تصميم إطار الشركة",
+        "body": "نحدد البنية التجارية، والتموضع السوقي، والنموذج التشغيلي قبل الإطلاق."
       },
       {
-        "title": "Deploy Shared Infrastructure",
-        "body": "Each venture launches on top of CSW Global's centralized capabilities and standards."
+        "title": "نشر البنية التحتية المشتركة",
+        "body": "تنطلق كل شركة فوق القدرات والمعايير المركزية لـ CSW Global."
       },
       {
-        "title": "Operate with Discipline",
-        "body": "Execution is governed by clear metrics, shared playbooks, and parent-company oversight."
+        "title": "التشغيل بانضباط",
+        "body": "يُحكَم التنفيذ بمؤشرات واضحة، وأدلة عمل مشتركة، وإشراف من الشركة الأم."
       },
       {
-        "title": "Scale with Leverage",
-        "body": "Proven ventures expand into adjacent markets and geographies using shared infrastructure."
+        "title": "التوسع برافعة",
+        "body": "تتوسع الشركات المُثبَتة في أسواق وجغرافيات مجاورة عبر البنية التحتية المشتركة."
       }
     ]
   },
   "capabilities": {
-    "eyebrow": "Shared Capabilities",
-    "title": "Centralized strength behind every venture.",
-    "body": "CSW Global concentrates expertise at the parent level so each company benefits from institutional depth from day one.",
+    "eyebrow": "القدرات المشتركة",
+    "title": "قوة مركزية وراء كل شركة.",
+    "body": "تُركّز CSW Global الخبرة على مستوى الشركة الأم لتستفيد كل شركة من عمق مؤسسي منذ اليوم الأول.",
     "items": [
-      "Strategy",
-      "Product Development",
-      "AI Systems",
-      "Brand Architecture",
-      "Digital Operations",
-      "Data & Intelligence",
-      "Multilingual Readiness",
-      "Market Expansion Support"
+      "الاستراتيجية",
+      "تطوير المنتجات",
+      "أنظمة الذكاء الاصطناعي",
+      "هندسة العلامة التجارية",
+      "العمليات الرقمية",
+      "البيانات والذكاء",
+      "الجاهزية متعددة اللغات",
+      "دعم التوسع في الأسواق"
     ]
   },
   "global": {
-    "eyebrow": "Global Outlook",
-    "title": "Built for international markets from the foundation.",
-    "body": "Every venture is engineered for multilingual readiness and cross-border operation. Global ambition is not a later phase — it is part of the structural design."
+    "eyebrow": "نظرة عالمية",
+    "title": "مبنية للأسواق الدولية منذ التأسيس.",
+    "body": "كل شركة مُهندَسة للجاهزية متعددة اللغات والتشغيل العابر للحدود. الطموح العالمي ليس مرحلة لاحقة — بل جزء من التصميم الهيكلي."
   },
   "founder": {
-    "eyebrow": "Founder Note",
-    "body": "We started CSW Global to build companies the way they should be built — with structural clarity, shared infrastructure, and a long horizon. The work is patient, the standards are high, and the ambition is global.",
-    "attribution": "Founder, CSW Global"
+    "eyebrow": "كلمة المؤسس",
+    "body": "أسسنا CSW Global لنبني الشركات بالطريقة التي ينبغي أن تُبنى بها — بوضوح هيكلي، وبنية تحتية مشتركة، وأفق طويل. العمل صبور، والمعايير عالية، والطموح عالمي.",
+    "attribution": "المؤسس، CSW Global"
   },
   "developments": {
-    "eyebrow": "Latest Developments",
-    "title": "Updates from the parent company.",
-    "viewAll": "All developments",
+    "eyebrow": "آخر المستجدات",
+    "title": "تحديثات من الشركة الأم.",
+    "viewAll": "كل المستجدات",
     "items": [
       {
-        "category": "Announcement",
-        "date": "Recent",
-        "title": "CSW Global outlines its parent-company operating framework.",
-        "body": "An overview of how the group structures venture creation, shared capabilities, and long-term governance."
+        "category": "إعلان",
+        "date": "حديث",
+        "title": "CSW Global تعرض إطار التشغيل كشركة أم.",
+        "body": "نظرة عامة على كيفية هيكلة المجموعة لإنشاء الشركات، والقدرات المشتركة، والحوكمة طويلة الأمد."
       },
       {
-        "category": "Portfolio",
-        "date": "Recent",
-        "title": "New venture enters operating phase under CSW Global.",
-        "body": "A portfolio company transitions from build phase to active operation, supported by the group's shared infrastructure."
+        "category": "المحفظة",
+        "date": "حديث",
+        "title": "شركة جديدة تدخل مرحلة التشغيل ضمن CSW Global.",
+        "body": "تنتقل شركة من المحفظة من مرحلة البناء إلى التشغيل النشط، مدعومة بالبنية التحتية المشتركة للمجموعة."
       },
       {
-        "category": "Capability",
-        "date": "Recent",
-        "title": "Multilingual readiness expanded across the group.",
-        "body": "Centralized investment in language and localization infrastructure benefits every venture in the portfolio."
+        "category": "القدرات",
+        "date": "حديث",
+        "title": "توسيع الجاهزية متعددة اللغات على مستوى المجموعة.",
+        "body": "استثمار مركزي في البنية التحتية للغة والتوطين يفيد كل شركة في المحفظة."
       }
     ]
   },
   "about": {
-    "eyebrow": "About",
-    "title": "An institutional parent company built for the long horizon.",
-    "intro": "CSW Global designs, operates, and scales AI-native businesses across multiple sectors. The group exists to build companies with structural advantages — strategic discipline, shared infrastructure, and global readiness from inception.",
-    "principlesEyebrow": "Operating Principles",
-    "principlesTitle": "What we hold constant across every venture.",
+    "eyebrow": "نبذة عنا",
+    "title": "شركة أم مؤسسية مبنية لأفق طويل.",
+    "intro": "تصمم CSW Global وتُشغّل وتُوسّع شركات أصيلة في الذكاء الاصطناعي عبر قطاعات متعددة. وُجدت المجموعة لبناء شركات تتمتع بمزايا هيكلية — انضباط استراتيجي، وبنية تحتية مشتركة، وجاهزية عالمية منذ التأسيس.",
+    "principlesEyebrow": "مبادئ التشغيل",
+    "principlesTitle": "ما نحافظ على ثباته في كل شركة.",
     "principles": [
       {
-        "title": "Long-horizon ownership",
-        "body": "We build for durable compounding value, not optical growth."
+        "title": "ملكية بأفق طويل",
+        "body": "نبني لقيمة مركّبة دائمة، لا لنمو شكلي."
       },
       {
-        "title": "Structural clarity",
-        "body": "Each venture has a defined purpose, architecture, and governance from day one."
+        "title": "وضوح هيكلي",
+        "body": "لكل شركة غاية محددة، وبنية، وحوكمة منذ اليوم الأول."
       },
       {
-        "title": "Shared infrastructure",
-        "body": "Strategy, AI systems, brand, and operations are concentrated at the parent."
+        "title": "بنية تحتية مشتركة",
+        "body": "الاستراتيجية، وأنظمة الذكاء الاصطناعي، والعلامة، والعمليات مركَّزة في الشركة الأم."
       },
       {
-        "title": "Global by design",
-        "body": "Every venture is engineered for multilingual readiness and cross-border operation."
+        "title": "عالمية بالتصميم",
+        "body": "كل شركة مُهندَسة للجاهزية متعددة اللغات والتشغيل العابر للحدود."
       }
     ]
   },
   "careers": {
-    "eyebrow": "Careers",
-    "title": "For builders, operators, and specialists.",
-    "body": "We work with people who take long-horizon problems seriously and execute with precision. CSW Global hires across the parent company and its ventures.",
-    "cta": "Contact careers"
+    "eyebrow": "الوظائف",
+    "title": "للبنّائين والمشغّلين والمتخصصين.",
+    "body": "نعمل مع أشخاص يأخذون المسائل ذات الأفق الطويل بجدية ويُنفّذون بدقة. تُوظّف CSW Global على مستوى الشركة الأم وشركاتها.",
+    "cta": "تواصل مع الوظائف"
   },
   "contact": {
-    "eyebrow": "Strategic Contact",
-    "title": "For partnerships, media, careers, and strategic inquiries.",
-    "body": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
+    "eyebrow": "تواصل استراتيجي",
+    "title": "للشراكات، والإعلام، والوظائف، والاستفسارات الاستراتيجية.",
+    "body": "نتعامل بانتقائية مع المؤسسات والمستثمرين والمشغّلين وأعضاء الفريق المحتملين الذين تتوافق أعمالهم مع التوجه طويل الأمد للمجموعة.",
     "lanes": {
       "partnerships": {
-        "title": "Partnerships",
-        "body": "Strategic alliances, joint ventures, and structural collaborations."
+        "title": "الشراكات",
+        "body": "تحالفات استراتيجية، ومشاريع مشتركة، وتعاون هيكلي."
       },
       "media": {
-        "title": "Media",
-        "body": "Press, editorial, and institutional communications."
+        "title": "الإعلام",
+        "body": "صحافة، وتحرير، واتصالات مؤسسية."
       },
       "strategic": {
-        "title": "Strategic Inquiries",
-        "body": "Investor, advisor, and senior operator conversations."
+        "title": "استفسارات استراتيجية",
+        "body": "محادثات مع المستثمرين، والمستشارين، وكبار المشغّلين."
       },
       "careers": {
-        "title": "Careers Inquiry",
-        "body": "Builders, operators, and specialists across the group."
+        "title": "استفسار وظيفي",
+        "body": "بنّاؤون ومشغّلون ومتخصصون عبر المجموعة."
       }
     },
-    "partnerships": "Partnerships",
-    "media": "Media",
-    "strategic": "Strategic Inquiries",
-    "cta": "Begin a conversation",
-    "ctaPending": "Begin a conversation",
-    "pendingNote": "The institutional contact address is being finalized and will be published before launch."
+    "partnerships": "الشراكات",
+    "media": "الإعلام",
+    "strategic": "استفسارات استراتيجية",
+    "cta": "ابدأ محادثة",
+    "ctaPending": "قناة التواصل المؤسسية — قيد الإعداد",
+    "pendingNote": "يجري إنهاء عنوان التواصل المؤسسي وسيُنشر قبل الإطلاق."
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "parent": "CSW Global is the parent company.",
-    "language": "Language"
+    "rights": "جميع الحقوق محفوظة.",
+    "parent": "CSW Global هي الشركة الأم.",
+    "language": "اللغة"
   }
 }
