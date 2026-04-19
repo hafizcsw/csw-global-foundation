@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { PageHeader } from "@/components/csw/PageHeader";
 import { SectionHeader } from "@/components/csw/SectionHeader";
 import { FounderNote } from "@/components/csw/FounderNote";
+import heroAbout from "@/assets/hero-about.mp4.asset.json";
 
 interface Principle {
   title: string;
@@ -13,7 +14,12 @@ const AboutPage = () => {
   const principles = t("about.principles", { returnObjects: true }) as Principle[];
   return (
     <>
-      <PageHeader eyebrowKey="about.eyebrow" titleKey="about.title" bodyKey="about.intro" />
+      <PageHeader
+        eyebrowKey="about.eyebrow"
+        titleKey="about.title"
+        bodyKey="about.intro"
+        videoSrc={heroAbout.url}
+      />
       <section className="relative bg-background border-b border-hairline-soft">
         <div className="container-csw py-32 md:py-44">
           <SectionHeader
