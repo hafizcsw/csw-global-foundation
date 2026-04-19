@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 export const Hero = () => {
@@ -23,21 +24,21 @@ export const Hero = () => {
           className="mt-14 flex flex-wrap items-center gap-6 animate-fade-up"
           style={{ animationDelay: "180ms" }}
         >
-          <a
-            href="#portfolio"
+          <Link
+            to="/portfolio"
             className="group inline-flex items-center gap-3 bg-ink text-parchment px-7 py-4 text-xs uppercase tracking-[0.22em] hover:bg-ink-soft transition-colors"
           >
             {t("hero.primaryCta")}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a
-            href="#thesis"
+          </Link>
+          <Link
+            to="/about"
             className="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-ink hover:text-gold transition-colors"
           >
             <span className="border-b border-hairline group-hover:border-gold pb-1 transition-colors">
               {t("hero.secondaryCta")}
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
