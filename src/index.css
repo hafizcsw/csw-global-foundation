@@ -149,14 +149,13 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "ss01", "cv11", "calt";
-    background:
-      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(38 25% 14% / 0.45), transparent 70%),
-      hsl(var(--background));
+    background: var(--gradient-hero);
     background-attachment: fixed;
+    transition: background-color 600ms var(--ease-luxury), color 600ms var(--ease-luxury);
   }
   ::selection {
     background: hsl(var(--gold));
-    color: hsl(var(--obsidian));
+    color: hsl(var(--primary-foreground));
   }
 }
 
