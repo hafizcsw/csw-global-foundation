@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 export const FounderNote = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative border-b border-hairline-soft bg-obsidian">
+    <section className="relative border-b border-hairline-soft bg-card">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-40"

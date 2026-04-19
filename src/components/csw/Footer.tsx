@@ -16,7 +16,7 @@ export const Footer = () => {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
   return (
-    <footer className="relative border-t border-hairline bg-obsidian">
+    <footer className="relative border-t border-hairline bg-card">
       <div className="gold-divider" />
       <div className="container-csw py-20 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12">
         <div className="md:col-span-4 flex flex-col gap-5">

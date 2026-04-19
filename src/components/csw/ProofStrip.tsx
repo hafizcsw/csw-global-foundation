@@ -4,7 +4,7 @@ export const ProofStrip = () => {
   const { t } = useTranslation();
   const items = t("proof.items", { returnObjects: true }) as string[];
   return (
-    <section className="relative border-y border-hairline-soft bg-obsidian-soft/50">
+    <section className="relative border-y border-hairline-soft bg-secondary/60">
       <div className="container-csw py-8">
         <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-4">
           {items.map((item, idx) => (

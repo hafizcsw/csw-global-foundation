@@ -34,7 +34,7 @@ export const FlagshipVentures = () => {
           {items.map((v, i) => (
             <article
               key={v.name}
-              className="group grid grid-cols-12 gap-6 py-10 md:py-14 transition-colors duration-700 hover:bg-obsidian-soft cursor-default"
+              className="group grid grid-cols-12 gap-6 py-10 md:py-14 transition-colors duration-700 hover:bg-secondary cursor-default"
             >
               <div className="col-span-12 md:col-span-1 font-mono text-[10px] tracking-[0.36em] text-gold pt-1">
                 0{i + 1}
