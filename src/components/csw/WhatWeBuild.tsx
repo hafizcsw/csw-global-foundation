@@ -7,27 +7,30 @@ export const WhatWeBuild = () => {
   const { t } = useTranslation();
   const sectors = t("whatWeBuild.sectors", { returnObjects: true }) as Sector[];
   return (
-    <section className="border-b border-hairline bg-secondary/30">
-      <div className="container-csw py-24 md:py-32">
+    <section className="relative border-b border-hairline-soft bg-obsidian-soft/40">
+      <div className="container-csw py-32 md:py-40">
         <SectionHeader
           eyebrow={t("whatWeBuild.eyebrow")}
           title={t("whatWeBuild.title")}
           body={t("whatWeBuild.body")}
         />
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-hairline border border-hairline">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sectors.map((s, i) => (
-            <div
+            <article
               key={i}
-              className="bg-background p-8 md:p-10 min-h-[220px] flex flex-col justify-between hover:bg-card transition-colors"
+              className="luxury-card p-10 md:p-12 min-h-[260px] flex flex-col justify-between group"
             >
-              <div className="text-[11px] tracking-[0.22em] text-muted-foreground">
-                {String(i + 1).padStart(2, "0")} / {String(sectors.length).padStart(2, "0")}
+              <div className="flex items-center justify-between text-[10px] tracking-[0.32em] uppercase">
+                <span className="text-gold">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-ink-muted">{String(sectors.length).padStart(2, "0")}</span>
               </div>
-              <div className="mt-10">
-                <h3 className="font-serif text-xl md:text-2xl text-ink mb-3">{s.title}</h3>
-                <p className="text-sm text-ink-soft leading-relaxed">{s.body}</p>
+              <div className="mt-12">
+                <h3 className="font-serif text-2xl md:text-3xl text-ink mb-4 group-hover:text-gold transition-colors duration-700 leading-tight">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-ink-soft leading-[1.8]">{s.body}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
