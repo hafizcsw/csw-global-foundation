@@ -43,13 +43,21 @@ export const Header = () => {
     setMenuOpen(false);
   }, [pathname]);
 
+  // On the homepage the header lives ONLY over the cinematic hero.
+  // Once the user scrolls past the hero, the entire header (brand + tools)
+  // disappears so the chaptered world reads cleanly. The MENU trigger inside
+  // the hero remains the single entry point to navigation.
+  const hideOnScroll = isFilmHero && scrolled;
+
   return (
     <>
       <header
         className={`sticky top-0 z-40 transition-all duration-700 ${
-          scrolled
-            ? "bg-obsidian/85 backdrop-blur-xl border-b border-hairline shadow-elegant"
-            : "bg-transparent border-b border-transparent"
+          hideOnScroll
+            ? "opacity-0 -translate-y-full pointer-events-none"
+            : scrolled
+              ? "bg-obsidian/85 backdrop-blur-xl border-b border-hairline shadow-elegant"
+              : "bg-transparent border-b border-transparent"
         }`}
       >
         {bugattiMode ? (
