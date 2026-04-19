@@ -10,10 +10,7 @@
     "leadership": "Leadership",
     "news": "News",
     "careers": "Careers",
-    "contact": "Contact",
-    "thesis": "Thesis",
-    "operatingModel": "Operating Model",
-    "capabilities": "Capabilities"
+    "contact": "Contact"
   },
   "brand": {
     "name": "CSW Global",
@@ -46,9 +43,18 @@
     "title": "A structured system for building and operating companies.",
     "body": "CSW Global is not a collection of brands. It is an integrated operating platform that combines strategic discipline, technology, AI systems, and execution depth to design ventures with structural advantages from inception.",
     "pillars": [
-      { "title": "Strategy", "body": "Long-horizon thinking applied to sectors with structural opportunity." },
-      { "title": "Technology", "body": "AI-native foundations embedded into every venture from day one." },
-      { "title": "Operations", "body": "Disciplined execution supported by shared infrastructure and standards." }
+      {
+        "title": "Strategy",
+        "body": "Long-horizon thinking applied to sectors with structural opportunity."
+      },
+      {
+        "title": "Technology",
+        "body": "AI-native foundations embedded into every venture from day one."
+      },
+      {
+        "title": "Operations",
+        "body": "Disciplined execution supported by shared infrastructure and standards."
+      }
     ]
   },
   "whatWeBuild": {
@@ -56,12 +62,30 @@
     "title": "Sectors of focus.",
     "body": "We build companies in domains where intelligent systems, operational depth, and global readiness create durable advantage.",
     "sectors": [
-      { "title": "Access & Opportunity", "body": "Platforms that expand access to learning, credentials, and economic mobility." },
-      { "title": "Financial Enablement", "body": "Infrastructure that makes capital, credit, and financial services more accessible." },
-      { "title": "Commerce & Consumer Platforms", "body": "Modern retail and consumer experiences powered by intelligent operations." },
-      { "title": "Mobility & Services", "body": "Solutions for movement, relocation, and cross-border life transitions." },
-      { "title": "AI & Digital Infrastructure", "body": "Internal and external systems that make companies measurably more effective." },
-      { "title": "Strategic Future Ventures", "body": "Categories under active research where CSW Global will deploy next." }
+      {
+        "title": "Access & Opportunity",
+        "body": "Platforms that expand access to learning, credentials, and economic mobility."
+      },
+      {
+        "title": "Financial Enablement",
+        "body": "Infrastructure that makes capital, credit, and financial services more accessible."
+      },
+      {
+        "title": "Commerce & Consumer Platforms",
+        "body": "Modern retail and consumer experiences powered by intelligent operations."
+      },
+      {
+        "title": "Mobility & Services",
+        "body": "Solutions for movement, relocation, and cross-border life transitions."
+      },
+      {
+        "title": "AI & Digital Infrastructure",
+        "body": "Internal and external systems that make companies measurably more effective."
+      },
+      {
+        "title": "Strategic Future Ventures",
+        "body": "Categories under active research where CSW Global will deploy next."
+      }
     ]
   },
   "portfolio": {
@@ -117,11 +141,26 @@
     "title": "How CSW Global builds companies.",
     "body": "A repeatable system applied with discipline across every venture.",
     "steps": [
-      { "title": "Identify Structural Opportunity", "body": "We study sectors where intelligent systems and operational depth can produce durable advantage." },
-      { "title": "Design the Venture Framework", "body": "We define the business architecture, market positioning, and operating model before deployment." },
-      { "title": "Deploy Shared Infrastructure", "body": "Each venture launches on top of CSW Global's centralized capabilities and standards." },
-      { "title": "Operate with Discipline", "body": "Execution is governed by clear metrics, shared playbooks, and parent-company oversight." },
-      { "title": "Scale with Leverage", "body": "Proven ventures expand into adjacent markets and geographies using shared infrastructure." }
+      {
+        "title": "Identify Structural Opportunity",
+        "body": "We study sectors where intelligent systems and operational depth can produce durable advantage."
+      },
+      {
+        "title": "Design the Venture Framework",
+        "body": "We define the business architecture, market positioning, and operating model before deployment."
+      },
+      {
+        "title": "Deploy Shared Infrastructure",
+        "body": "Each venture launches on top of CSW Global's centralized capabilities and standards."
+      },
+      {
+        "title": "Operate with Discipline",
+        "body": "Execution is governed by clear metrics, shared playbooks, and parent-company oversight."
+      },
+      {
+        "title": "Scale with Leverage",
+        "body": "Proven ventures expand into adjacent markets and geographies using shared infrastructure."
+      }
     ]
   },
   "capabilities": {
@@ -154,9 +193,24 @@
     "title": "Updates from the parent company.",
     "viewAll": "All developments",
     "items": [
-      { "category": "Announcement", "date": "Recent", "title": "CSW Global outlines its parent-company operating framework.", "body": "An overview of how the group structures venture creation, shared capabilities, and long-term governance." },
-      { "category": "Portfolio", "date": "Recent", "title": "New venture enters operating phase under CSW Global.", "body": "A portfolio company transitions from build phase to active operation, supported by the group's shared infrastructure." },
-      { "category": "Capability", "date": "Recent", "title": "Multilingual readiness expanded across the group.", "body": "Centralized investment in language and localization infrastructure benefits every venture in the portfolio." }
+      {
+        "category": "Announcement",
+        "date": "Recent",
+        "title": "CSW Global outlines its parent-company operating framework.",
+        "body": "An overview of how the group structures venture creation, shared capabilities, and long-term governance."
+      },
+      {
+        "category": "Portfolio",
+        "date": "Recent",
+        "title": "New venture enters operating phase under CSW Global.",
+        "body": "A portfolio company transitions from build phase to active operation, supported by the group's shared infrastructure."
+      },
+      {
+        "category": "Capability",
+        "date": "Recent",
+        "title": "Multilingual readiness expanded across the group.",
+        "body": "Centralized investment in language and localization infrastructure benefits every venture in the portfolio."
+      }
     ]
   },
   "about": {
@@ -166,10 +220,22 @@
     "principlesEyebrow": "Operating Principles",
     "principlesTitle": "What we hold constant across every venture.",
     "principles": [
-      { "title": "Long-horizon ownership", "body": "We build for durable compounding value, not optical growth." },
-      { "title": "Structural clarity", "body": "Each venture has a defined purpose, architecture, and governance from day one." },
-      { "title": "Shared infrastructure", "body": "Strategy, AI systems, brand, and operations are concentrated at the parent." },
-      { "title": "Global by design", "body": "Every venture is engineered for multilingual readiness and cross-border operation." }
+      {
+        "title": "Long-horizon ownership",
+        "body": "We build for durable compounding value, not optical growth."
+      },
+      {
+        "title": "Structural clarity",
+        "body": "Each venture has a defined purpose, architecture, and governance from day one."
+      },
+      {
+        "title": "Shared infrastructure",
+        "body": "Strategy, AI systems, brand, and operations are concentrated at the parent."
+      },
+      {
+        "title": "Global by design",
+        "body": "Every venture is engineered for multilingual readiness and cross-border operation."
+      }
     ]
   },
   "careers": {
@@ -183,10 +249,22 @@
     "title": "For partnerships, media, careers, and strategic inquiries.",
     "body": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
     "lanes": {
-      "partnerships": { "title": "Partnerships", "body": "Strategic alliances, joint ventures, and structural collaborations." },
-      "media": { "title": "Media", "body": "Press, editorial, and institutional communications." },
-      "strategic": { "title": "Strategic Inquiries", "body": "Investor, advisor, and senior operator conversations." },
-      "careers": { "title": "Careers Inquiry", "body": "Builders, operators, and specialists across the group." }
+      "partnerships": {
+        "title": "Partnerships",
+        "body": "Strategic alliances, joint ventures, and structural collaborations."
+      },
+      "media": {
+        "title": "Media",
+        "body": "Press, editorial, and institutional communications."
+      },
+      "strategic": {
+        "title": "Strategic Inquiries",
+        "body": "Investor, advisor, and senior operator conversations."
+      },
+      "careers": {
+        "title": "Careers Inquiry",
+        "body": "Builders, operators, and specialists across the group."
+      }
     },
     "partnerships": "Partnerships",
     "media": "Media",
