@@ -23,9 +23,8 @@ export const HeroFilm = () => {
   return (
     <section
       id="top"
-      className="relative w-full h-[100svh] min-h-[680px] overflow-hidden bg-obsidian text-ink -mt-20"
+      className="relative w-full h-[100svh] min-h-[680px] overflow-hidden bg-obsidian text-parchment -mt-20"
     >
-      {/* Cinematic film bed */}
       {!reduce && (
         <video
           src={heroVideo.url}
@@ -39,13 +38,12 @@ export const HeroFilm = () => {
         />
       )}
 
-      {/* Tonal grading: deepen edges, preserve center atmosphere */}
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, hsl(220 25% 3% / 0.55) 0%, hsl(220 25% 3% / 0) 22%, hsl(220 25% 3% / 0) 50%, hsl(220 25% 3% / 0.95) 100%)",
+            "linear-gradient(180deg, hsl(220 25% 3% / 0.68) 0%, hsl(220 25% 3% / 0.18) 28%, hsl(220 25% 3% / 0.28) 58%, hsl(220 25% 3% / 0.96) 100%)",
         }}
       />
       <div
@@ -53,37 +51,34 @@ export const HeroFilm = () => {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, hsl(220 25% 3% / 0.55) 0%, hsl(220 25% 3% / 0) 55%)",
+            "linear-gradient(90deg, hsl(220 25% 3% / 0.78) 0%, hsl(220 25% 3% / 0.2) 42%, hsl(220 25% 3% / 0.08) 62%, hsl(220 25% 3% / 0.42) 100%)",
         }}
       />
 
-      {/* Top-left institutional mark */}
       <div
         className="absolute top-28 start-6 md:start-12 lg:start-20 z-10 reveal-soft"
         style={{ animationDelay: "300ms" }}
       >
         <div className="flex items-start gap-3">
           <span className="mt-[6px] h-px w-8 bg-gold/70" />
-          <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-ink/70">
+          <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-parchment/70">
             {t("home.world.marker")} &nbsp; {t("home.world.eyebrow")}
           </div>
         </div>
       </div>
 
-      {/* Top-right reference */}
       <div
         className="absolute top-28 end-6 md:end-12 lg:end-20 z-10 reveal-soft text-end"
         style={{ animationDelay: "400ms" }}
       >
-        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-ink/60">
+        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-parchment/65">
           {t("hero.specSeries")}
         </div>
-        <div className="mt-1 font-mono text-[10px] tracking-[0.3em] text-ink/40">
+        <div className="mt-1 font-mono text-[10px] tracking-[0.3em] text-parchment/45">
           {t("hero.specCoords")}
         </div>
       </div>
 
-      {/* Bottom-anchored sovereign headline */}
       <div className="absolute inset-x-0 bottom-0 z-10">
         <div className="container-csw pb-16 md:pb-20 lg:pb-24">
           <div
@@ -91,13 +86,13 @@ export const HeroFilm = () => {
             style={{ animationDelay: "600ms" }}
           >
             <span className="h-px w-12 bg-gold" />
-            <span className="font-mono text-[10px] tracking-[0.36em] uppercase text-ink/85">
+            <span className="font-mono text-[10px] tracking-[0.36em] uppercase text-parchment/85">
               {t("home.hero.eyebrow")}
             </span>
           </div>
 
           <h1
-            className="reveal display font-light text-ink tracking-[-0.03em] leading-[0.92] text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6.5rem] xl:text-[7.5rem] max-w-[20ch]"
+            className="reveal display font-light text-parchment tracking-[-0.03em] leading-[0.92] text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6.5rem] xl:text-[7.5rem] max-w-[20ch]"
             style={{ animationDelay: "800ms", fontWeight: 300 }}
           >
             {t("home.hero.headline")}
@@ -107,13 +102,13 @@ export const HeroFilm = () => {
             className="reveal mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-10"
             style={{ animationDelay: "1100ms" }}
           >
-            <p className="max-w-md text-sm md:text-base text-ink/70 leading-[1.8]">
+            <p className="max-w-md text-sm md:text-base text-parchment/72 leading-[1.8]">
               {t("home.hero.subheadline")}
             </p>
             <div className="flex items-center gap-8">
               <Link
                 to="/portfolio"
-                className="group inline-flex items-center gap-4 font-mono text-[11px] tracking-[0.32em] uppercase text-ink hover:text-gold-glow transition-colors duration-700"
+                className="group inline-flex items-center gap-4 font-mono text-[11px] tracking-[0.32em] uppercase text-parchment hover:text-gold-glow transition-colors duration-700"
               >
                 <span className="relative">
                   {t("home.hero.primaryCta")}
@@ -123,7 +118,7 @@ export const HeroFilm = () => {
               </Link>
               <Link
                 to="/our-model"
-                className="group inline-flex items-center font-mono text-[11px] tracking-[0.32em] uppercase text-ink/60 hover:text-ink transition-colors duration-700"
+                className="group inline-flex items-center font-mono text-[11px] tracking-[0.32em] uppercase text-parchment/65 hover:text-parchment transition-colors duration-700"
               >
                 {t("home.hero.secondaryCta")}
               </Link>
@@ -132,13 +127,12 @@ export const HeroFilm = () => {
         </div>
       </div>
 
-      {/* Subtle scroll cue */}
       <div
         className="absolute bottom-6 inset-x-0 z-10 flex justify-center reveal-soft"
         style={{ animationDelay: "1400ms" }}
         aria-hidden
       >
-        <div className="font-mono text-[9px] tracking-[0.4em] uppercase text-ink/40">
+        <div className="font-mono text-[9px] tracking-[0.4em] uppercase text-parchment/45">
           {t("home.hero.scroll")} ↓
         </div>
       </div>
