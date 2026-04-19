@@ -4,25 +4,57 @@ import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
 
-const NAV_ITEMS = [
-  { key: "about", to: "/about" },
-  { key: "portfolio", to: "/portfolio" },
-  { key: "ourModel", to: "/our-model" },
-  { key: "leadership", to: "/leadership" },
-  { key: "news", to: "/news" },
-  { key: "careers", to: "/careers" },
-  { key: "contact", to: "/contact" },
-] as const;
+import imgAbout from "@/assets/cinema-architecture-1.jpg";
+import imgPortfolio from "@/assets/cinema-skyline.jpg";
+import imgOurModel from "@/assets/cinema-data-lattice.jpg";
+import imgLeadership from "@/assets/cinema-drafting.jpg";
+import imgNews from "@/assets/cinema-corridor.jpg";
+import imgCareers from "@/assets/cinema-obsidian-veins.jpg";
+import imgContact from "@/assets/cinema-global-network.jpg";
+import imgBrand from "@/assets/cinema-liquid-gold.jpg";
+
+type NavGroup = {
+  groupKey: string;
+  items: { key: string; to: string; image: string }[];
+};
+
+const NAV_GROUPS: NavGroup[] = [
+  {
+    groupKey: "house",
+    items: [
+      { key: "about", to: "/about", image: imgAbout },
+      { key: "ourModel", to: "/our-model", image: imgOurModel },
+      { key: "leadership", to: "/leadership", image: imgLeadership },
+    ],
+  },
+  {
+    groupKey: "work",
+    items: [
+      { key: "portfolio", to: "/portfolio", image: imgPortfolio },
+      { key: "news", to: "/news", image: imgNews },
+    ],
+  },
+  {
+    groupKey: "engage",
+    items: [
+      { key: "careers", to: "/careers", image: imgCareers },
+      { key: "contact", to: "/contact", image: imgContact },
+    ],
+  },
+];
+
+const ALL_ITEMS = NAV_GROUPS.flatMap((g) => g.items);
 
 export const Header = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hoverImage, setHoverImage] = useState<string>(imgBrand);
+  const [hoverKey, setHoverKey] = useState<string | null>(null);
   const isFilmHero = pathname === "/";
 
   useEffect(() => {
-    // Watch scroll on window AND on the snap-stage container (homepage)
     const onScroll = () => {
       const stage = document.querySelector(".snap-stage") as HTMLElement | null;
       const y = stage ? stage.scrollTop : window.scrollY;
@@ -49,13 +81,19 @@ export const Header = () => {
     setMenuOpen(false);
   }, [pathname]);
 
-  // Homepage: header is absolute over hero, scrolls away with it.
-  // Other pages: classic sticky header.
+  // Reset preview image when menu opens/closes
+  useEffect(() => {
+    if (menuOpen) {
+      setHoverImage(imgBrand);
+      setHoverKey(null);
+    }
+  }, [menuOpen]);
+
   const onHome = isFilmHero;
 
   return (
     <>
-      {/* ===== Bugatti-style header — only on hero, fades on scroll ===== */}
+      {/* ===== Header on hero ===== */}
       {onHome ? (
         <header
           className={`absolute top-0 left-0 right-0 z-40 transition-opacity duration-700 ${
@@ -63,7 +101,6 @@ export const Header = () => {
           }`}
         >
           <div className="container-csw relative flex items-center justify-between h-24">
-            {/* MENU left */}
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
@@ -79,7 +116,6 @@ export const Header = () => {
               </span>
             </button>
 
-            {/* Brand center — Antonio bold, wide tracking, like BUGATTI */}
             <Link
               to="/"
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group"
@@ -92,7 +128,6 @@ export const Header = () => {
               </span>
             </Link>
 
-            {/* Tools right */}
             <div className="flex items-center gap-3 text-parchment">
               <ThemeToggle />
               <LanguageSwitcher />
@@ -102,55 +137,39 @@ export const Header = () => {
       ) : (
         <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-xl border-b border-hairline-soft">
           <div className="container-csw flex items-center justify-between h-20">
-            <Link to="/" className="flex items-baseline gap-3 group">
+            <button
+              type="button"
+              onClick={() => setMenuOpen(true)}
+              aria-label={t("nav.menu", { defaultValue: "Menu" }) as string}
+              className="group inline-flex items-center gap-3 text-ink hover:text-ink-soft transition-colors duration-500"
+            >
+              <span className="flex flex-col gap-[5px]" aria-hidden>
+                <span className="block h-px w-7 bg-current" />
+                <span className="block h-px w-7 bg-current" />
+              </span>
+              <span className="font-mono text-[11px] tracking-[0.32em] uppercase">
+                {t("nav.menu", { defaultValue: "Menu" })}
+              </span>
+            </button>
+
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 group">
               <span
                 className="font-display text-xl md:text-2xl uppercase text-ink group-hover:text-ink/70 transition-colors duration-500"
-                style={{ fontWeight: 700, letterSpacing: "0.16em" }}
+                style={{ fontWeight: 700, letterSpacing: "0.18em" }}
               >
                 {t("brand.name")}
               </span>
             </Link>
-            <nav className="hidden lg:flex items-center gap-9">
-              {NAV_ITEMS.map((item) => (
-                <NavLink
-                  key={item.key}
-                  to={item.to}
-                  className={({ isActive }) =>
-                    `relative font-mono text-[11px] uppercase tracking-[0.28em] transition-colors duration-500 py-2 ${
-                      isActive ? "text-ink" : "text-ink-soft hover:text-ink"
-                    }`
-                  }
-                >
-                  {({ isActive }) => (
-                    <>
-                      {t(`nav.${item.key}`)}
-                      {isActive && <span className="absolute -bottom-0.5 inset-x-0 h-px bg-ink" />}
-                    </>
-                  )}
-                </NavLink>
-              ))}
-            </nav>
+
             <div className="flex items-center gap-3">
               <ThemeToggle />
               <LanguageSwitcher />
-              {/* Mobile menu trigger */}
-              <button
-                type="button"
-                onClick={() => setMenuOpen(true)}
-                aria-label="Menu"
-                className="lg:hidden inline-flex items-center gap-2 text-ink"
-              >
-                <span className="flex flex-col gap-[4px]" aria-hidden>
-                  <span className="block h-px w-6 bg-current" />
-                  <span className="block h-px w-6 bg-current" />
-                </span>
-              </button>
             </div>
           </div>
         </header>
       )}
 
-      {/* ===== Floating MENU pill — appears after hero scrolls away on homepage ===== */}
+      {/* ===== Floating MENU pill on home after scroll ===== */}
       {onHome && (
         <button
           type="button"
@@ -170,7 +189,7 @@ export const Header = () => {
         </button>
       )}
 
-      {/* ===== Full-screen overlay menu ===== */}
+      {/* ===== Bugatti-style full-screen menu ===== */}
       <div
         className={`fixed inset-0 z-50 transition-all duration-700 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -179,21 +198,16 @@ export const Header = () => {
         role="dialog"
         aria-modal="true"
       >
-        <div className="absolute inset-0 bg-obsidian/96 backdrop-blur-2xl" />
-        <div
-          aria-hidden
-          className="absolute inset-0"
-          style={{
-            background: "radial-gradient(ellipse at center, hsl(220 25% 3% / 0) 0%, hsl(220 25% 3% / 0.6) 100%)",
-          }}
-        />
+        {/* Background — parchment/light like Bugatti */}
+        <div className="absolute inset-0 bg-background" />
 
-        <div className="relative container-csw flex items-center justify-between h-24">
+        {/* Top bar */}
+        <div className="relative flex items-center justify-between h-20 md:h-24 px-6 md:px-12 border-b border-hairline-soft">
           <button
             type="button"
             onClick={() => setMenuOpen(false)}
             aria-label="Close"
-            className="group inline-flex items-center gap-3 text-parchment hover:text-parchment/70 transition-colors duration-500"
+            className="group inline-flex items-center gap-3 text-ink hover:text-ink-soft transition-colors duration-500"
           >
             <span className="relative w-5 h-5" aria-hidden>
               <span className="absolute top-1/2 left-0 w-5 h-px bg-current rotate-45" />
@@ -206,50 +220,148 @@ export const Header = () => {
 
           <Link
             to="/"
-            className="font-display text-2xl md:text-3xl uppercase text-parchment hover:text-parchment/80 transition-colors duration-500"
+            className="absolute left-1/2 -translate-x-1/2 font-display text-xl md:text-2xl uppercase text-ink hover:text-ink/70 transition-colors duration-500"
             style={{ fontWeight: 700, letterSpacing: "0.18em" }}
           >
             {t("brand.name")}
           </Link>
 
-          <div className="flex items-center gap-3 text-parchment">
+          <div className="flex items-center gap-3 text-ink">
             <ThemeToggle />
             <LanguageSwitcher />
           </div>
         </div>
 
-        <nav className="relative h-[calc(100%-6rem)] flex items-center">
-          <div className="container-csw w-full">
-            <ul className="flex flex-col gap-5 md:gap-6">
-              {NAV_ITEMS.map((item, idx) => (
-                <li
-                  key={item.key}
-                  className="overflow-hidden"
+        {/* Body — left list / right preview */}
+        <div className="relative grid grid-cols-1 lg:grid-cols-[minmax(0,460px)_1fr] h-[calc(100%-5rem)] md:h-[calc(100%-6rem)]">
+          {/* LEFT — sectioned list */}
+          <div className="overflow-y-auto px-6 md:px-12 py-10 md:py-14 border-r border-hairline-soft">
+            {NAV_GROUPS.map((group, gIdx) => (
+              <div key={group.groupKey} className={gIdx > 0 ? "mt-12" : ""}>
+                <div
+                  className="font-mono text-[10px] tracking-[0.4em] uppercase text-ink-soft/70 mb-5"
                   style={{
-                    transform: menuOpen ? "translateY(0)" : "translateY(20px)",
                     opacity: menuOpen ? 1 : 0,
-                    transition: `transform 700ms cubic-bezier(0.2,0.7,0.2,1) ${150 + idx * 70}ms, opacity 700ms ease ${150 + idx * 70}ms`,
+                    transform: menuOpen ? "translateY(0)" : "translateY(8px)",
+                    transition: `opacity 600ms ease ${100 + gIdx * 80}ms, transform 600ms ease ${100 + gIdx * 80}ms`,
                   }}
                 >
-                  <NavLink
-                    to={item.to}
-                    className={({ isActive }) =>
-                      `group inline-flex items-baseline gap-6 font-display uppercase text-5xl md:text-7xl lg:text-8xl transition-colors duration-500 ${
-                        isActive ? "text-parchment" : "text-parchment/85 hover:text-parchment"
-                      }`
-                    }
-                    style={{ fontWeight: 700, letterSpacing: "0.02em", lineHeight: 0.95 }}
-                  >
-                    <span className="font-mono text-[10px] tracking-[0.32em] text-parchment/40 group-hover:text-parchment/70 transition-colors">
-                      {String(idx + 1).padStart(2, "0")}
-                    </span>
-                    <span>{t(`nav.${item.key}`)}</span>
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+                  {t(`nav.groups.${group.groupKey}`, {
+                    defaultValue:
+                      group.groupKey === "house"
+                        ? "LA MAISON"
+                        : group.groupKey === "work"
+                        ? "WORK"
+                        : "ENGAGE",
+                  })}
+                </div>
+                <ul className="flex flex-col">
+                  {group.items.map((item, idx) => {
+                    const itemIndex = ALL_ITEMS.findIndex((i) => i.key === item.key);
+                    const isHovered = hoverKey === item.key;
+                    return (
+                      <li
+                        key={item.key}
+                        style={{
+                          opacity: menuOpen ? 1 : 0,
+                          transform: menuOpen ? "translateY(0)" : "translateY(14px)",
+                          transition: `opacity 600ms ease ${180 + itemIndex * 60}ms, transform 600ms ease ${180 + itemIndex * 60}ms`,
+                        }}
+                      >
+                        <NavLink
+                          to={item.to}
+                          onMouseEnter={() => {
+                            setHoverImage(item.image);
+                            setHoverKey(item.key);
+                          }}
+                          onFocus={() => {
+                            setHoverImage(item.image);
+                            setHoverKey(item.key);
+                          }}
+                          className={({ isActive }) =>
+                            `group flex items-center justify-between gap-6 py-4 border-b border-hairline-soft transition-colors duration-500 ${
+                              isActive || isHovered ? "text-ink" : "text-ink-soft hover:text-ink"
+                            }`
+                          }
+                        >
+                          <span
+                            className="font-display uppercase text-2xl md:text-3xl"
+                            style={{ fontWeight: 600, letterSpacing: "0.01em" }}
+                          >
+                            {t(`nav.${item.key}`)}
+                          </span>
+                          <span
+                            className={`font-mono text-[10px] tracking-[0.3em] transition-transform duration-500 ${
+                              isHovered ? "translate-x-1" : ""
+                            }`}
+                            aria-hidden
+                          >
+                            ›
+                          </span>
+                        </NavLink>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+
+            {/* Footer micro-links inside the menu */}
+            <div className="mt-14 pt-8 border-t border-hairline-soft flex flex-wrap gap-x-8 gap-y-3 text-ink-soft">
+              <Link to="/contact" className="font-mono text-[10px] tracking-[0.3em] uppercase hover:text-ink transition-colors">
+                {t("nav.contact")}
+              </Link>
+              <Link to="/careers" className="font-mono text-[10px] tracking-[0.3em] uppercase hover:text-ink transition-colors">
+                {t("nav.careers")}
+              </Link>
+            </div>
           </div>
-        </nav>
+
+          {/* RIGHT — cinematic preview */}
+          <div className="relative hidden lg:block overflow-hidden bg-obsidian">
+            {/* Cross-faded preview images */}
+            {[imgBrand, ...ALL_ITEMS.map((i) => i.image)]
+              .filter((src, i, arr) => arr.indexOf(src) === i)
+              .map((src) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt=""
+                  aria-hidden
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-out"
+                  style={{ opacity: hoverImage === src ? 1 : 0 }}
+                />
+              ))}
+            {/* Tonal grade for legibility */}
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, hsl(220 30% 3% / 0.15) 0%, hsl(220 30% 3% / 0.55) 100%)",
+              }}
+            />
+            {/* Caption */}
+            <div className="absolute bottom-10 left-10 right-10 text-parchment">
+              <div
+                className="font-mono text-[10px] tracking-[0.4em] uppercase text-parchment/70 mb-3"
+                key={`eyebrow-${hoverKey ?? "brand"}`}
+                style={{ animation: "fadeIn 700ms ease both" }}
+              >
+                {hoverKey
+                  ? t(`nav.eyebrow.${hoverKey}`, { defaultValue: t("brand.tagline", { defaultValue: "" }) })
+                  : t("brand.tagline", { defaultValue: "" })}
+              </div>
+              <div
+                className="font-display uppercase text-3xl md:text-5xl leading-[0.95]"
+                style={{ fontWeight: 700, letterSpacing: "0.01em" }}
+                key={`title-${hoverKey ?? "brand"}`}
+              >
+                {hoverKey ? t(`nav.${hoverKey}`) : t("brand.name")}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
