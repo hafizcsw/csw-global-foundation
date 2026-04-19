@@ -36,8 +36,8 @@ export const Portfolio = ({ showFilters = false, showViewAll = true }: Portfolio
   const sectorMatch = FILTER_TO_SECTOR[active];
   const visible = sectorMatch ? companies.filter((c) => c.sector === sectorMatch) : companies;
   return (
-    <section id="portfolio" className="relative border-b border-hairline-soft">
-      <div className="container-csw py-32 md:py-40">
+    <section id="portfolio" className="relative bg-background border-b border-hairline-soft">
+      <div className="container-csw py-32 md:py-44">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <SectionHeader
             eyebrow={t("portfolio.eyebrow")}
@@ -47,7 +47,7 @@ export const Portfolio = ({ showFilters = false, showViewAll = true }: Portfolio
           {showViewAll && (
             <Link
               to="/portfolio"
-              className="group inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-ink hover:text-gold transition-colors duration-500 whitespace-nowrap"
+              className="group inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.28em] text-ink hover:text-ink/70 transition-colors duration-500 whitespace-nowrap"
             >
               {t("portfolio.viewAll")}
               <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -62,10 +62,10 @@ export const Portfolio = ({ showFilters = false, showViewAll = true }: Portfolio
                 key={k}
                 type="button"
                 onClick={() => setActive(k)}
-                className={`px-5 py-3 border text-[10px] uppercase tracking-[0.28em] transition-all duration-500 ${
+                className={`px-5 py-3 border font-mono text-[10px] uppercase tracking-[0.28em] transition-all duration-500 ${
                   active === k
-                    ? "border-gold bg-gold text-obsidian"
-                    : "border-hairline text-ink-soft hover:text-gold hover:border-gold"
+                    ? "border-ink bg-ink text-background"
+                    : "border-hairline-soft text-ink-soft hover:text-ink hover:border-ink/40"
                 }`}
               >
                 {t(`portfolio.filters.${k}`)}
@@ -74,26 +74,43 @@ export const Portfolio = ({ showFilters = false, showViewAll = true }: Portfolio
           </div>
         )}
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-px bg-hairline-soft border border-hairline-soft">
           {visible.map((c, i) => (
-            <article key={i} className="luxury-card p-10 md:p-14 group">
+            <article key={i} className="bg-background p-10 md:p-14 group transition-colors duration-700 hover:bg-secondary/40">
               <div className="flex items-start justify-between gap-6 mb-10">
-                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-ink group-hover:text-gold transition-colors duration-700 leading-tight">
+                <h3
+                  className="font-display uppercase text-ink leading-[0.95] text-2xl md:text-3xl lg:text-4xl"
+                  style={{ fontWeight: 700, letterSpacing: "0.005em" }}
+                >
                   {c.name}
                 </h3>
-                <span className="text-[10px] uppercase tracking-[0.28em] px-3 py-2 border border-gold/40 text-gold whitespace-nowrap">
+                <span className="font-mono text-[10px] uppercase tracking-[0.28em] px-3 py-2 border border-ink/30 text-ink whitespace-nowrap">
                   {c.status}
                 </span>
               </div>
-              <p className="text-base text-ink-soft leading-[1.8] mb-12 max-w-lg">{c.description}</p>
-              <dl className="grid grid-cols-2 gap-y-5 gap-x-8 pt-8 border-t border-hairline text-sm">
+              <p className="text-base text-ink-soft leading-[1.85] mb-12 max-w-lg">{c.description}</p>
+              <dl className="grid grid-cols-2 gap-y-5 gap-x-8 pt-8 border-t border-hairline-soft text-sm">
                 <div>
-                  <dt className="text-[10px] uppercase tracking-[0.28em] text-ink-muted mb-2">{t("portfolio.sectorLabel")}</dt>
-                  <dd className="text-ink font-serif text-lg">{c.sector}</dd>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.28em] text-ink-muted mb-2">
+                    {t("portfolio.sectorLabel")}
+                  </dt>
+                  <dd
+                    className="font-display uppercase text-ink text-base"
+                    style={{ fontWeight: 600, letterSpacing: "0.01em" }}
+                  >
+                    {c.sector}
+                  </dd>
                 </div>
                 <div>
-                  <dt className="text-[10px] uppercase tracking-[0.28em] text-ink-muted mb-2">{t("portfolio.relationshipLabel")}</dt>
-                  <dd className="text-ink font-serif text-lg">{c.relationship}</dd>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.28em] text-ink-muted mb-2">
+                    {t("portfolio.relationshipLabel")}
+                  </dt>
+                  <dd
+                    className="font-display uppercase text-ink text-base"
+                    style={{ fontWeight: 600, letterSpacing: "0.01em" }}
+                  >
+                    {c.relationship}
+                  </dd>
                 </div>
               </dl>
             </article>
