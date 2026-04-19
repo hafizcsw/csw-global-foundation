@@ -10,7 +10,23 @@
     "leadership": "Leadership",
     "news": "News",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "菜单",
+    "close": "关闭",
+    "groups": {
+      "house": "本宅",
+      "work": "业务",
+      "engage": "联系"
+    },
+    "eyebrow": {
+      "about": "本宅",
+      "ourModel": "运营模式",
+      "leadership": "领导层",
+      "portfolio": "企业",
+      "news": "新闻",
+      "careers": "职业",
+      "contact": "联系我们"
+    }
   },
   "brand": {
     "name": "CSW Global",

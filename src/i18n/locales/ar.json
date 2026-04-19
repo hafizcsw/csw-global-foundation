@@ -10,7 +10,23 @@
     "leadership": "القيادة",
     "news": "الأخبار",
     "careers": "الوظائف",
-    "contact": "تواصل"
+    "contact": "تواصل",
+    "menu": "القائمة",
+    "close": "إغلاق",
+    "groups": {
+      "house": "الدار",
+      "work": "الأعمال",
+      "engage": "تواصل"
+    },
+    "eyebrow": {
+      "about": "الدار",
+      "ourModel": "نموذج التشغيل",
+      "leadership": "القيادة",
+      "portfolio": "الشركات",
+      "news": "الأخبار",
+      "careers": "الوظائف",
+      "contact": "تواصل معنا"
+    }
   },
   "brand": {
     "name": "CSW Global",

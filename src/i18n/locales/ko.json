@@ -10,7 +10,23 @@
     "leadership": "Leadership",
     "news": "News",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "메뉴",
+    "close": "닫기",
+    "groups": {
+      "house": "더 하우스",
+      "work": "사업",
+      "engage": "문의"
+    },
+    "eyebrow": {
+      "about": "더 하우스",
+      "ourModel": "운영 모델",
+      "leadership": "리더십",
+      "portfolio": "사업",
+      "news": "뉴스",
+      "careers": "채용",
+      "contact": "문의하기"
+    }
   },
   "brand": {
     "name": "CSW Global",

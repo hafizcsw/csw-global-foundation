@@ -10,7 +10,23 @@
     "leadership": "Leadership",
     "news": "News",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "मेनू",
+    "close": "बंद करें",
+    "groups": {
+      "house": "घराना",
+      "work": "कार्य",
+      "engage": "संपर्क"
+    },
+    "eyebrow": {
+      "about": "घराना",
+      "ourModel": "परिचालन मॉडल",
+      "leadership": "नेतृत्व",
+      "portfolio": "उद्यम",
+      "news": "समाचार",
+      "careers": "करियर",
+      "contact": "संपर्क करें"
+    }
   },
   "brand": {
     "name": "CSW Global",
