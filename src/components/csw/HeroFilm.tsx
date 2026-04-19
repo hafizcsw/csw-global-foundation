@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import heroVideoUrl from "@/assets/hero-cinematic.mp4";
+import heroVideoAsset from "@/assets/hero-cinematic-hd.mp4.asset.json";
+
+const heroVideoUrl = heroVideoAsset.url;
 
 /**
  * HeroFilm — full-bleed cinematic film hero.
