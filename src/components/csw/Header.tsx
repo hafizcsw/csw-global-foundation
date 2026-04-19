@@ -53,35 +53,36 @@ export const Header = () => {
         }`}
       >
         {bugattiMode ? (
-          // ===== Bugatti-style: MENU left · Brand center · Tools right =====
-          <div className="container-csw grid grid-cols-3 items-center h-20">
+          // ===== Bugatti-style: MENU left · Brand absolute-center · Tools right =====
+          <div className="container-csw relative flex items-center justify-between h-20">
             {/* MENU trigger */}
-            <div className="flex items-center justify-start">
-              <button
-                type="button"
-                onClick={() => setMenuOpen(true)}
-                aria-label={t("nav.menu", { defaultValue: "Menu" }) as string}
-                className="group inline-flex items-center gap-3 text-parchment hover:text-gold transition-colors duration-500"
-              >
-                <span className="flex flex-col gap-[5px]" aria-hidden>
-                  <span className="block h-px w-7 bg-current" />
-                  <span className="block h-px w-7 bg-current" />
-                </span>
-                <span className="font-mono text-[11px] tracking-[0.32em] uppercase">
-                  {t("nav.menu", { defaultValue: "Menu" })}
-                </span>
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setMenuOpen(true)}
+              aria-label={t("nav.menu", { defaultValue: "Menu" }) as string}
+              className="group inline-flex items-center gap-3 text-parchment hover:text-gold transition-colors duration-500"
+            >
+              <span className="flex flex-col gap-[5px]" aria-hidden>
+                <span className="block h-px w-6 bg-current" />
+                <span className="block h-px w-6 bg-current" />
+              </span>
+              <span className="font-mono text-[10px] tracking-[0.32em] uppercase">
+                {t("nav.menu", { defaultValue: "Menu" })}
+              </span>
+            </button>
 
-            {/* Brand center */}
-            <Link to="/" className="flex items-center justify-center group">
-              <span className="font-serif text-xl md:text-[1.4rem] tracking-[0.18em] uppercase text-parchment group-hover:text-gold transition-colors duration-500">
+            {/* Brand — absolutely centered to the viewport line */}
+            <Link
+              to="/"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group"
+            >
+              <span className="font-serif text-base md:text-lg tracking-[0.32em] uppercase text-parchment group-hover:text-gold transition-colors duration-500 whitespace-nowrap">
                 {t("brand.name")}
               </span>
             </Link>
 
             {/* Tools right */}
-            <div className="flex items-center justify-end gap-3 text-parchment">
+            <div className="flex items-center gap-3 text-parchment">
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
