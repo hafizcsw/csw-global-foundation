@@ -27,7 +27,7 @@ export const SiteLayout = () => {
   if (isHome) {
     // Homepage owns its own scroll (snap-stage). No global header offset, no footer.
     return (
-      <div className="bg-obsidian text-parchment">
+      <div className="cinematic-dark bg-obsidian text-parchment">
         <Header />
         <main>
           <Outlet />
