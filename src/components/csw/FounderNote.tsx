@@ -1,18 +1,30 @@
 import { useTranslation } from "react-i18next";
+import atmosphereSilk from "@/assets/atmosphere-silk.mp4.asset.json";
 
 /**
- * Bugatti-grade founder note — full editorial chamber, Antonio condensed.
+ * Bugatti-grade founder note — full editorial chamber, Antonio condensed,
+ * cinematic silk/smoke video atmosphere underneath.
  */
 export const FounderNote = () => {
   const { t } = useTranslation();
   return (
     <section className="relative bg-obsidian text-parchment overflow-hidden">
+      <video
+        src={atmosphereSilk.url}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
+      />
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 50%, hsl(220 25% 10%) 0%, hsl(220 22% 4%) 80%)",
+            "radial-gradient(ellipse 70% 60% at 50% 50%, hsl(220 25% 6% / 0.55) 0%, hsl(220 22% 3% / 0.95) 80%)",
         }}
       />
       <div className="container-csw relative py-32 md:py-48">

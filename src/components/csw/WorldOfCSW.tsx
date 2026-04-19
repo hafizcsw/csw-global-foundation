@@ -1,14 +1,16 @@
 import { useTranslation } from "react-i18next";
+import { CinematicBackdrop } from "./CinematicBackdrop";
+import architecture from "@/assets/cinema-architecture-1.jpg";
 
 /**
  * WorldOfCSW — "La Maison" equivalent. The brand's world stated quietly.
- * Massive editorial type, vast negative space.
  */
 export const WorldOfCSW = () => {
   const { t } = useTranslation();
   return (
-    <section className="bg-background text-ink">
-      <div className="container-csw py-32 md:py-48 lg:py-56">
+    <section className="relative bg-background text-ink overflow-hidden">
+      <CinematicBackdrop src={architecture} opacity={20} position="center 30%" />
+      <div className="container-csw relative py-32 md:py-48 lg:py-56">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-3">
             <div className="font-mono text-[10px] tracking-[0.36em] uppercase text-gold">

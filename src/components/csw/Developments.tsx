@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { ArrowUpRight } from "lucide-react";
+import { CinematicBackdrop } from "./CinematicBackdrop";
+import obsidian from "@/assets/cinema-obsidian-veins.jpg";
 
 interface Item { category: string; date: string; title: string; body: string }
 
@@ -7,8 +9,9 @@ export const Developments = () => {
   const { t } = useTranslation();
   const items = t("developments.items", { returnObjects: true }) as Item[];
   return (
-    <section className="relative border-b border-hairline-soft bg-background">
-      <div className="container-csw py-32 md:py-44">
+    <section className="relative border-b border-hairline-soft bg-background overflow-hidden">
+      <CinematicBackdrop src={obsidian} opacity={14} />
+      <div className="container-csw relative py-32 md:py-44">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-8">

@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { CinematicBackdrop } from "./CinematicBackdrop";
+import corridor from "@/assets/cinema-corridor.jpg";
 
 interface Venture {
   name: string;
@@ -12,8 +14,9 @@ export const FlagshipVentures = () => {
   const items = t("home.ventures.items", { returnObjects: true }) as Venture[];
 
   return (
-    <section className="bg-background text-ink">
-      <div className="container-csw py-32 md:py-44">
+    <section className="relative bg-background text-ink overflow-hidden">
+      <CinematicBackdrop src={corridor} opacity={14} position="center 60%" />
+      <div className="container-csw relative py-32 md:py-44">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-4">
             <div className="font-mono text-[10px] tracking-[0.36em] uppercase text-gold">

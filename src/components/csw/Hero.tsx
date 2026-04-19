@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import heroVideo from "@/assets/hero-sovereign.mp4.asset.json";
+import heroVideo from "@/assets/hero-monolith.mp4.asset.json";
 
 export const Hero = () => {
   const { t } = useTranslation();
