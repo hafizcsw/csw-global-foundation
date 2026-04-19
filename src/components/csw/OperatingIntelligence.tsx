@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { CinematicBackdrop } from "./CinematicBackdrop";
+import drafting from "@/assets/cinema-drafting.jpg";
 
 interface Step {
   code: string;
@@ -11,8 +13,9 @@ export const OperatingIntelligence = () => {
   const steps = t("home.intelligence.steps", { returnObjects: true }) as Step[];
 
   return (
-    <section className="bg-background text-ink border-y border-hairline-soft">
-      <div className="container-csw py-32 md:py-44">
+    <section className="relative bg-background text-ink border-y border-hairline-soft overflow-hidden">
+      <CinematicBackdrop src={drafting} opacity={12} />
+      <div className="container-csw relative py-32 md:py-44">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-4">
             <div className="font-mono text-[10px] tracking-[0.36em] uppercase text-gold">

@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { CinematicBackdrop } from "./CinematicBackdrop";
+import dataLattice from "@/assets/cinema-data-lattice.jpg";
 
 interface Domain {
   code: string;
@@ -8,15 +10,15 @@ interface Domain {
 
 /**
  * FlagshipDomains — six large cinematic panels, no card frames.
- * Hairline grid, gold accent on hover, slow reveals.
  */
 export const FlagshipDomains = () => {
   const { t } = useTranslation();
   const items = t("home.domains.items", { returnObjects: true }) as Domain[];
 
   return (
-    <section className="bg-background text-ink border-y border-hairline-soft">
-      <div className="container-csw py-32 md:py-44">
+    <section className="relative bg-background text-ink border-y border-hairline-soft overflow-hidden">
+      <CinematicBackdrop src={dataLattice} opacity={22} tone="dark" />
+      <div className="container-csw relative py-32 md:py-44">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-4">
             <div className="font-mono text-[10px] tracking-[0.36em] uppercase text-gold">
