@@ -139,3 +139,7 @@
   font-family: "Noto Naskh Arabic", "Amiri", "Geeza Pro", "Times New Roman", serif;
   letter-spacing: 0 !important;
 }
+[dir="rtl"] .font-sans,
+[dir="rtl"] body {
+  font-family: "Noto Sans Arabic", "Noto Naskh Arabic", system-ui, sans-serif;
+}
