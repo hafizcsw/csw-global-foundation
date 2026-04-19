@@ -41,7 +41,7 @@ const Home = () => {
           {t("home.world.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.9] text-[3rem] md:text-[5rem] lg:text-[7rem] xl:text-[8rem] max-w-[16ch]"
+          className="font-display uppercase text-parchment leading-[0.95] text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.75rem] max-w-[18ch]"
           style={{ fontWeight: 600, letterSpacing: "0.005em" }}
         >
           {t("home.world.title")}
