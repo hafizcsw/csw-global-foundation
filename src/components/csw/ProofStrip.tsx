@@ -4,16 +4,18 @@ export const ProofStrip = () => {
   const { t } = useTranslation();
   const items = t("proof.items", { returnObjects: true }) as string[];
   return (
-    <section className="border-b border-hairline bg-secondary/40">
-      <div className="container-csw py-6">
-        <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-3">
+    <section className="relative border-y border-hairline-soft bg-obsidian-soft/50">
+      <div className="container-csw py-8">
+        <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-4">
           {items.map((item, idx) => (
-            <span
-              key={idx}
-              className="text-[11px] uppercase tracking-[0.22em] text-ink-soft"
-            >
-              {item}
-            </span>
+            <div key={idx} className="flex items-center gap-3">
+              {idx > 0 && (
+                <span className="hidden md:inline-block h-1 w-1 rounded-full bg-gold/60" aria-hidden />
+              )}
+              <span className="text-[10px] uppercase tracking-[0.32em] text-ink-soft">
+                {item}
+              </span>
+            </div>
           ))}
         </div>
       </div>

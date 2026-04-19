@@ -7,33 +7,42 @@ export const Developments = () => {
   const { t } = useTranslation();
   const items = t("developments.items", { returnObjects: true }) as Item[];
   return (
-    <section className="border-b border-hairline bg-secondary/30">
-      <div className="container-csw py-24 md:py-32">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+    <section className="relative border-b border-hairline-soft bg-obsidian-soft/40">
+      <div className="container-csw py-32 md:py-40">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div className="max-w-2xl">
-            <div className="eyebrow mb-6">{t("developments.eyebrow")}</div>
-            <h2 className="display text-3xl md:text-4xl lg:text-5xl text-ink">
-              {t("developments.title")}
-            </h2>
+            <div className="flex items-center gap-3 mb-8">
+              <span className="h-px w-10 bg-gold" />
+              <span className="eyebrow">{t("developments.eyebrow")}</span>
+            </div>
+            <h2 className="display text-3xl md:text-5xl lg:text-6xl">{t("developments.title")}</h2>
           </div>
-          <a href="#" className="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-ink hover:text-gold transition-colors">
+          <a
+            href="#"
+            className="group inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-ink hover:text-gold transition-colors duration-500"
+          >
             {t("developments.viewAll")}
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-px bg-hairline border border-hairline">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((item, i) => (
-            <article key={i} className="bg-background p-8 md:p-10 flex flex-col group cursor-pointer hover:bg-card transition-colors">
-              <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-muted-foreground mb-8">
-                <span>{item.category}</span>
-                <span>{item.date}</span>
+            <article
+              key={i}
+              className="luxury-card p-10 md:p-12 flex flex-col group cursor-pointer min-h-[340px]"
+            >
+              <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.32em] mb-10">
+                <span className="text-gold">{item.category}</span>
+                <span className="text-ink-muted">{item.date}</span>
               </div>
-              <h3 className="font-serif text-xl md:text-2xl text-ink mb-4 leading-snug">{item.title}</h3>
-              <p className="text-sm text-ink-soft leading-relaxed flex-1">{item.body}</p>
-              <div className="mt-8 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-ink group-hover:text-gold transition-colors">
-                <span className="h-px w-6 bg-current" />
-                <ArrowUpRight className="h-3.5 w-3.5" />
+              <h3 className="font-serif text-xl md:text-2xl text-ink mb-5 leading-snug group-hover:text-gold transition-colors duration-700">
+                {item.title}
+              </h3>
+              <p className="text-sm text-ink-soft leading-[1.8] flex-1">{item.body}</p>
+              <div className="mt-10 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-ink-soft group-hover:text-gold transition-colors duration-500">
+                <span className="h-px w-8 bg-current" />
+                <ArrowUpRight className="h-4 w-4" />
               </div>
             </article>
           ))}

@@ -14,20 +14,23 @@ const AboutPage = () => {
   return (
     <>
       <PageHeader eyebrowKey="about.eyebrow" titleKey="about.title" bodyKey="about.intro" />
-      <section className="border-b border-hairline bg-secondary/30">
-        <div className="container-csw py-24 md:py-32">
+      <section className="relative border-b border-hairline-soft bg-obsidian-soft/40">
+        <div className="container-csw py-32 md:py-40">
           <SectionHeader
             eyebrow={t("about.principlesEyebrow")}
             title={t("about.principlesTitle")}
           />
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-px bg-hairline border border-hairline">
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
             {principles.map((p, i) => (
-              <div key={i} className="bg-background p-8 md:p-10">
-                <div className="text-[11px] uppercase tracking-[0.22em] text-gold mb-6">
-                  {String(i + 1).padStart(2, "0")}
+              <div key={i} className="luxury-card p-10 md:p-12 group">
+                <div className="flex items-baseline justify-between mb-10">
+                  <span className="font-serif text-5xl text-gold/40 group-hover:text-gold transition-colors duration-700">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="h-px w-12 bg-hairline group-hover:bg-gold transition-colors duration-700" />
                 </div>
-                <h3 className="font-serif text-2xl text-ink mb-4">{p.title}</h3>
-                <p className="text-sm text-ink-soft leading-relaxed">{p.body}</p>
+                <h3 className="font-serif text-2xl md:text-3xl text-ink mb-5 leading-tight">{p.title}</h3>
+                <p className="text-sm text-ink-soft leading-[1.8]">{p.body}</p>
               </div>
             ))}
           </div>

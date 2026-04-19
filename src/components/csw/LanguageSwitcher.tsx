@@ -15,7 +15,7 @@ export const LanguageSwitcher = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-ink transition-colors"
+        className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-ink-soft hover:text-gold transition-colors duration-500"
         aria-label={t("footer.language")}
       >
         <Globe className="h-3.5 w-3.5" />
