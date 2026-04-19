@@ -57,29 +57,8 @@ export const HeroFilm = () => {
         }}
       />
 
-      <div
-        className="absolute top-28 start-6 md:start-12 lg:start-20 z-10 reveal-soft"
-        style={{ animationDelay: "300ms" }}
-      >
-        <div className="flex items-start gap-3">
-          <span className="mt-[6px] h-px w-8 bg-gold/70" />
-          <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-parchment/70">
-            {t("home.world.marker")} &nbsp; {t("home.world.eyebrow")}
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="absolute top-28 end-6 md:end-12 lg:end-20 z-10 reveal-soft text-end"
-        style={{ animationDelay: "400ms" }}
-      >
-        <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-parchment/65">
-          {t("hero.specSeries")}
-        </div>
-        <div className="mt-1 font-mono text-[10px] tracking-[0.3em] text-parchment/45">
-          {t("hero.specCoords")}
-        </div>
-      </div>
+      {/* Top markers removed — brand already lives in the header.
+          Keeping the hero quiet lets the film + headline carry the moment. */}
 
       <div className="absolute inset-x-0 bottom-0 z-10">
         <div className="container-csw pb-16 md:pb-20 lg:pb-24">
