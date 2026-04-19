@@ -1,8 +1,15 @@
 # Door 1 — Strategy / Truth / Structure
 
-Status: **LOCKED (v1)**
+Status: **NEAR-CLOSE (revision r2). NOT CLOSED.**
 Owner: CSW Global
-Scope: This document is the canonical source of truth for the website's narrative, sitemap, taxonomy, scope, and approved copy. Doors 2, 3, and 4 must conform to this document. Any change requires a Door 1 re-open.
+Scope: Canonical source of truth for narrative, sitemap, taxonomy, scope, and approved copy. Doors 2–4 must conform. Any change requires a Door 1 re-open.
+
+---
+
+## 0. Revision history
+
+- **r1** — initial lock attempt. **Retracted.** Closed prematurely; silently introduced "Capabilities" as a top-level nav item, silently locked "no managed backend" as a rule, and treated placeholder venture names as approved launch copy.
+- **r2 (current)** — corrections applied. Door 1 is **near-close**, awaiting three explicit confirmations (§8) before it can be marked closed.
 
 ---
 
@@ -12,67 +19,92 @@ Scope: This document is the canonical source of truth for the website's narrativ
 CSW Global is a parent company and venture builder that creates, operates, and scales AI-native businesses for long-term value and intelligent global expansion.
 
 **Voice & tone**
-- Institutional, restrained, precise.
-- No startup hype, no inflated metrics, no consumer-brand tone.
-- Long-horizon, operator-led, structurally confident.
+Institutional, restrained, precise. No startup hype, no inflated metrics, no consumer-brand tone. Long-horizon, operator-led, structurally confident.
 
-**Non-negotiables**
+**Non-negotiables (locked)**
 - 12-language readiness from day one (architecture, not translation completeness).
 - No hardcoded visible UI text in code.
-- Private deployment environment only. No Lovable Cloud, no managed backend.
+- **Private environment only.**
+- **No Lovable Cloud under any circumstances.**
 - No fabricated proof, logos, metrics, partners, or names.
+
+**Explicitly NOT locked at Door 1**
+- Whether the site uses any managed backend or not. The only Door 1 rule on infrastructure is "private environment only, no Lovable Cloud." Backend posture beyond that is a Door 3 decision.
 
 ---
 
-## 2. Final sitemap (v1)
+## 2. Canonical sitemap (v1, multi-route — locked)
 
-Routes that ship in v1:
+Single-page scroll is **rejected**. v1 ships as a multi-route site.
 
-| Path                  | Page                        | Status |
-|-----------------------|-----------------------------|--------|
-| `/`                   | Home                        | v1     |
-| `/about`              | About / Parent Company      | v1     |
-| `/portfolio`          | Portfolio index             | v1     |
-| `/portfolio/:slug`    | Portfolio company detail    | v1     |
-| `/operating-model`    | Operating model             | v1     |
-| `/capabilities`       | Shared capabilities         | v1     |
-| `/careers`            | Careers (static, no ATS)    | v1     |
-| `/contact`            | Strategic contact           | v1     |
-| `/legal/privacy`      | Privacy                     | v1     |
-| `/legal/terms`        | Terms                       | v1     |
-| `*`                   | 404                         | v1     |
+| Path                  | Page                        | In v1 |
+|-----------------------|-----------------------------|-------|
+| `/`                   | Home                        | yes   |
+| `/about`              | About                       | yes   |
+| `/portfolio`          | Portfolio index             | yes   |
+| `/portfolio/:slug`    | Portfolio company detail    | yes   |
+| `/our-model`          | Our Model                   | yes   |
+| `/leadership`         | Leadership index            | yes   |
+| `/leadership/:slug`   | Leadership profile          | yes   |
+| `/news`               | News index                  | yes   |
+| `/news/:slug`         | News article                | yes   |
+| `/careers`            | Careers (static, no ATS)    | yes   |
+| `/contact`            | Contact                     | yes   |
+| `/legal/privacy`      | Privacy                     | yes   |
+| `/legal/terms`        | Terms                       | yes   |
+| `*`                   | 404                         | yes   |
 
-Deferred (post-v1, explicitly out of scope):
-- `/news` index + `/news/:slug` (Developments stays as homepage section in v1).
-- `/leadership` and `/leadership/:slug`.
+Deferred (post-v1):
 - Per-language country/region landing pages.
 - Investor relations area.
 - Search.
+- Live ATS / job board on `/careers`.
+- CMS. v1 content lives in typed TS/JSON in the repo.
 
 ---
 
-## 3. Page purpose map
+## 3. Canonical navigation (locked)
 
-Each page has exactly one job. If a page tries to do two jobs, it gets split.
+Top navigation, in order:
+
+1. About
+2. Portfolio
+3. Our Model
+4. Leadership
+5. News
+6. Careers
+7. Contact
+
+Rules:
+- **No "Capabilities" as a top-level nav item.** Shared capabilities content lives inside `/our-model` (and/or `/about`) as a section, not as a route or nav entry.
+- Footer mirrors the same nav, plus legal links and the language switcher.
+- Nav labels are translation keys, never hardcoded.
+
+---
+
+## 4. Page purpose map
 
 | Page               | Single job                                                                 | Primary CTA                  |
 |--------------------|----------------------------------------------------------------------------|------------------------------|
-| Home               | Communicate what CSW Global is and route visitors to Portfolio or About.   | Explore Portfolio            |
-| About              | Explain the parent-company thesis and operating philosophy.                | View Operating Model         |
+| Home               | Communicate what CSW Global is and route to Portfolio or About.            | Explore Portfolio            |
+| About              | Parent-company thesis and operating philosophy.                            | View Our Model               |
 | Portfolio index    | Show the portfolio as an institutional set, filterable by domain/status.   | Open a company               |
-| Portfolio detail   | Present one venture: sector, status, description, relationship to CSW.     | Back to Portfolio / Contact  |
-| Operating model    | Explain the repeatable system used to build and operate ventures.          | View Capabilities            |
-| Capabilities       | List the shared capabilities concentrated at the parent level.             | Contact for partnerships     |
-| Careers            | Invite operators and specialists; set hiring posture (no live ATS in v1).  | Contact Careers              |
-| Contact            | Route partnerships, media, strategic inquiries to the right channel.       | Begin a conversation         |
-| Legal pages        | Provide privacy and terms; institutional minimum.                          | —                            |
+| Portfolio detail   | Present one venture: domain, status, description, relationship to CSW.     | Back to Portfolio / Contact  |
+| Our Model          | The repeatable system used to build and operate ventures + shared caps.    | View Portfolio               |
+| Leadership index   | Present the leadership group institutionally.                              | Open a profile               |
+| Leadership profile | Single leader: role, remit, short bio.                                     | Back to Leadership           |
+| News index         | Chronological list of institutional updates.                               | Open an article              |
+| News article       | One update: category, date, title, body.                                   | Back to News                 |
+| Careers            | Hiring posture; route to Contact (no live ATS in v1).                      | Contact Careers              |
+| Contact            | Route partnerships, media, strategic inquiries.                            | Begin a conversation         |
+| Legal              | Privacy and terms; institutional minimum.                                  | —                            |
 | 404                | Recover the visitor to Home or Portfolio.                                  | Return Home                  |
 
 ---
 
-## 4. Portfolio domain taxonomy
+## 5. Portfolio domain taxonomy (locked)
 
-Domains are fixed. Companies are tagged with **exactly one** primary domain. Status is one of three values. Relationship is one of three values. No free text on these fields.
+Companies are tagged with **exactly one** primary domain. Status and Relationship are controlled vocabularies. No free text on these fields.
 
 **Primary domains (6)**
 1. Education & Opportunity
@@ -82,121 +114,81 @@ Domains are fixed. Companies are tagged with **exactly one** primary domain. Sta
 5. AI & Operating Infrastructure
 6. Future Strategic Ventures
 
-**Status (controlled vocabulary)**
-- In Development
-- In Operation
-- Scaling
+**Status**: In Development · In Operation · Scaling
+**Relationship**: Wholly owned subsidiary · Operated by CSW Global · Incubated by CSW Global
 
-**Relationship to CSW Global (controlled vocabulary)**
-- Wholly owned subsidiary
-- Operated by CSW Global
-- Incubated by CSW Global
-
-**Portfolio entry shape (data contract)**
+**Entry shape (data contract)**
 ```
-slug:          string, kebab-case, stable, used in URL
-name:          string
-domain:        one of the 6 primary domains
-status:        one of the 3 status values
-relationship:  one of the 3 relationship values
-summary:       1–2 sentences, plain institutional language
-description:   2–4 short paragraphs, optional in v1
+slug, name, domain, status, relationship, summary (1–2 sentences), description (optional)
 ```
 
-All portfolio data lives in a single typed registry consumed by both the Portfolio index and detail routes. No per-page hardcoding.
+Single typed registry consumed by both Portfolio index and detail routes. No per-page hardcoding.
 
 ---
 
-## 5. v1 vs later scope
+## 6. v1 scope
 
-**In v1 (must ship)**
-- All routes listed in the sitemap above.
-- 12-language i18n architecture with English translated and 11 scaffolds clearly labeled.
-- RTL support verified for Arabic.
-- Portfolio registry with at least 4 entries (placeholder names allowed if real names are not yet cleared, but marked as such in content).
+**In v1**
+- All routes in §2.
+- Top nav per §3.
+- 12-language i18n architecture; English translated; 11 scaffolds clearly labeled.
+- RTL verified for Arabic.
+- Portfolio registry with at least 4 entries. **Names are internal scaffolds until cleared. They are not approved launch copy and will not ship to production unless replaced or explicitly approved.**
+- Leadership registry: structure ready; entries are internal scaffolds until cleared.
+- News registry: structure ready; at least 3 scaffold entries clearly marked as such.
 - Footer with language switcher and legal links.
-- Sitemap.xml and robots.txt for the production domain.
-- OG/Twitter metadata per route.
+- `sitemap.xml`, `robots.txt`, OG/Twitter metadata per route.
 
-**Out of v1 (explicitly later)**
-- News/Developments as its own route.
-- Leadership pages.
-- Country landing pages.
-- Live job board / ATS integration.
-- Newsletter / forms backed by a server.
-- Analytics beyond a privacy-respecting page-view counter.
-- CMS. Content stays in typed TS/JSON in the repo for v1.
+**Deferred (out of v1)**
+- Country landing pages, IR area, search, ATS, CMS, newsletter/forms with a server.
 
 ---
 
-## 6. Approved master copy (v1)
+## 7. Approved master copy (v1)
 
-The English copy below is the approved baseline. It lives in `src/i18n/locales/en.json` and is mirrored structurally (scaffolds) into the other 11 locale files. No visible string in any component may exist outside this resource.
+English copy lives in `src/i18n/locales/en.json` and is mirrored structurally (scaffolds) in the other 11 locale files. No visible string in any component may exist outside this resource.
 
-> Copy is intentionally restrained. Edits require Door 1 re-open.
+**Approved as launch copy**: brand, nav labels, Home, Thesis, sector cards, Our Model steps, Shared Capabilities list, Global Outlook, Founder note framing, Careers framing, Contact framing, Footer.
 
-### 6.1 Brand
-- Name: **CSW Global**
-- Tagline: **Parent Company**
+**Internal scaffold only — not approved for launch**:
+- All venture names and venture descriptions in the portfolio registry.
+- All leadership names, roles, and bios.
+- All News entries and dates (use *Recent* until real dates exist).
+- Institutional contact email (see §8.3).
 
-### 6.2 Navigation labels
-Portfolio · About · Operating Model · Capabilities · Careers · Contact
-
-### 6.3 Home
-- Eyebrow: *Parent Company · Venture Builder*
-- Headline: **Building the next generation of global companies.**
-- Subheadline: *CSW Global is the parent company behind a growing portfolio of AI-native ventures, built for long-term value, operational leverage, and intelligent global expansion.*
-- Primary CTA: *Explore Portfolio*
-- Secondary CTA: *About CSW Global*
-
-### 6.4 Proof strip (no fabricated metrics)
-Parent Company · Venture Builder · AI-Native Operations · Global Ambition · Shared Infrastructure
-
-### 6.5 Thesis
-- Title: *A structured system for building and operating companies.*
-- Body: *CSW Global is not a collection of brands. It is an integrated operating platform that combines strategic discipline, technology, AI systems, and execution depth to design ventures with structural advantages from inception.*
-- Pillars: Strategy / Technology / Operations (bodies in `en.json`).
-
-### 6.6 What we build
-Six sector cards mapped 1:1 to the portfolio taxonomy in §4.
-
-### 6.7 Portfolio preview (homepage)
-Shows up to 4 entries from the registry, sorted by status then name. Links to `/portfolio/:slug`.
-
-### 6.8 Operating model
-Five steps: Identify Structural Opportunity → Design the Venture Framework → Deploy Shared Infrastructure → Operate with Discipline → Scale with Leverage.
-
-### 6.9 Shared capabilities
-Strategy · Product Development · AI Systems · Brand Architecture · Digital Operations · Data & Intelligence · Multilingual Readiness · Market Expansion Support.
-
-### 6.10 Global outlook
-Built for international markets and multilingual operation from the foundation.
-
-### 6.11 Founder note
-Restrained, no emotional excess. Attribution: *Founder, CSW Global*.
-
-### 6.12 Latest developments
-Three institutional updates. Category · Date · Title · Body. No fabricated dates — use *Recent* until real dates exist.
-
-### 6.13 Careers
-Invite operators and specialists. v1 has no live roles board; CTA routes to Contact.
-
-### 6.14 Strategic contact
-Three lanes: Partnerships · Media · Strategic Inquiries. v1 routes to a single institutional email; no form backend.
-
-### 6.15 Footer
-Rights line · parent-company line · language switcher · legal links.
+A scaffold flag must be visible in the data layer (e.g., `scaffold: true`) so QA can block production builds that still contain scaffold content in approved-launch slots.
 
 ---
 
-## 7. Door 1 closure criteria
+## 8. Open confirmations (block Door 1 closure)
 
-Door 1 is closed when **all** of the following are true:
-- [x] Sitemap locked (§2).
-- [x] Page purposes locked (§3).
-- [x] Portfolio taxonomy locked (§4).
-- [x] v1 scope locked (§5).
-- [x] Approved copy locked in `src/i18n/locales/en.json` and mirrored as scaffolds in the other 11 locales.
-- [x] Deployment posture locked: private environment only, no Lovable Cloud, no managed backend.
+Door 1 cannot move to **CLOSED** until these three are explicitly answered:
 
-**Door 1: CLOSED.** Proceed to Door 2.
+- **8.1 Portfolio names** — Confirm: keep placeholder venture names as internal scaffolds (not shipped to production) **OR** provide the cleared real names now.
+- **8.2 Leadership entries** — Confirm: scaffold-only for v1 launch (page exists, entries marked scaffold) **OR** provide real leadership entries now.
+- **8.3 Institutional contact email** — **Unresolved.** No real address has been provided. A placeholder may be used internally during build but must not ship to production. Provide the real address before launch.
+
+---
+
+## 9. What is truly locked vs deferred
+
+**Locked at Door 1 (r2)**
+- Positioning, voice, non-negotiables (§1).
+- Multi-route sitemap (§2).
+- Top nav order and the exclusion of "Capabilities" as a route/nav item (§3).
+- Page purpose map (§4).
+- Portfolio taxonomy and data contract (§5).
+- v1 scope boundary (§6).
+- Approved master copy slots vs scaffold slots (§7).
+- Deployment rule: **private environment only, no Lovable Cloud.**
+
+**Deferred**
+- Country/region pages, IR, search, ATS, CMS, server-backed forms.
+- Backend posture beyond "private environment only, no Lovable Cloud" (Door 3 decision).
+- Real venture names, real leadership entries, real news dates, real contact email (block production, not Door 1 structure).
+
+---
+
+## 10. Door 1 closure criteria
+
+Door 1 closes only when §8.1, §8.2, and §8.3 each have an explicit answer recorded here. Until then: **NEAR-CLOSE.**
