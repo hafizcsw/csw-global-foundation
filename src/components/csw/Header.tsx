@@ -20,8 +20,10 @@ export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const isFilmHero = pathname === "/";
-  // Bugatti-style layout only over the film hero (homepage, before scroll)
-  const bugattiMode = isFilmHero && !scrolled;
+  // Homepage always uses the cinematic header variant only.
+  // Because the header is absolute on home, it scrolls away with the hero
+  // instead of switching into the classic nav on slight scroll.
+  const bugattiMode = isFilmHero;
   const useInverse = isFilmHero;
 
   useEffect(() => {
