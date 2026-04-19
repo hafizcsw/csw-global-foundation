@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import heroVideo from "@/assets/hero-sovereign.mp4.asset.json";
+import heroVideoUrl from "@/assets/hero-cinematic.mp4";
 
 /**
  * HeroFilm — full-bleed cinematic film hero.
@@ -27,7 +27,7 @@ export const HeroFilm = () => {
     >
       {!reduce && (
         <video
-          src={heroVideo.url}
+          src={heroVideoUrl}
           autoPlay
           loop
           muted
