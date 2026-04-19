@@ -10,7 +10,23 @@
     "leadership": "Leadership",
     "news": "News",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Menü",
+    "close": "Schließen",
+    "groups": {
+      "house": "Das Haus",
+      "work": "Arbeit",
+      "engage": "Kontakt"
+    },
+    "eyebrow": {
+      "about": "Das Haus",
+      "ourModel": "Betriebsmodell",
+      "leadership": "Führung",
+      "portfolio": "Unternehmen",
+      "news": "Neuigkeiten",
+      "careers": "Karriere",
+      "contact": "Kontakt"
+    }
   },
   "brand": {
     "name": "CSW Global",

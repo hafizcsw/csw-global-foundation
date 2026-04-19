@@ -10,7 +10,23 @@
     "leadership": "Leadership",
     "news": "News",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "メニュー",
+    "close": "閉じる",
+    "groups": {
+      "house": "本社",
+      "work": "事業",
+      "engage": "お問い合わせ"
+    },
+    "eyebrow": {
+      "about": "本社",
+      "ourModel": "運営モデル",
+      "leadership": "リーダーシップ",
+      "portfolio": "事業",
+      "news": "ニュース",
+      "careers": "キャリア",
+      "contact": "お問い合わせ"
+    }
   },
   "brand": {
     "name": "CSW Global",

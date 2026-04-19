@@ -10,7 +10,23 @@
     "leadership": "Leadership",
     "news": "News",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "groups": {
+      "house": "La Casa",
+      "work": "Trabajo",
+      "engage": "Contacto"
+    },
+    "eyebrow": {
+      "about": "La Casa",
+      "ourModel": "Modelo Operativo",
+      "leadership": "Liderazgo",
+      "portfolio": "Empresas",
+      "news": "Noticias",
+      "careers": "Carreras",
+      "contact": "Contáctenos"
+    }
   },
   "brand": {
     "name": "CSW Global",
