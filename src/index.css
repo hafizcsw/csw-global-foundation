@@ -47,12 +47,12 @@
     --ink-soft: 220 12% 26%;
     --ink-muted: 220 8% 44%;
     --parchment: 30 14% 98%;
-    /* In light mode, "obsidian" surfaces become refined warm off-white panels
-       so dark-themed sections (Header/Footer/Hero overlays) don't punch
-       black holes through the page. Text inside still uses --ink which is
-       dark in light mode, so contrast stays correct. */
-    --obsidian: 30 12% 94%;
-    --obsidian-soft: 30 10% 90%;
+    /* `obsidian` stays a true deep tone in BOTH modes — reserved for
+       cinematic surfaces (Hero film bed, scrolled Header, video overlays)
+       which must read dark so footage and gold accents register.
+       Non-cinematic sections use bg-background / bg-card / bg-secondary. */
+    --obsidian: 220 22% 4%;
+    --obsidian-soft: 220 18% 8%;
 
     /* Warm metallic gold (institutional, not yellow) */
     --gold: 38 55% 45%;
