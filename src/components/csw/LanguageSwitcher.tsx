@@ -21,14 +21,21 @@ export const LanguageSwitcher = () => {
         <Globe className="h-3.5 w-3.5" />
         <span>{current.label}</span>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-[200px] max-h-[60vh] overflow-y-auto">
+      <DropdownMenuContent align="end" className="min-w-[240px] max-h-[60vh] overflow-y-auto">
         {SUPPORTED_LANGUAGES.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => i18n.changeLanguage(lang.code)}
-            className="flex items-center justify-between text-sm cursor-pointer"
+            className="flex items-center justify-between gap-3 text-sm cursor-pointer"
           >
-            <span>{lang.label}</span>
+            <span className="flex items-center gap-2">
+              <span>{lang.label}</span>
+              {lang.status === "scaffold" && (
+                <span className="text-[9px] uppercase tracking-[0.18em] text-muted-foreground border border-hairline px-1.5 py-0.5">
+                  scaffold
+                </span>
+              )}
+            </span>
             {lang.code === current.code && <Check className="h-3.5 w-3.5 text-gold" />}
           </DropdownMenuItem>
         ))}
