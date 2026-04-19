@@ -126,3 +126,16 @@
     border-color: hsl(var(--hairline));
   }
 }
+
+/* RTL / Arabic typography override.
+   Cormorant Garamond + Inter have no Arabic glyphs, which breaks shaping.
+   Use platform Arabic system stack and neutralize negative tracking for RTL. */
+[dir="rtl"] {
+  font-family: "Noto Naskh Arabic", "Geeza Pro", "Tahoma", system-ui, sans-serif;
+  letter-spacing: 0 !important;
+}
+[dir="rtl"] .display,
+[dir="rtl"] .font-serif {
+  font-family: "Noto Naskh Arabic", "Amiri", "Geeza Pro", "Times New Roman", serif;
+  letter-spacing: 0 !important;
+}
