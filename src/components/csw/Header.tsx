@@ -20,18 +20,23 @@ export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const isFilmHero = pathname === "/";
-  // Homepage always uses the cinematic header variant only.
-  // Because the header is absolute on home, it scrolls away with the hero
-  // instead of switching into the classic nav on slight scroll.
-  const bugattiMode = isFilmHero;
-  const useInverse = isFilmHero;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    // Watch scroll on window AND on the snap-stage container (homepage)
+    const onScroll = () => {
+      const stage = document.querySelector(".snap-stage") as HTMLElement | null;
+      const y = stage ? stage.scrollTop : window.scrollY;
+      setScrolled(y > 60);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const stage = document.querySelector(".snap-stage");
+    stage?.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      stage?.removeEventListener("scroll", onScroll as EventListener);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -40,53 +45,49 @@ export const Header = () => {
     };
   }, [menuOpen]);
 
-  // Close menu on route change
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
-  // On the homepage the header sits ABSOLUTELY over the cinematic hero,
-  // so it scrolls away with the hero and never reappears. The MENU trigger
-  // inside the hero is the single entry point to navigation.
-  // On all other pages the header stays sticky as usual.
-  const positionClass = isFilmHero
-    ? "absolute top-0 left-0 right-0 z-40"
-    : "sticky top-0 z-40";
+  // Homepage: header is absolute over hero, scrolls away with it.
+  // Other pages: classic sticky header.
+  const onHome = isFilmHero;
 
   return (
     <>
-      <header
-        className={`${positionClass} transition-all duration-700 ${
-          !isFilmHero && scrolled
-            ? "bg-obsidian/85 backdrop-blur-xl border-b border-hairline shadow-elegant"
-            : "bg-transparent border-b border-transparent"
-        }`}
-      >
-        {bugattiMode ? (
-          // ===== Bugatti-style: MENU left · Brand absolute-center · Tools right =====
-          <div className="container-csw relative flex items-center justify-between h-20">
-            {/* MENU trigger */}
+      {/* ===== Bugatti-style header — only on hero, fades on scroll ===== */}
+      {onHome ? (
+        <header
+          className={`absolute top-0 left-0 right-0 z-40 transition-opacity duration-700 ${
+            scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        >
+          <div className="container-csw relative flex items-center justify-between h-24">
+            {/* MENU left */}
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
               aria-label={t("nav.menu", { defaultValue: "Menu" }) as string}
-              className="group inline-flex items-center gap-3 text-parchment hover:text-gold transition-colors duration-500"
+              className="group inline-flex items-center gap-3 text-parchment hover:text-parchment/70 transition-colors duration-500"
             >
               <span className="flex flex-col gap-[5px]" aria-hidden>
-                <span className="block h-px w-6 bg-current" />
-                <span className="block h-px w-6 bg-current" />
+                <span className="block h-px w-7 bg-current" />
+                <span className="block h-px w-7 bg-current" />
               </span>
-              <span className="font-mono text-[10px] tracking-[0.32em] uppercase">
+              <span className="font-mono text-[11px] tracking-[0.32em] uppercase">
                 {t("nav.menu", { defaultValue: "Menu" })}
               </span>
             </button>
 
-            {/* Brand — absolutely centered, Bugatti-style thin wide-tracked sans */}
+            {/* Brand center — Antonio bold, wide tracking, like BUGATTI */}
             <Link
               to="/"
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group"
             >
-              <span className="font-sans font-light text-base md:text-lg tracking-[0.42em] uppercase text-parchment group-hover:text-gold transition-colors duration-500 whitespace-nowrap">
+              <span
+                className="font-display text-2xl md:text-3xl uppercase text-parchment group-hover:text-parchment/80 transition-colors duration-500 whitespace-nowrap"
+                style={{ fontWeight: 700, letterSpacing: "0.18em" }}
+              >
                 {t("brand.name")}
               </span>
             </Link>
@@ -97,15 +98,16 @@ export const Header = () => {
               <LanguageSwitcher />
             </div>
           </div>
-        ) : (
-          // ===== Classic header (other pages, or homepage when scrolled) =====
+        </header>
+      ) : (
+        <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-xl border-b border-hairline-soft">
           <div className="container-csw flex items-center justify-between h-20">
             <Link to="/" className="flex items-baseline gap-3 group">
-              <span className={`font-serif text-xl tracking-wide transition-colors duration-500 ${useInverse ? "text-parchment group-hover:text-gold" : "text-ink group-hover:text-gold"}`}>
+              <span
+                className="font-display text-xl md:text-2xl uppercase text-ink group-hover:text-ink/70 transition-colors duration-500"
+                style={{ fontWeight: 700, letterSpacing: "0.16em" }}
+              >
                 {t("brand.name")}
-              </span>
-              <span className={`hidden md:inline text-[10px] uppercase tracking-[0.32em] ${useInverse ? "text-parchment/55" : "text-ink-muted"}`}>
-                {t("brand.tagline")}
               </span>
             </Link>
             <nav className="hidden lg:flex items-center gap-9">
@@ -114,35 +116,61 @@ export const Header = () => {
                   key={item.key}
                   to={item.to}
                   className={({ isActive }) =>
-                    `relative text-[11px] uppercase tracking-[0.24em] transition-colors duration-500 py-2 ${
-                      isActive
-                        ? "text-gold"
-                        : useInverse
-                          ? "text-parchment/65 hover:text-parchment"
-                          : "text-ink-soft hover:text-ink"
+                    `relative font-mono text-[11px] uppercase tracking-[0.28em] transition-colors duration-500 py-2 ${
+                      isActive ? "text-ink" : "text-ink-soft hover:text-ink"
                     }`
                   }
                 >
                   {({ isActive }) => (
                     <>
                       {t(`nav.${item.key}`)}
-                      {isActive && (
-                        <span className="absolute -bottom-0.5 inset-x-0 h-px bg-gold" />
-                      )}
+                      {isActive && <span className="absolute -bottom-0.5 inset-x-0 h-px bg-ink" />}
                     </>
                   )}
                 </NavLink>
               ))}
             </nav>
-            <div className={`flex items-center gap-3 ${useInverse ? "text-parchment" : ""}`}>
+            <div className="flex items-center gap-3">
               <ThemeToggle />
               <LanguageSwitcher />
+              {/* Mobile menu trigger */}
+              <button
+                type="button"
+                onClick={() => setMenuOpen(true)}
+                aria-label="Menu"
+                className="lg:hidden inline-flex items-center gap-2 text-ink"
+              >
+                <span className="flex flex-col gap-[4px]" aria-hidden>
+                  <span className="block h-px w-6 bg-current" />
+                  <span className="block h-px w-6 bg-current" />
+                </span>
+              </button>
             </div>
           </div>
-        )}
-      </header>
+        </header>
+      )}
 
-      {/* ===== Full-screen overlay menu (Bugatti-style) ===== */}
+      {/* ===== Floating MENU pill — appears after hero scrolls away on homepage ===== */}
+      {onHome && (
+        <button
+          type="button"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Menu"
+          className={`fixed top-6 left-6 z-40 inline-flex items-center gap-3 px-5 py-3 rounded-full border border-parchment/40 bg-obsidian/70 backdrop-blur-md text-parchment hover:bg-obsidian/90 hover:border-parchment transition-all duration-700 ${
+            scrolled ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-3 pointer-events-none"
+          }`}
+        >
+          <span className="flex flex-col gap-[4px]" aria-hidden>
+            <span className="block h-px w-5 bg-current" />
+            <span className="block h-px w-5 bg-current" />
+          </span>
+          <span className="font-mono text-[10px] tracking-[0.32em] uppercase">
+            {t("nav.menu", { defaultValue: "Menu" })}
+          </span>
+        </button>
+      )}
+
+      {/* ===== Full-screen overlay menu ===== */}
       <div
         className={`fixed inset-0 z-50 transition-all duration-700 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -151,26 +179,21 @@ export const Header = () => {
         role="dialog"
         aria-modal="true"
       >
-        {/* Backdrop */}
         <div className="absolute inset-0 bg-obsidian/96 backdrop-blur-2xl" />
-
-        {/* Tonal vignette */}
         <div
           aria-hidden
           className="absolute inset-0"
           style={{
-            background:
-              "radial-gradient(ellipse at center, hsl(220 25% 3% / 0) 0%, hsl(220 25% 3% / 0.6) 100%)",
+            background: "radial-gradient(ellipse at center, hsl(220 25% 3% / 0) 0%, hsl(220 25% 3% / 0.6) 100%)",
           }}
         />
 
-        {/* Top bar inside overlay */}
-        <div className="relative container-csw flex items-center justify-between h-20">
+        <div className="relative container-csw flex items-center justify-between h-24">
           <button
             type="button"
             onClick={() => setMenuOpen(false)}
-            aria-label="Close menu"
-            className="group inline-flex items-center gap-3 text-parchment hover:text-gold transition-colors duration-500"
+            aria-label="Close"
+            className="group inline-flex items-center gap-3 text-parchment hover:text-parchment/70 transition-colors duration-500"
           >
             <span className="relative w-5 h-5" aria-hidden>
               <span className="absolute top-1/2 left-0 w-5 h-px bg-current rotate-45" />
@@ -181,7 +204,11 @@ export const Header = () => {
             </span>
           </button>
 
-          <Link to="/" className="font-sans font-light text-base md:text-lg tracking-[0.42em] uppercase text-parchment hover:text-gold transition-colors duration-500">
+          <Link
+            to="/"
+            className="font-display text-2xl md:text-3xl uppercase text-parchment hover:text-parchment/80 transition-colors duration-500"
+            style={{ fontWeight: 700, letterSpacing: "0.18em" }}
+          >
             {t("brand.name")}
           </Link>
 
@@ -191,8 +218,7 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Nav list */}
-        <nav className="relative h-[calc(100%-5rem)] flex items-center">
+        <nav className="relative h-[calc(100%-6rem)] flex items-center">
           <div className="container-csw w-full">
             <ul className="flex flex-col gap-5 md:gap-6">
               {NAV_ITEMS.map((item, idx) => (
@@ -208,12 +234,13 @@ export const Header = () => {
                   <NavLink
                     to={item.to}
                     className={({ isActive }) =>
-                      `group inline-flex items-baseline gap-6 font-serif font-light tracking-[-0.02em] text-4xl md:text-6xl lg:text-7xl transition-colors duration-500 ${
-                        isActive ? "text-gold" : "text-parchment hover:text-gold"
+                      `group inline-flex items-baseline gap-6 font-display uppercase text-5xl md:text-7xl lg:text-8xl transition-colors duration-500 ${
+                        isActive ? "text-parchment" : "text-parchment/85 hover:text-parchment"
                       }`
                     }
+                    style={{ fontWeight: 700, letterSpacing: "0.02em", lineHeight: 0.95 }}
                   >
-                    <span className="font-mono text-[10px] tracking-[0.32em] uppercase text-parchment/45 group-hover:text-gold/80 transition-colors">
+                    <span className="font-mono text-[10px] tracking-[0.32em] text-parchment/40 group-hover:text-parchment/70 transition-colors">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
                     <span>{t(`nav.${item.key}`)}</span>
@@ -221,20 +248,6 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-
-            <div
-              className="mt-16 flex items-center gap-4"
-              style={{
-                opacity: menuOpen ? 1 : 0,
-                transform: menuOpen ? "translateY(0)" : "translateY(10px)",
-                transition: `opacity 700ms ease ${150 + NAV_ITEMS.length * 70 + 100}ms, transform 700ms ease ${150 + NAV_ITEMS.length * 70 + 100}ms`,
-              }}
-            >
-              <span className="h-px w-10 bg-gold/60" />
-              <span className="font-mono text-[10px] tracking-[0.32em] uppercase text-parchment/55">
-                {t("brand.tagline")}
-              </span>
-            </div>
           </div>
         </nav>
       </div>
