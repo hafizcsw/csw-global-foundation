@@ -1,139 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,300;6..96,400;6..96,500;6..96,600;6..96,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* CSW Global — Luxury Dark institutional system (Door 2 V2).
-   All colors HSL. Obsidian + champagne gold + ivory parchment.
-   No ad-hoc colors in components — semantic tokens only. */
+/* CSW Global — Door 2 V3 "Atelier Molsheim".
+   Inspired by Bugatti's two-tone heritage: deep obsidian + Bugatti blue,
+   with bordeaux as rare accent. EB-monogram precision; engineered restraint.
+   The `gold` token name is preserved for code stability but now maps to
+   Bugatti Blue (the institutional accent). All colors HSL. */
 
 @layer base {
-  /* Light (Day) mode — ivory parchment + ink black + champagne gold.
-     Editorial luxury day variant — Hermès catalog feel. */
+  /* Light (Day) — atelier whitepaper: cool ivory + ink + Bugatti Blue */
   :root {
-    --background: 36 28% 96%;
-    --foreground: 30 10% 10%;
+    --background: 220 15% 96%;
+    --foreground: 220 18% 10%;
 
-    --card: 36 30% 98%;
-    --card-foreground: 30 10% 10%;
+    --card: 220 20% 98%;
+    --card-foreground: 220 18% 10%;
 
-    --popover: 36 30% 98%;
-    --popover-foreground: 30 10% 10%;
+    --popover: 220 20% 98%;
+    --popover-foreground: 220 18% 10%;
 
-    --primary: 30 10% 10%;
-    --primary-foreground: 36 30% 96%;
+    --primary: 220 18% 10%;
+    --primary-foreground: 220 15% 96%;
 
-    --secondary: 36 18% 92%;
-    --secondary-foreground: 30 10% 10%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 220 18% 10%;
 
-    --muted: 36 16% 90%;
-    --muted-foreground: 30 8% 38%;
+    --muted: 220 14% 90%;
+    --muted-foreground: 220 8% 38%;
 
-    --accent: 38 55% 45%;
-    --accent-foreground: 36 30% 96%;
+    --accent: 211 100% 32%;
+    --accent-foreground: 220 15% 96%;
 
-    --destructive: 0 60% 45%;
-    --destructive-foreground: 36 30% 96%;
+    --destructive: 350 70% 38%;
+    --destructive-foreground: 220 15% 96%;
 
-    --border: 30 10% 82%;
-    --input: 30 10% 82%;
-    --ring: 38 55% 45%;
+    --border: 220 12% 80%;
+    --input: 220 12% 80%;
+    --ring: 211 100% 32%;
 
-    /* Brand semantic tokens — light variants */
-    --hairline: 30 10% 78%;
-    --hairline-soft: 30 10% 88%;
-    --ink: 30 10% 10%;            /* primary text on light */
-    --ink-soft: 30 8% 28%;        /* body text */
-    --ink-muted: 30 6% 45%;       /* captions */
-    --parchment: 36 30% 98%;      /* page surface */
-    --obsidian: 30 10% 8%;        /* inverted dark accents */
-    --obsidian-soft: 36 18% 92%;  /* light card surface */
-    --gold: 38 55% 45%;           /* deeper gold for contrast on light */
-    --gold-soft: 38 45% 38%;
-    --gold-glow: 38 60% 55%;
+    /* Brand semantic — light */
+    --hairline: 220 10% 76%;
+    --hairline-soft: 220 10% 88%;
+    --ink: 220 18% 10%;
+    --ink-soft: 220 12% 28%;
+    --ink-muted: 220 8% 45%;
+    --parchment: 220 20% 98%;
+    --obsidian: 220 25% 6%;
+    --obsidian-soft: 220 14% 92%;
 
-    /* Gradients (light) */
-    --gradient-hero: radial-gradient(ellipse at 30% 0%, hsl(38 50% 88% / 0.6), transparent 60%), linear-gradient(180deg, hsl(36 30% 97%), hsl(36 28% 94%));
+    /* `gold` slot now carries Bugatti Blue (institutional accent) */
+    --gold: 211 100% 32%;          /* Bugatti Blue — primary accent */
+    --gold-soft: 211 90% 25%;      /* deep accent */
+    --gold-glow: 211 100% 45%;     /* lit accent */
+
+    /* Bordeaux — rare ceremonial accent (EB monogram red) */
+    --bordeaux: 350 70% 32%;
+    --bordeaux-soft: 350 60% 26%;
+
+    /* Carbon — engineered surface */
+    --carbon: 220 14% 14%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(115deg, hsl(220 20% 97%) 0%, hsl(220 20% 97%) 50%, hsl(211 100% 32%) 50%, hsl(211 100% 22%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold-glow)), hsl(var(--gold)) 50%, hsl(var(--gold-soft)));
     --gradient-fade: linear-gradient(180deg, transparent, hsl(var(--background)));
+    --gradient-split: linear-gradient(90deg, hsl(var(--obsidian)) 0%, hsl(var(--obsidian)) 50%, hsl(var(--gold)) 50%, hsl(var(--gold-soft)) 100%);
 
-    /* Shadows (light) */
-    --shadow-elegant: 0 30px 80px -30px hsl(30 20% 20% / 0.18);
-    --shadow-gold: 0 0 0 1px hsl(var(--gold) / 0.3), 0 20px 60px -25px hsl(var(--gold) / 0.25);
-    --shadow-card: 0 1px 0 hsl(var(--hairline)) inset, 0 20px 50px -30px hsl(30 15% 20% / 0.15);
+    /* Shadows */
+    --shadow-elegant: 0 30px 80px -30px hsl(220 30% 15% / 0.18);
+    --shadow-gold: 0 0 0 1px hsl(var(--gold) / 0.35), 0 24px 60px -25px hsl(var(--gold) / 0.30);
+    --shadow-card: 0 1px 0 hsl(var(--hairline)) inset, 0 20px 50px -30px hsl(220 20% 15% / 0.15);
 
     --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
-    --radius: 0.125rem;
+    --radius: 0;
 
-    --sidebar-background: 36 30% 98%;
-    --sidebar-foreground: 30 8% 28%;
-    --sidebar-primary: 30 10% 10%;
-    --sidebar-primary-foreground: 36 30% 96%;
-    --sidebar-accent: 36 18% 92%;
-    --sidebar-accent-foreground: 30 10% 10%;
-    --sidebar-border: 30 10% 82%;
-    --sidebar-ring: 38 55% 45%;
+    --sidebar-background: 220 20% 98%;
+    --sidebar-foreground: 220 12% 28%;
+    --sidebar-primary: 220 18% 10%;
+    --sidebar-primary-foreground: 220 15% 96%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 220 18% 10%;
+    --sidebar-border: 220 12% 80%;
+    --sidebar-ring: 211 100% 32%;
   }
 
-  /* Dark (Night) mode — original Luxury Dark obsidian + champagne. */
+  /* Dark (Night) — Molsheim midnight: pure carbon black + Bugatti blue */
   .dark {
-    --background: 30 8% 6%;
-    --foreground: 36 30% 92%;
+    --background: 220 25% 5%;
+    --foreground: 220 15% 94%;
 
-    --card: 30 8% 8%;
-    --card-foreground: 36 30% 92%;
+    --card: 220 22% 7%;
+    --card-foreground: 220 15% 94%;
 
-    --popover: 30 10% 9%;
-    --popover-foreground: 36 30% 92%;
+    --popover: 220 22% 8%;
+    --popover-foreground: 220 15% 94%;
 
-    --primary: 36 30% 92%;
-    --primary-foreground: 30 8% 6%;
+    --primary: 220 15% 94%;
+    --primary-foreground: 220 25% 5%;
 
-    --secondary: 30 8% 11%;
-    --secondary-foreground: 36 30% 92%;
+    --secondary: 220 18% 10%;
+    --secondary-foreground: 220 15% 94%;
 
-    --muted: 30 8% 12%;
-    --muted-foreground: 36 12% 60%;
+    --muted: 220 16% 12%;
+    --muted-foreground: 220 8% 60%;
 
-    --accent: 38 55% 60%;
-    --accent-foreground: 30 8% 6%;
+    --accent: 211 95% 52%;
+    --accent-foreground: 220 25% 5%;
 
-    --destructive: 0 60% 50%;
-    --destructive-foreground: 36 30% 92%;
+    --destructive: 350 70% 50%;
+    --destructive-foreground: 220 15% 94%;
 
-    --border: 30 8% 16%;
-    --input: 30 8% 16%;
-    --ring: 38 55% 60%;
+    --border: 220 16% 16%;
+    --input: 220 16% 16%;
+    --ring: 211 95% 52%;
 
-    --hairline: 36 14% 22%;
-    --hairline-soft: 30 8% 14%;
-    --ink: 36 30% 92%;
-    --ink-soft: 36 14% 70%;
-    --ink-muted: 36 8% 50%;
-    --parchment: 36 30% 96%;
-    --obsidian: 30 8% 4%;
-    --obsidian-soft: 30 8% 9%;
-    --gold: 38 55% 60%;
-    --gold-soft: 38 40% 48%;
-    --gold-glow: 38 70% 70%;
+    --hairline: 220 14% 22%;
+    --hairline-soft: 220 18% 12%;
+    --ink: 220 15% 94%;
+    --ink-soft: 220 10% 70%;
+    --ink-muted: 220 8% 50%;
+    --parchment: 220 15% 96%;
+    --obsidian: 220 30% 3%;
+    --obsidian-soft: 220 22% 8%;
 
-    --gradient-hero: radial-gradient(ellipse at 30% 0%, hsl(38 30% 18% / 0.35), transparent 60%), linear-gradient(180deg, hsl(30 8% 7%), hsl(30 8% 5%));
+    /* Bugatti Blue (lifted for dark contrast) */
+    --gold: 211 95% 52%;
+    --gold-soft: 211 80% 38%;
+    --gold-glow: 211 100% 65%;
+
+    --bordeaux: 350 75% 45%;
+    --bordeaux-soft: 350 65% 32%;
+
+    --carbon: 220 14% 8%;
+
+    --gradient-hero: linear-gradient(115deg, hsl(220 25% 4%) 0%, hsl(220 25% 4%) 50%, hsl(211 90% 22%) 50%, hsl(211 95% 14%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold-glow)), hsl(var(--gold)) 50%, hsl(var(--gold-soft)));
     --gradient-fade: linear-gradient(180deg, transparent, hsl(var(--background)));
+    --gradient-split: linear-gradient(90deg, hsl(var(--obsidian)) 0%, hsl(var(--obsidian)) 50%, hsl(var(--gold)) 50%, hsl(var(--gold-soft)) 100%);
 
-    --shadow-elegant: 0 30px 80px -30px hsl(0 0% 0% / 0.6);
-    --shadow-gold: 0 0 0 1px hsl(var(--gold) / 0.25), 0 20px 60px -25px hsl(var(--gold) / 0.25);
-    --shadow-card: 0 1px 0 hsl(var(--hairline)) inset, 0 30px 60px -40px hsl(0 0% 0% / 0.7);
+    --shadow-elegant: 0 30px 80px -30px hsl(0 0% 0% / 0.7);
+    --shadow-gold: 0 0 0 1px hsl(var(--gold) / 0.35), 0 24px 60px -25px hsl(var(--gold) / 0.45);
+    --shadow-card: 0 1px 0 hsl(var(--hairline)) inset, 0 30px 60px -40px hsl(0 0% 0% / 0.8);
 
-    --sidebar-background: 30 8% 8%;
-    --sidebar-foreground: 36 14% 70%;
-    --sidebar-primary: 36 30% 92%;
-    --sidebar-primary-foreground: 30 8% 6%;
-    --sidebar-accent: 30 8% 12%;
-    --sidebar-accent-foreground: 36 30% 92%;
-    --sidebar-border: 30 8% 16%;
-    --sidebar-ring: 38 55% 60%;
+    --sidebar-background: 220 22% 7%;
+    --sidebar-foreground: 220 10% 70%;
+    --sidebar-primary: 220 15% 94%;
+    --sidebar-primary-foreground: 220 25% 5%;
+    --sidebar-accent: 220 16% 12%;
+    --sidebar-accent-foreground: 220 15% 94%;
+    --sidebar-border: 220 16% 16%;
+    --sidebar-ring: 211 95% 52%;
   }
 }
 
@@ -148,8 +167,10 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
-    font-feature-settings: "ss01", "cv11", "calt";
-    background: var(--gradient-hero);
+    font-feature-settings: "ss01", "cv11", "calt", "tnum";
+    background:
+      radial-gradient(ellipse 60% 40% at 85% 0%, hsl(var(--gold) / 0.10), transparent 70%),
+      hsl(var(--background));
     background-attachment: fixed;
     transition: background-color 600ms var(--ease-luxury), color 600ms var(--ease-luxury);
   }
@@ -164,13 +185,20 @@
     @apply mx-auto w-full max-w-[1400px] px-6 md:px-12 lg:px-20;
   }
   .eyebrow {
-    @apply text-[10px] font-medium uppercase tracking-[0.32em] text-gold;
+    @apply text-[10px] font-medium uppercase tracking-[0.36em] text-gold;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
   }
   .eyebrow-muted {
-    @apply text-[10px] font-medium uppercase tracking-[0.32em] text-ink-muted;
+    @apply text-[10px] font-medium uppercase tracking-[0.36em] text-ink-muted;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
   }
   .display {
-    @apply font-serif font-light tracking-[-0.015em] leading-[1.02] text-ink;
+    @apply font-serif font-light tracking-[-0.02em] leading-[0.98] text-ink;
+    font-feature-settings: "ss01", "ss02", "lnum";
+  }
+  .spec-label {
+    @apply text-[9px] uppercase tracking-[0.4em] text-ink-muted;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
   }
   .hairline-divider {
     height: 1px;
@@ -178,7 +206,7 @@
   }
   .gold-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.6) 50%, transparent);
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.7) 50%, transparent);
   }
   .gold-text {
     background: var(--gradient-gold);
@@ -190,10 +218,26 @@
     background: linear-gradient(180deg, hsl(var(--obsidian-soft)), hsl(var(--background)));
     border: 1px solid hsl(var(--hairline));
     transition: border-color 600ms var(--ease-luxury), transform 600ms var(--ease-luxury), box-shadow 600ms var(--ease-luxury);
+    position: relative;
+  }
+  .luxury-card::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: hsl(var(--gold));
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 700ms var(--ease-luxury);
   }
   .luxury-card:hover {
-    border-color: hsl(var(--gold) / 0.5);
+    border-color: hsl(var(--gold) / 0.6);
     box-shadow: var(--shadow-gold);
+  }
+  .luxury-card:hover::before {
+    transform: scaleY(1);
   }
   .gold-rule {
     position: relative;
@@ -204,7 +248,7 @@
     inset-inline-start: 0;
     top: 0;
     height: 1px;
-    width: 48px;
+    width: 56px;
     background: hsl(var(--gold));
   }
   .reveal {
@@ -217,19 +261,20 @@
     animation: luxuryFade 900ms var(--ease-luxury) forwards;
   }
   .btn-luxury {
-    @apply inline-flex items-center gap-3 px-8 py-4 text-[11px] uppercase tracking-[0.28em] transition-all duration-500;
-    background: hsl(var(--ink));
-    color: hsl(var(--obsidian));
-    border: 1px solid hsl(var(--ink));
+    @apply inline-flex items-center gap-3 px-9 py-4 text-[11px] uppercase tracking-[0.32em] transition-all duration-500;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    background: hsl(var(--gold));
+    color: hsl(var(--primary-foreground));
+    border: 1px solid hsl(var(--gold));
   }
   .btn-luxury:hover {
-    background: hsl(var(--gold));
-    border-color: hsl(var(--gold));
-    color: hsl(var(--obsidian));
+    background: hsl(var(--gold-glow));
+    border-color: hsl(var(--gold-glow));
     box-shadow: var(--shadow-gold);
   }
   .btn-ghost-luxury {
-    @apply inline-flex items-center gap-3 px-8 py-4 text-[11px] uppercase tracking-[0.28em] transition-all duration-500;
+    @apply inline-flex items-center gap-3 px-9 py-4 text-[11px] uppercase tracking-[0.32em] transition-all duration-500;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
     background: transparent;
     color: hsl(var(--ink));
     border: 1px solid hsl(var(--hairline));
@@ -237,6 +282,36 @@
   .btn-ghost-luxury:hover {
     border-color: hsl(var(--gold));
     color: hsl(var(--gold));
+  }
+  /* EB-style monogram corner marks */
+  .corner-marks {
+    position: relative;
+  }
+  .corner-marks::before,
+  .corner-marks::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: hsl(var(--gold));
+    border-style: solid;
+    border-width: 0;
+  }
+  .corner-marks::before {
+    top: 0;
+    inset-inline-start: 0;
+    border-top-width: 1px;
+    border-inline-start-width: 1px;
+  }
+  .corner-marks::after {
+    bottom: 0;
+    inset-inline-end: 0;
+    border-bottom-width: 1px;
+    border-inline-end-width: 1px;
+  }
+  /* Two-tone diagonal split surface — Bugatti hallmark */
+  .split-surface {
+    background: var(--gradient-hero);
   }
 }
 
@@ -251,9 +326,7 @@
   100% { background-position: 200% 0; }
 }
 
-/* RTL / Arabic typography override.
-   Cormorant Garamond + Inter have no Arabic glyphs — fallback breaks shaping.
-   Use Noto Arabic stack and neutralize negative tracking for RTL. */
+/* RTL / Arabic typography override. */
 [dir="rtl"] {
   font-family: "Noto Naskh Arabic", "Geeza Pro", "Tahoma", system-ui, sans-serif;
   letter-spacing: 0 !important;
@@ -266,4 +339,12 @@
 [dir="rtl"] .font-sans,
 [dir="rtl"] body {
   font-family: "Noto Sans Arabic", "Noto Naskh Arabic", system-ui, sans-serif;
+}
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .eyebrow-muted,
+[dir="rtl"] .spec-label,
+[dir="rtl"] .btn-luxury,
+[dir="rtl"] .btn-ghost-luxury {
+  font-family: "Noto Sans Arabic", system-ui, sans-serif;
+  letter-spacing: 0.08em !important;
 }
