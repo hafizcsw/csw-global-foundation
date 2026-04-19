@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 export const Careers = () => {
@@ -14,10 +15,13 @@ export const Careers = () => {
           </p>
         </div>
         <div className="lg:col-span-4 flex lg:justify-end">
-          <a href="#" className="group inline-flex items-center gap-3 border border-ink text-ink px-7 py-4 text-xs uppercase tracking-[0.22em] hover:bg-ink hover:text-parchment transition-colors">
+          <Link
+            to="/contact#careers"
+            className="group inline-flex items-center gap-3 border border-ink text-ink px-7 py-4 text-xs uppercase tracking-[0.22em] hover:bg-ink hover:text-parchment transition-colors"
+          >
             {t("careers.cta")}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

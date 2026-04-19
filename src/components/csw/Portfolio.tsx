@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { SectionHeader } from "./SectionHeader";
 import { ArrowUpRight } from "lucide-react";
 
@@ -10,9 +12,29 @@ interface Company {
   relationship: string;
 }
 
-export const Portfolio = () => {
+// Door 1 locked taxonomy. Filter labels resolve to taxonomy values that match company.sector.
+const FILTER_KEYS = ["all", "access", "mobility", "commerce", "financial", "ai", "future"] as const;
+const FILTER_TO_SECTOR: Record<(typeof FILTER_KEYS)[number], string | null> = {
+  all: null,
+  access: "Access & Opportunity",
+  mobility: "Mobility & Services",
+  commerce: "Commerce & Consumer Platforms",
+  financial: "Financial Enablement",
+  ai: "AI & Digital Infrastructure",
+  future: "Strategic Future Ventures",
+};
+
+interface PortfolioProps {
+  showFilters?: boolean;
+  showViewAll?: boolean;
+}
+
+export const Portfolio = ({ showFilters = false, showViewAll = true }: PortfolioProps) => {
   const { t } = useTranslation();
+  const [active, setActive] = useState<(typeof FILTER_KEYS)[number]>("all");
   const companies = t("portfolio.companies", { returnObjects: true }) as Company[];
+  const sectorMatch = FILTER_TO_SECTOR[active];
+  const visible = sectorMatch ? companies.filter((c) => c.sector === sectorMatch) : companies;
   return (
     <section id="portfolio" className="border-b border-hairline">
       <div className="container-csw py-24 md:py-32">
@@ -22,14 +44,38 @@ export const Portfolio = () => {
             title={t("portfolio.title")}
             body={t("portfolio.body")}
           />
-          <a href="#" className="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-ink hover:text-gold transition-colors whitespace-nowrap">
-            {t("portfolio.viewAll")}
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          {showViewAll && (
+            <Link
+              to="/portfolio"
+              className="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-ink hover:text-gold transition-colors whitespace-nowrap"
+            >
+              {t("portfolio.viewAll")}
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          )}
         </div>
 
+        {showFilters && (
+          <div className="mt-12 flex flex-wrap gap-2">
+            {FILTER_KEYS.map((k) => (
+              <button
+                key={k}
+                type="button"
+                onClick={() => setActive(k)}
+                className={`px-4 py-2 border text-[11px] uppercase tracking-[0.22em] transition-colors ${
+                  active === k
+                    ? "border-ink bg-ink text-parchment"
+                    : "border-hairline text-ink-soft hover:text-ink hover:border-ink"
+                }`}
+              >
+                {t(`portfolio.filters.${k}`)}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-px bg-hairline border border-hairline">
-          {companies.map((c, i) => (
+          {visible.map((c, i) => (
             <article key={i} className="bg-background p-8 md:p-12 group">
               <div className="flex items-start justify-between gap-6 mb-8">
                 <h3 className="font-serif text-3xl md:text-4xl text-ink">{c.name}</h3>

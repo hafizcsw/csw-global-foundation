@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { ArrowUpRight } from "lucide-react";
 
+const LANES = ["partnerships", "media", "strategic", "careers"] as const;
+
 export const Contact = () => {
   const { t } = useTranslation();
-  const channels = ["partnerships", "media", "strategic"] as const;
   return (
     <section id="contact" className="border-b border-hairline bg-ink text-parchment">
       <div className="container-csw py-28 md:py-36">
@@ -19,13 +20,15 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-parchment/15 pt-12">
-          {channels.map((c) => (
-            <div key={c}>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 border-t border-parchment/15 pt-12">
+          {LANES.map((c) => (
+            <div key={c} id={c === "careers" ? "careers" : undefined} className="scroll-mt-24">
               <div className="text-[11px] uppercase tracking-[0.22em] text-gold mb-3">
-                {t(`contact.${c}`)}
+                {t(`contact.lanes.${c}.title`)}
               </div>
-              <div className="font-serif text-xl text-parchment">{t("brand.name")}</div>
+              <p className="text-sm text-parchment/70 leading-relaxed">
+                {t(`contact.lanes.${c}.body`)}
+              </p>
             </div>
           ))}
         </div>
