@@ -7,6 +7,7 @@ import { Footer } from "./Footer";
 export const SiteLayout = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,6 +23,18 @@ export const SiteLayout = () => {
     }
     desc.setAttribute("content", t("meta.description"));
   }, [t, pathname]);
+
+  if (isHome) {
+    // Homepage owns its own scroll (snap-stage). No global header offset, no footer.
+    return (
+      <div className="bg-obsidian text-parchment">
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">

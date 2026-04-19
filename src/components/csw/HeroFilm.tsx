@@ -25,7 +25,8 @@ export const HeroFilm = () => {
   return (
     <section
       id="top"
-      className="relative w-full h-[100svh] min-h-[680px] overflow-hidden bg-obsidian text-parchment -mt-20"
+      className="snap-chapter relative w-full bg-obsidian text-parchment"
+      data-chapter="01"
     >
       {!reduce && (
         <video
