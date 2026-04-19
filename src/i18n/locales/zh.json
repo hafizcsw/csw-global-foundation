@@ -4,16 +4,26 @@
     "description": "CSW Global is the parent company behind a growing portfolio of AI-native ventures built for long-term value, operational leverage, and intelligent global expansion."
   },
   "nav": {
+    "about": "About",
     "portfolio": "Portfolio",
+    "ourModel": "Our Model",
+    "leadership": "Leadership",
+    "news": "News",
+    "careers": "Careers",
+    "contact": "Contact",
     "thesis": "Thesis",
     "operatingModel": "Operating Model",
-    "capabilities": "Capabilities",
-    "careers": "Careers",
-    "contact": "Contact"
+    "capabilities": "Capabilities"
   },
   "brand": {
     "name": "CSW Global",
     "tagline": "Parent Company"
+  },
+  "pageStub": {
+    "eyebrow": "In Preparation",
+    "title": "This section is being prepared.",
+    "body": "This page is part of the approved CSW Global architecture and will be populated with cleared institutional content before public launch.",
+    "back": "Return to home"
   },
   "hero": {
     "eyebrow": "Parent Company · Venture Builder",
@@ -46,12 +56,12 @@
     "title": "Sectors of focus.",
     "body": "We build companies in domains where intelligent systems, operational depth, and global readiness create durable advantage.",
     "sectors": [
-      { "title": "Education & Opportunity", "body": "Platforms that expand access to learning, credentials, and economic mobility." },
+      { "title": "Access & Opportunity", "body": "Platforms that expand access to learning, credentials, and economic mobility." },
       { "title": "Financial Enablement", "body": "Infrastructure that makes capital, credit, and financial services more accessible." },
-      { "title": "Commerce & Consumer Systems", "body": "Modern retail and consumer experiences powered by intelligent operations." },
-      { "title": "Mobility & Transition", "body": "Solutions for movement, relocation, and cross-border life transitions." },
-      { "title": "AI & Operating Infrastructure", "body": "Internal and external systems that make companies measurably more effective." },
-      { "title": "Future Strategic Ventures", "body": "Categories under active research where CSW Global will deploy next." }
+      { "title": "Commerce & Consumer Platforms", "body": "Modern retail and consumer experiences powered by intelligent operations." },
+      { "title": "Mobility & Services", "body": "Solutions for movement, relocation, and cross-border life transitions." },
+      { "title": "AI & Digital Infrastructure", "body": "Internal and external systems that make companies measurably more effective." },
+      { "title": "Strategic Future Ventures", "body": "Categories under active research where CSW Global will deploy next." }
     ]
   },
   "portfolio": {
@@ -62,10 +72,19 @@
     "sectorLabel": "Sector",
     "relationshipLabel": "Relationship",
     "viewAll": "View full portfolio",
+    "filters": {
+      "all": "All Domains",
+      "access": "Access & Opportunity",
+      "mobility": "Mobility & Services",
+      "commerce": "Commerce & Consumer Platforms",
+      "financial": "Financial Enablement",
+      "ai": "AI & Digital Infrastructure",
+      "future": "Strategic Future Ventures"
+    },
     "companies": [
       {
         "name": "Venture One",
-        "sector": "Education & Opportunity",
+        "sector": "Access & Opportunity",
         "status": "In Operation",
         "description": "An AI-native platform expanding access to learning and verifiable credentials.",
         "relationship": "Wholly owned subsidiary"
@@ -79,14 +98,14 @@
       },
       {
         "name": "Venture Three",
-        "sector": "Commerce & Consumer Systems",
+        "sector": "Commerce & Consumer Platforms",
         "status": "In Operation",
         "description": "A consumer commerce business built on intelligent operations and brand depth.",
         "relationship": "Wholly owned subsidiary"
       },
       {
         "name": "Venture Four",
-        "sector": "Mobility & Transition",
+        "sector": "Mobility & Services",
         "status": "In Development",
         "description": "Services supporting cross-border relocation and life transition workflows.",
         "relationship": "Incubated by CSW Global"
@@ -140,16 +159,35 @@
       { "category": "Capability", "date": "Recent", "title": "Multilingual readiness expanded across the group.", "body": "Centralized investment in language and localization infrastructure benefits every venture in the portfolio." }
     ]
   },
+  "about": {
+    "eyebrow": "About",
+    "title": "An institutional parent company built for the long horizon.",
+    "intro": "CSW Global designs, operates, and scales AI-native businesses across multiple sectors. The group exists to build companies with structural advantages — strategic discipline, shared infrastructure, and global readiness from inception.",
+    "principlesEyebrow": "Operating Principles",
+    "principlesTitle": "What we hold constant across every venture.",
+    "principles": [
+      { "title": "Long-horizon ownership", "body": "We build for durable compounding value, not optical growth." },
+      { "title": "Structural clarity", "body": "Each venture has a defined purpose, architecture, and governance from day one." },
+      { "title": "Shared infrastructure", "body": "Strategy, AI systems, brand, and operations are concentrated at the parent." },
+      { "title": "Global by design", "body": "Every venture is engineered for multilingual readiness and cross-border operation." }
+    ]
+  },
   "careers": {
     "eyebrow": "Careers",
     "title": "For builders, operators, and specialists.",
     "body": "We work with people who take long-horizon problems seriously and execute with precision. CSW Global hires across the parent company and its ventures.",
-    "cta": "View open roles"
+    "cta": "Contact careers"
   },
   "contact": {
     "eyebrow": "Strategic Contact",
-    "title": "For partnerships, media, and strategic inquiries.",
-    "body": "We engage selectively with institutions, investors, and operators whose work aligns with the group's long-term direction.",
+    "title": "For partnerships, media, careers, and strategic inquiries.",
+    "body": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
+    "lanes": {
+      "partnerships": { "title": "Partnerships", "body": "Strategic alliances, joint ventures, and structural collaborations." },
+      "media": { "title": "Media", "body": "Press, editorial, and institutional communications." },
+      "strategic": { "title": "Strategic Inquiries", "body": "Investor, advisor, and senior operator conversations." },
+      "careers": { "title": "Careers Inquiry", "body": "Builders, operators, and specialists across the group." }
+    },
     "partnerships": "Partnerships",
     "media": "Media",
     "strategic": "Strategic Inquiries",
