@@ -185,7 +185,7 @@ const Home = () => {
           {reach.map((m) => (
             <div key={m.label} className="bg-obsidian px-8 py-10">
               <div
-                className="font-display uppercase text-parchment text-4xl md:text-6xl leading-none"
+                className="font-display uppercase text-parchment text-3xl md:text-4xl lg:text-5xl leading-none"
                 style={{ fontWeight: 600 }}
               >
                 {m.value}
