@@ -14,7 +14,7 @@ const AboutPage = () => {
   return (
     <>
       <PageHeader eyebrowKey="about.eyebrow" titleKey="about.title" bodyKey="about.intro" />
-      <section className="relative border-b border-hairline-soft bg-obsidian-soft/40">
+      <section className="relative border-b border-hairline-soft bg-secondary/50">
         <div className="container-csw py-32 md:py-40">
           <SectionHeader
             eyebrow={t("about.principlesEyebrow")}

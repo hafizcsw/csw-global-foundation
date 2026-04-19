@@ -11,7 +11,7 @@ export const OperatingIntelligence = () => {
   const steps = t("home.intelligence.steps", { returnObjects: true }) as Step[];
 
   return (
-    <section className="bg-obsidian text-ink border-y border-hairline-soft">
+    <section className="bg-background text-ink border-y border-hairline-soft">
       <div className="container-csw py-32 md:py-44">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-4">
@@ -34,7 +34,7 @@ export const OperatingIntelligence = () => {
           {steps.map((s) => (
             <div
               key={s.code}
-              className="bg-obsidian p-10 lg:p-12 min-h-[260px] flex flex-col"
+              className="bg-card p-10 lg:p-12 min-h-[260px] flex flex-col"
             >
               <div className="font-mono text-[10px] tracking-[0.36em] text-gold mb-8">
                 {s.code}

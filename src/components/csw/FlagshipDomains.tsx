@@ -15,7 +15,7 @@ export const FlagshipDomains = () => {
   const items = t("home.domains.items", { returnObjects: true }) as Domain[];
 
   return (
-    <section className="bg-obsidian text-ink border-y border-hairline-soft">
+    <section className="bg-background text-ink border-y border-hairline-soft">
       <div className="container-csw py-32 md:py-44">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-4">
@@ -40,7 +40,7 @@ export const FlagshipDomains = () => {
           {items.map((d) => (
             <article
               key={d.code}
-              className="group relative bg-obsidian p-10 lg:p-12 min-h-[280px] flex flex-col justify-between transition-colors duration-700 hover:bg-carbon"
+              className="group relative bg-card p-10 lg:p-12 min-h-[280px] flex flex-col justify-between transition-colors duration-700 hover:bg-secondary"
             >
               <div className="flex items-start justify-between">
                 <span className="font-mono text-[10px] tracking-[0.36em] text-gold">

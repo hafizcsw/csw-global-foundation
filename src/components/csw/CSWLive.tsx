@@ -11,7 +11,7 @@ export const CSWLive = () => {
   const items = t("home.live.items", { returnObjects: true }) as Item[];
 
   return (
-    <section className="bg-obsidian text-ink border-y border-hairline-soft">
+    <section className="bg-background text-ink border-y border-hairline-soft">
       <div className="container-csw py-32 md:py-44">
         <div className="flex items-end justify-between mb-16 flex-wrap gap-6">
           <div>
@@ -34,7 +34,7 @@ export const CSWLive = () => {
           {items.map((it, i) => (
             <article
               key={i}
-              className="group bg-obsidian p-10 lg:p-12 min-h-[260px] flex flex-col justify-between transition-colors duration-700 hover:bg-carbon"
+              className="group bg-card p-10 lg:p-12 min-h-[260px] flex flex-col justify-between transition-colors duration-700 hover:bg-secondary"
             >
               <div className="flex items-center gap-4">
                 <span className="font-mono text-[10px] tracking-[0.36em] uppercase text-gold">
