@@ -497,3 +497,14 @@
 [dir="rtl"] [class*="tabular"] {
   font-variant-numeric: tabular-nums lining-nums;
 }
+
+/* ===== Cinematic surfaces — force the dark palette regardless of theme.
+   The homepage snap-stage and any explicit `.cinematic-dark` zone keep
+   true obsidian + parchment so footage, video overlays, and gold accents
+   register correctly even when the user has chosen Day mode. ===== */
+.snap-stage,
+.cinematic-dark {
+  --parchment: 30 14% 98%;
+  --obsidian: 220 22% 4%;
+  --obsidian-soft: 220 18% 8%;
+}
