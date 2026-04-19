@@ -51,6 +51,177 @@
     },
     "specCoords": "MONDIAL · 12 LANGUES"
   },
+  "home": {
+    "hero": {
+      "eyebrow": "CSW Global · The House of Intelligent Ventures",
+      "headline": "Building the systems behind the next generation of global companies.",
+      "subheadline": "CSW Global builds and operates ventures across AI, aerospace systems, institutions, infrastructure, and strategic global sectors.",
+      "primaryCta": "Explore the Group",
+      "secondaryCta": "Our Model",
+      "scroll": "Scroll"
+    },
+    "world": {
+      "eyebrow": "The World of CSW Global",
+      "title": "A house of ventures, not a portfolio of logos.",
+      "body": "We design, build, and operate companies across strategic global sectors — bound by one operating intelligence, one standard of execution, and one long horizon.",
+      "marker": "I."
+    },
+    "domains": {
+      "eyebrow": "Flagship Operating Domains",
+      "title": "Six domains. One operating system.",
+      "body": "Each domain is a long-horizon arena where intelligent systems, institutional depth, and global reach create durable structural advantage.",
+      "items": [
+        {
+          "code": "01",
+          "title": "AI & Intelligence",
+          "body": "Inference systems, orchestration, and applied intelligence across the group."
+        },
+        {
+          "code": "02",
+          "title": "Aerospace & Drone Systems",
+          "body": "Airspace platforms, control surfaces, and propulsion-grade engineering."
+        },
+        {
+          "code": "03",
+          "title": "Global Education & Institutions",
+          "body": "Universities, credentials, and platforms that move generations."
+        },
+        {
+          "code": "04",
+          "title": "Digital Infrastructure",
+          "body": "The substrate every venture runs on — data, identity, networks."
+        },
+        {
+          "code": "05",
+          "title": "Strategic Ventures",
+          "body": "Ownership positions in companies of structural national or regional value."
+        },
+        {
+          "code": "06",
+          "title": "Commercial Systems",
+          "body": "Operating businesses that compound into category leadership."
+        }
+      ]
+    },
+    "ventures": {
+      "eyebrow": "Flagship Ventures",
+      "title": "Selected companies operating under the group.",
+      "body": "Not all twelve. A flagship cross-section of what CSW Global builds and how it builds it.",
+      "statusLabel": "Status",
+      "sectorLabel": "Sector",
+      "items": [
+        {
+          "name": "Venture Alpha",
+          "sector": "AI & Intelligence",
+          "status": "In Operation",
+          "description": "An applied-intelligence platform powering decision systems across the group."
+        },
+        {
+          "name": "Venture Beta",
+          "sector": "Aerospace & Drone Systems",
+          "status": "In Development",
+          "description": "Airspace and control systems engineered for institutional and defense-grade deployment."
+        },
+        {
+          "name": "Venture Gamma",
+          "sector": "Global Education & Institutions",
+          "status": "Scaling",
+          "description": "An institutional platform expanding access to credentials and global mobility."
+        },
+        {
+          "name": "Venture Delta",
+          "sector": "Digital Infrastructure",
+          "status": "In Operation",
+          "description": "Identity, data, and network primitives the entire group is built on."
+        }
+      ]
+    },
+    "intelligence": {
+      "eyebrow": "Our Operating Intelligence",
+      "title": "How a CSW Global venture comes into the world.",
+      "body": "Five disciplined movements. Repeated with precision across every venture.",
+      "steps": [
+        {
+          "code": "I.",
+          "title": "Identify",
+          "body": "We study sectors where structural opportunity exists."
+        },
+        {
+          "code": "II.",
+          "title": "Architect",
+          "body": "We design the venture's framework before a single line of code."
+        },
+        {
+          "code": "III.",
+          "title": "Build",
+          "body": "We construct on top of the group's shared infrastructure."
+        },
+        {
+          "code": "IV.",
+          "title": "Operate",
+          "body": "We govern execution against parent-company standards."
+        },
+        {
+          "code": "V.",
+          "title": "Scale",
+          "body": "We extend across markets, languages, and adjacent sectors."
+        }
+      ]
+    },
+    "reach": {
+      "eyebrow": "Institutional Reach",
+      "title": "Global by structural design.",
+      "body": "Twelve languages. Multiple regions. Every venture engineered for cross-border operation from inception.",
+      "metrics": [
+        {
+          "value": "12",
+          "label": "Languages"
+        },
+        {
+          "value": "06",
+          "label": "Domains"
+        },
+        {
+          "value": "∞",
+          "label": "Horizon"
+        }
+      ]
+    },
+    "live": {
+      "eyebrow": "CSW Global · Live",
+      "title": "Movement across the group.",
+      "viewAll": "All updates",
+      "items": [
+        {
+          "category": "Group",
+          "date": "Recent",
+          "title": "CSW Global articulates its parent-company framework."
+        },
+        {
+          "category": "Venture",
+          "date": "Recent",
+          "title": "A new venture transitions to operating phase."
+        },
+        {
+          "category": "Capability",
+          "date": "Recent",
+          "title": "Multilingual readiness extended across the group."
+        }
+      ]
+    },
+    "entry": {
+      "eyebrow": "Strategic Contact",
+      "title": "Begin a strategic conversation.",
+      "body": "We engage selectively with institutions, partners, investors, and operators whose work aligns with the group's long horizon.",
+      "lanes": {
+        "partnerships": "Partnerships",
+        "institutions": "Institutions",
+        "media": "Media",
+        "strategic": "Strategic Inquiries"
+      },
+      "cta": "Enter the Group"
+    }
+  },
   "proof": {
     "items": [
       "Parent Company",
