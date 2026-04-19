@@ -61,67 +61,153 @@
       "scroll": "مرّر"
     },
     "world": {
-      "eyebrow": "عالم CSW Global",
-      "title": "بيت شركات، لا محفظة شعارات.",
-      "body": "نُصمّم ونبني ونُشغّل شركات عبر قطاعات عالمية استراتيجية — مرتبطة بذكاء تشغيلي واحد، ومعيار تنفيذ واحد، وأفق طويل واحد.",
+      "eyebrow": "The World of CSW Global",
+      "title": "A house built to design, operate, and compound companies.",
+      "body": "CSW Global is the parent. Its work is to bring ventures into the world with structural clarity, shared infrastructure, and a long horizon.",
       "marker": "I."
     },
     "domains": {
-      "eyebrow": "المجالات التشغيلية الرئيسية",
-      "title": "ستة مجالات. نظام تشغيل واحد.",
-      "body": "كل مجال هو ساحة طويلة الأمد تخلق فيها الأنظمة الذكية، والعمق المؤسسي، والامتداد العالمي ميزة هيكلية دائمة.",
+      "eyebrow": "Strategic Arenas",
+      "title": "The arenas in which the group operates.",
+      "body": "Narrative framing of the long-horizon arenas the parent company prioritizes. The canonical portfolio taxonomy is defined on the Portfolio page.",
+      "note": "Narrative framing — not the canonical portfolio taxonomy.",
       "items": [
-        { "code": "٠١", "title": "الذكاء الاصطناعي", "body": "أنظمة استدلال وتنسيق وذكاء تطبيقي عبر المجموعة." },
-        { "code": "٠٢", "title": "الطيران وأنظمة الدرونز", "body": "منصات للمجال الجوي، وأسطح تحكم، وهندسة دفع عالية المستوى." },
-        { "code": "٠٣", "title": "التعليم العالمي والمؤسسات", "body": "جامعات وشهادات ومنصات تُحرّك أجيالاً." },
-        { "code": "٠٤", "title": "البنية الرقمية", "body": "الركيزة التي تعمل فوقها كل شركة — بيانات، هوية، شبكات." },
-        { "code": "٠٥", "title": "شركات استراتيجية", "body": "حصص في شركات ذات قيمة هيكلية وطنية أو إقليمية." },
-        { "code": "٠٦", "title": "الأنظمة التجارية", "body": "أعمال تشغيلية تتراكم لتصبح قائدة في فئتها." }
+        {
+          "code": "01",
+          "title": "Applied Intelligence",
+          "body": "Inference, orchestration, and decision systems as a shared discipline."
+        },
+        {
+          "code": "02",
+          "title": "Aerospace & Autonomous Systems",
+          "body": "Long-horizon interest in airspace, control, and propulsion-grade engineering."
+        },
+        {
+          "code": "03",
+          "title": "Education & Institutional Platforms",
+          "body": "Access to learning, credentials, and global mobility at institutional scale."
+        },
+        {
+          "code": "04",
+          "title": "Digital Infrastructure",
+          "body": "The substrate ventures are built on — identity, data, and networks."
+        },
+        {
+          "code": "05",
+          "title": "Commerce & Consumer Platforms",
+          "body": "Modern commerce and consumer experiences run on intelligent operations."
+        },
+        {
+          "code": "06",
+          "title": "Strategic Future Ventures",
+          "body": "Categories under active research where the group will deploy next."
+        }
       ]
     },
     "ventures": {
-      "eyebrow": "الشركات الرئيسية",
-      "title": "شركات مختارة تعمل ضمن المجموعة.",
-      "body": "ليست كل الاثنتي عشرة. نموذج رئيسي ممثّل لما تبنيه CSW Global وكيف تبنيه.",
-      "statusLabel": "الحالة",
-      "sectorLabel": "القطاع",
+      "eyebrow": "Flagship Capabilities",
+      "title": "What the group brings to every venture it builds.",
+      "body": "Specific company names are presented on the Portfolio page. Below is a description of the capabilities the parent company concentrates and applies across its work.",
+      "statusLabel": "Discipline",
+      "sectorLabel": "Arena",
       "items": [
-        { "name": "شركة ألفا", "sector": "الذكاء الاصطناعي", "status": "قيد التشغيل", "description": "منصة ذكاء تطبيقي تُشغّل أنظمة القرار عبر المجموعة." },
-        { "name": "شركة بيتا", "sector": "الطيران وأنظمة الدرونز", "status": "قيد التطوير", "description": "أنظمة فضاء جوي وتحكم مُهندَسة لنشر مؤسسي وعسكري المستوى." },
-        { "name": "شركة جاما", "sector": "التعليم العالمي والمؤسسات", "status": "في مرحلة التوسع", "description": "منصة مؤسسية تُوسّع الوصول إلى الشهادات والحراك العالمي." },
-        { "name": "شركة دلتا", "sector": "البنية الرقمية", "status": "قيد التشغيل", "description": "هوية وبيانات وشبكات هي الأساس الذي تُبنى عليه المجموعة كاملة." }
+        {
+          "name": "Applied Intelligence",
+          "sector": "Applied Intelligence",
+          "status": "Shared Capability",
+          "description": "Decision systems, orchestration, and applied AI made available to ventures the group builds."
+        },
+        {
+          "name": "Shared Digital Infrastructure",
+          "sector": "Digital Infrastructure",
+          "status": "Shared Capability",
+          "description": "Identity, data, and network primitives used as the substrate for new ventures."
+        },
+        {
+          "name": "Institutional & Education Platforms",
+          "sector": "Education & Institutional Platforms",
+          "status": "Strategic Discipline",
+          "description": "Discipline focused on credentials, access, and institution-grade platforms."
+        },
+        {
+          "name": "Brand & Operating Standards",
+          "sector": "Operating Discipline",
+          "status": "Shared Capability",
+          "description": "Brand architecture, governance, and operating standards held at the parent company."
+        }
       ]
     },
     "intelligence": {
-      "eyebrow": "ذكاؤنا التشغيلي",
-      "title": "كيف تأتي شركة CSW Global إلى الوجود.",
-      "body": "خمس حركات منضبطة. تتكرر بدقة في كل شركة.",
+      "eyebrow": "Our Operating Intelligence",
+      "title": "How a CSW Global venture is intended to come into the world.",
+      "body": "Five disciplined movements. The model the parent company applies as it builds.",
       "steps": [
-        { "code": "I.", "title": "نُحدّد", "body": "ندرس القطاعات حيث توجد فرصة هيكلية." },
-        { "code": "II.", "title": "نُهندس", "body": "نُصمّم إطار الشركة قبل كتابة سطر برمجي واحد." },
-        { "code": "III.", "title": "نبني", "body": "نُشيّد فوق البنية التحتية المشتركة للمجموعة." },
-        { "code": "IV.", "title": "نُشغّل", "body": "نحكم التنفيذ وفق معايير الشركة الأم." },
-        { "code": "V.", "title": "نُوسّع", "body": "نمتد عبر الأسواق واللغات والقطاعات المجاورة." }
+        {
+          "code": "I.",
+          "title": "Identify",
+          "body": "We study sectors where structural opportunity exists."
+        },
+        {
+          "code": "II.",
+          "title": "Architect",
+          "body": "We design the venture's framework before a single line of code."
+        },
+        {
+          "code": "III.",
+          "title": "Build",
+          "body": "We construct on top of the group's shared infrastructure."
+        },
+        {
+          "code": "IV.",
+          "title": "Operate",
+          "body": "We govern execution against parent-company standards."
+        },
+        {
+          "code": "V.",
+          "title": "Scale",
+          "body": "We extend across markets, languages, and adjacent sectors."
+        }
       ]
     },
     "reach": {
-      "eyebrow": "الامتداد المؤسسي",
-      "title": "عالمية بالتصميم الهيكلي.",
-      "body": "اثنتا عشرة لغة. مناطق متعددة. كل شركة مُهندَسة للتشغيل العابر للحدود منذ التأسيس.",
+      "eyebrow": "Institutional Reach",
+      "title": "Global by structural design.",
+      "body": "Twelve languages. Six canonical portfolio domains. Every venture engineered for cross-border operation from inception.",
       "metrics": [
-        { "value": "١٢", "label": "لغة" },
-        { "value": "٠٦", "label": "مجالات" },
-        { "value": "∞", "label": "الأفق" }
+        {
+          "value": "12",
+          "label": "Languages"
+        },
+        {
+          "value": "06",
+          "label": "Portfolio Domains"
+        },
+        {
+          "value": "—",
+          "label": "Long Horizon"
+        }
       ]
     },
     "live": {
-      "eyebrow": "CSW Global · مباشر",
-      "title": "حركة عبر المجموعة.",
-      "viewAll": "كل التحديثات",
+      "eyebrow": "CSW Global · Live",
+      "title": "Movement across the group.",
+      "viewAll": "All updates",
       "items": [
-        { "category": "المجموعة", "date": "حديث", "title": "CSW Global تُوضّح إطار عملها كشركة أم." },
-        { "category": "شركة", "date": "حديث", "title": "شركة جديدة تنتقل إلى مرحلة التشغيل." },
-        { "category": "القدرات", "date": "حديث", "title": "توسيع الجاهزية متعددة اللغات على مستوى المجموعة." }
+        {
+          "category": "Group",
+          "date": "Recent",
+          "title": "CSW Global articulates its parent-company operating framework."
+        },
+        {
+          "category": "Capability",
+          "date": "Recent",
+          "title": "Shared infrastructure expanded across the group's ventures."
+        },
+        {
+          "category": "Capability",
+          "date": "Recent",
+          "title": "Multilingual readiness extended across the group."
+        }
       ]
     },
     "entry": {
