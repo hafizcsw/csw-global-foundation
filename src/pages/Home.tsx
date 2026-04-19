@@ -2,11 +2,19 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { HeroFilm } from "@/components/csw/HeroFilm";
 import { SnapChapter } from "@/components/csw/SnapChapter";
+import { CinematicBackdrop } from "@/components/csw/CinematicBackdrop";
+import architecture from "@/assets/cinema-architecture-1.jpg";
+import dataLattice from "@/assets/cinema-data-lattice.jpg";
+import corridor from "@/assets/cinema-corridor.jpg";
+import drafting from "@/assets/cinema-drafting.jpg";
+import skyline from "@/assets/cinema-skyline.jpg";
+import obsidian from "@/assets/cinema-obsidian-veins.jpg";
+import globalNetwork from "@/assets/cinema-global-network.jpg";
 
 /**
  * CSW Global — Bugatti-grade chaptered cinematic homepage.
- * The page is a snap-scroll stage of 8 full-viewport chapters.
- * No automotive imagery — abstract gradient/landscape backgrounds only.
+ * 8 full-viewport snap chapters, each anchored by a cinematic image
+ * backdrop graded for obsidian legibility. No automotive imagery.
  */
 const Home = () => {
   const { t } = useTranslation();
@@ -22,18 +30,10 @@ const Home = () => {
       {/* Chapter 01 — Sovereign Hero */}
       <HeroFilm />
 
-      {/* Chapter 02 — Enter the World */}
+      {/* Chapter 02 — Enter the World (Architecture) */}
       <SnapChapter
         index="02"
-        background={
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 80% 60% at 50% 30%, hsl(220 30% 12%) 0%, hsl(220 25% 5%) 60%, hsl(220 22% 3%) 100%)",
-            }}
-          />
-        }
+        background={<CinematicBackdrop src={architecture} opacity={32} tone="dark" position="center 40%" />}
         overlay="none"
         align="center"
       >
@@ -51,18 +51,10 @@ const Home = () => {
         </p>
       </SnapChapter>
 
-      {/* Chapter 03 — Strategic Arenas */}
+      {/* Chapter 03 — Strategic Arenas (Data lattice) */}
       <SnapChapter
         index="03"
-        background={
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, hsl(220 22% 4%) 0%, hsl(220 18% 8%) 50%, hsl(220 25% 5%) 100%)",
-            }}
-          />
-        }
+        background={<CinematicBackdrop src={dataLattice} opacity={28} tone="dark" />}
         overlay="none"
         align="center"
       >
@@ -70,38 +62,34 @@ const Home = () => {
           {t("home.domains.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] max-w-[20ch] mb-14"
+          className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] max-w-[20ch] mb-10"
           style={{ fontWeight: 600 }}
         >
           {t("home.domains.title")}
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-8 max-w-5xl">
+        <p className="max-w-2xl text-sm md:text-base leading-[1.8] text-parchment/65 mb-14">
+          {t("home.domains.body")}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 max-w-6xl">
           {arenas.slice(0, 6).map((d) => (
             <div key={d.code} className="border-t border-parchment/15 pt-5">
               <div className="font-mono text-[10px] tracking-[0.32em] text-parchment/45 mb-3">{d.code}</div>
               <div
-                className="font-display uppercase text-parchment text-lg md:text-xl leading-[1.1]"
+                className="font-display uppercase text-parchment text-lg md:text-xl leading-[1.1] mb-3"
                 style={{ fontWeight: 600, letterSpacing: "0.01em" }}
               >
                 {d.title}
               </div>
+              <p className="text-[13px] leading-[1.7] text-parchment/55">{d.body}</p>
             </div>
           ))}
         </div>
       </SnapChapter>
 
-      {/* Chapter 04 — Flagship Ventures */}
+      {/* Chapter 04 — Flagship Ventures (Corridor) */}
       <SnapChapter
         index="04"
-        background={
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 60% 50% at 80% 50%, hsl(220 25% 10%) 0%, hsl(220 22% 4%) 70%)",
-            }}
-          />
-        }
+        background={<CinematicBackdrop src={corridor} opacity={30} tone="dark" position="center 60%" />}
         overlay="none"
         align="center"
       >
@@ -109,44 +97,40 @@ const Home = () => {
           {t("home.ventures.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] max-w-[20ch] mb-14"
+          className="font-display uppercase text-parchment leading-[0.92] text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] max-w-[20ch] mb-8"
           style={{ fontWeight: 600 }}
         >
           {t("home.ventures.title")}
         </h2>
-        <div className="divide-y divide-parchment/15 border-y border-parchment/15 max-w-5xl">
+        <p className="max-w-2xl text-sm md:text-base leading-[1.8] text-parchment/65 mb-12">
+          {t("home.ventures.body")}
+        </p>
+        <div className="divide-y divide-parchment/15 border-y border-parchment/15 max-w-5xl w-full">
           {ventures.slice(0, 4).map((v, i) => (
-            <div key={v.name} className="grid grid-cols-12 gap-6 py-6">
+            <div key={v.name} className="grid grid-cols-12 gap-6 py-7">
               <div className="col-span-1 font-mono text-[10px] tracking-[0.32em] text-parchment/40 pt-1">
                 0{i + 1}
               </div>
-              <div className="col-span-7">
+              <div className="col-span-11 md:col-span-5">
                 <div
-                  className="font-display uppercase text-parchment text-xl md:text-2xl leading-[1.05]"
+                  className="font-display uppercase text-parchment text-lg md:text-2xl leading-[1.05] mb-2"
                   style={{ fontWeight: 600 }}
                 >
                   {v.name}
                 </div>
+                <p className="text-[12px] leading-[1.7] text-parchment/55 max-w-md">{v.description}</p>
               </div>
-              <div className="col-span-2 text-xs text-parchment/55">{v.sector}</div>
-              <div className="col-span-2 text-xs text-parchment/55">{v.status}</div>
+              <div className="col-span-6 md:col-span-3 text-xs text-parchment/55 pt-1">{v.sector}</div>
+              <div className="col-span-6 md:col-span-3 text-xs text-parchment/55 pt-1">{v.status}</div>
             </div>
           ))}
         </div>
       </SnapChapter>
 
-      {/* Chapter 05 — Operating Intelligence */}
+      {/* Chapter 05 — Operating Intelligence (Drafting) */}
       <SnapChapter
         index="05"
-        background={
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(180deg, hsl(220 22% 3%) 0%, hsl(220 18% 7%) 100%)",
-            }}
-          />
-        }
+        background={<CinematicBackdrop src={drafting} opacity={26} tone="dark" />}
         overlay="none"
         align="center"
       >
@@ -154,38 +138,34 @@ const Home = () => {
           {t("home.intelligence.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] max-w-[20ch] mb-14"
+          className="font-display uppercase text-parchment leading-[0.92] text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] max-w-[20ch] mb-8"
           style={{ fontWeight: 600 }}
         >
           {t("home.intelligence.title")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-parchment/15 max-w-6xl">
+        <p className="max-w-2xl text-sm md:text-base leading-[1.8] text-parchment/65 mb-14">
+          {t("home.intelligence.body")}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-parchment/15 max-w-6xl w-full">
           {intel.map((s) => (
-            <div key={s.code} className="bg-obsidian p-7 min-h-[180px] flex flex-col justify-between">
-              <div className="font-mono text-[10px] tracking-[0.32em] text-parchment/40">{s.code}</div>
+            <div key={s.code} className="bg-obsidian p-7 min-h-[220px] flex flex-col">
+              <div className="font-mono text-[10px] tracking-[0.32em] text-parchment/40 mb-6">{s.code}</div>
               <div
-                className="font-display uppercase text-parchment text-base md:text-lg leading-[1.15] mt-6"
+                className="font-display uppercase text-parchment text-base md:text-lg leading-[1.15] mb-4"
                 style={{ fontWeight: 600 }}
               >
                 {s.title}
               </div>
+              <p className="text-[12px] leading-[1.65] text-parchment/55">{s.body}</p>
             </div>
           ))}
         </div>
       </SnapChapter>
 
-      {/* Chapter 06 — Institutional Reach */}
+      {/* Chapter 06 — Institutional Reach (Skyline) */}
       <SnapChapter
         index="06"
-        background={
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 70% 50% at 30% 60%, hsl(220 28% 10%) 0%, hsl(220 22% 4%) 70%)",
-            }}
-          />
-        }
+        background={<CinematicBackdrop src={skyline} opacity={28} tone="dark" position="center 35%" />}
         overlay="none"
         align="center"
       >
@@ -193,12 +173,15 @@ const Home = () => {
           {t("home.reach.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] max-w-[18ch] mb-12"
+          className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] max-w-[18ch] mb-8"
           style={{ fontWeight: 600 }}
         >
           {t("home.reach.title")}
         </h2>
-        <div className="grid grid-cols-3 gap-px bg-parchment/15 max-w-4xl">
+        <p className="max-w-2xl text-sm md:text-base leading-[1.8] text-parchment/65 mb-12">
+          {t("home.reach.body")}
+        </p>
+        <div className="grid grid-cols-3 gap-px bg-parchment/15 max-w-4xl w-full">
           {reach.map((m) => (
             <div key={m.label} className="bg-obsidian px-8 py-10">
               <div
@@ -215,18 +198,10 @@ const Home = () => {
         </div>
       </SnapChapter>
 
-      {/* Chapter 07 — CSW Live */}
+      {/* Chapter 07 — CSW Live (Obsidian veins) */}
       <SnapChapter
         index="07"
-        background={
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, hsl(220 25% 5%) 0%, hsl(220 18% 9%) 100%)",
-            }}
-          />
-        }
+        background={<CinematicBackdrop src={obsidian} opacity={26} tone="dark" />}
         overlay="none"
         align="center"
       >
@@ -239,9 +214,9 @@ const Home = () => {
         >
           {t("home.live.title")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-parchment/15 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-parchment/15 max-w-6xl w-full">
           {live.slice(0, 3).map((it, i) => (
-            <article key={i} className="bg-obsidian p-8 min-h-[200px] flex flex-col justify-between">
+            <article key={i} className="bg-obsidian p-8 min-h-[220px] flex flex-col justify-between">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-[10px] tracking-[0.32em] uppercase text-parchment/55">
                   {it.category}
@@ -262,18 +237,10 @@ const Home = () => {
         </div>
       </SnapChapter>
 
-      {/* Chapter 08 — Strategic Entry */}
+      {/* Chapter 08 — Strategic Entry (Global network) */}
       <SnapChapter
         index="08"
-        background={
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 90% 70% at 50% 50%, hsl(220 30% 8%) 0%, hsl(220 25% 3%) 80%)",
-            }}
-          />
-        }
+        background={<CinematicBackdrop src={globalNetwork} opacity={30} tone="dark" />}
         overlay="none"
         align="center"
       >
