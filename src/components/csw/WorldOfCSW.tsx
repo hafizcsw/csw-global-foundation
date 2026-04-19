@@ -19,10 +19,13 @@ export const WorldOfCSW = () => {
             </div>
           </div>
           <div className="col-span-12 md:col-span-9">
-            <h2 className="display font-light text-ink tracking-[-0.025em] leading-[1.02] text-[2.25rem] md:text-[3.5rem] lg:text-[5rem] max-w-[18ch]">
+            <h2
+              className="font-display uppercase text-ink leading-[1.02] text-[2.25rem] md:text-[3.5rem] lg:text-[5rem] max-w-[18ch]"
+              style={{ fontWeight: 600, letterSpacing: "0.005em" }}
+            >
               {t("home.world.title")}
             </h2>
-            <div className="gold-divider mt-12 max-w-md" />
+            <div className="mt-12 h-px w-24 bg-gold" />
             <p className="mt-10 max-w-2xl text-base md:text-lg leading-[1.8] text-ink-soft">
               {t("home.world.body")}
             </p>
