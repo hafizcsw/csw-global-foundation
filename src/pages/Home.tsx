@@ -41,7 +41,7 @@ const Home = () => {
           {t("home.world.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.9] text-[3rem] md:text-[5rem] lg:text-[7rem] xl:text-[8rem] max-w-[16ch]"
+          className="font-display uppercase text-parchment leading-[0.95] text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.75rem] max-w-[18ch]"
           style={{ fontWeight: 600, letterSpacing: "0.005em" }}
         >
           {t("home.world.title")}
@@ -62,7 +62,7 @@ const Home = () => {
           {t("home.domains.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] max-w-[20ch] mb-10"
+          className="font-display uppercase text-parchment leading-[0.95] text-[1.75rem] md:text-[2.5rem] lg:text-[3.25rem] max-w-[22ch] mb-10"
           style={{ fontWeight: 600 }}
         >
           {t("home.domains.title")}
@@ -97,7 +97,7 @@ const Home = () => {
           {t("home.ventures.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] max-w-[20ch] mb-8"
+          className="font-display uppercase text-parchment leading-[0.95] text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] max-w-[22ch] mb-8"
           style={{ fontWeight: 600 }}
         >
           {t("home.ventures.title")}
@@ -138,7 +138,7 @@ const Home = () => {
           {t("home.intelligence.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] max-w-[20ch] mb-8"
+          className="font-display uppercase text-parchment leading-[0.95] text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] max-w-[22ch] mb-8"
           style={{ fontWeight: 600 }}
         >
           {t("home.intelligence.title")}
@@ -173,7 +173,7 @@ const Home = () => {
           {t("home.reach.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.5rem] md:text-[4rem] lg:text-[5.5rem] max-w-[18ch] mb-8"
+          className="font-display uppercase text-parchment leading-[0.95] text-[1.75rem] md:text-[2.5rem] lg:text-[3.25rem] max-w-[20ch] mb-8"
           style={{ fontWeight: 600 }}
         >
           {t("home.reach.title")}
@@ -185,7 +185,7 @@ const Home = () => {
           {reach.map((m) => (
             <div key={m.label} className="bg-obsidian px-8 py-10">
               <div
-                className="font-display uppercase text-parchment text-4xl md:text-6xl leading-none"
+                className="font-display uppercase text-parchment text-3xl md:text-4xl lg:text-5xl leading-none"
                 style={{ fontWeight: 600 }}
               >
                 {m.value}
@@ -209,7 +209,7 @@ const Home = () => {
           {t("home.live.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.92] text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] max-w-[18ch] mb-14"
+          className="font-display uppercase text-parchment leading-[0.95] text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] max-w-[20ch] mb-14"
           style={{ fontWeight: 600 }}
         >
           {t("home.live.title")}
@@ -248,7 +248,7 @@ const Home = () => {
           {t("home.entry.eyebrow")}
         </div>
         <h2
-          className="font-display uppercase text-parchment leading-[0.9] text-[3rem] md:text-[5rem] lg:text-[7rem] max-w-[14ch]"
+          className="font-display uppercase text-parchment leading-[0.95] text-[2rem] md:text-[3rem] lg:text-[4rem] max-w-[16ch]"
           style={{ fontWeight: 700, letterSpacing: "0.005em" }}
         >
           {t("home.entry.title")}
