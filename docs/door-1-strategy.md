@@ -1,6 +1,6 @@
 # Door 1 — Strategy / Truth / Structure
 
-Status: **NEAR-CLOSE (revision r2). NOT CLOSED.**
+Status: **CLOSED (revision r3).**
 Owner: CSW Global
 Scope: Canonical source of truth for narrative, sitemap, taxonomy, scope, and approved copy. Doors 2–4 must conform. Any change requires a Door 1 re-open.
 
@@ -9,7 +9,8 @@ Scope: Canonical source of truth for narrative, sitemap, taxonomy, scope, and ap
 ## 0. Revision history
 
 - **r1** — initial lock attempt. **Retracted.** Closed prematurely; silently introduced "Capabilities" as a top-level nav item, silently locked "no managed backend" as a rule, and treated placeholder venture names as approved launch copy.
-- **r2 (current)** — corrections applied. Door 1 is **near-close**, awaiting three explicit confirmations (§8) before it can be marked closed.
+- **r2** — corrections applied. Held at NEAR-CLOSE awaiting §8 confirmations.
+- **r3 (current)** — Door 1 reconciled with Door 2 and the implemented Priority A code. Canonical taxonomy aligned to the labels actually shipped in `src/components/csw/Portfolio.tsx` and `src/i18n/locales/en.json`. §8 confirmations recorded. **Door 1 is CLOSED.**
 
 ---
 
@@ -96,26 +97,49 @@ Rules:
 | News index         | Chronological list of institutional updates.                               | Open an article              |
 | News article       | One update: category, date, title, body.                                   | Back to News                 |
 | Careers            | Hiring posture; route to Contact (no live ATS in v1).                      | Contact Careers              |
-| Contact            | Route partnerships, media, strategic inquiries.                            | Begin a conversation         |
+| Contact            | Route partnerships, media, careers, and strategic inquiries.               | Begin a conversation         |
 | Legal              | Privacy and terms; institutional minimum.                                  | —                            |
 | 404                | Recover the visitor to Home or Portfolio.                                  | Return Home                  |
 
 ---
 
-## 5. Portfolio domain taxonomy (locked)
+## 5. Portfolio domain taxonomy (locked — canonical)
 
-Companies are tagged with **exactly one** primary domain. Status and Relationship are controlled vocabularies. No free text on these fields.
+This is the **single canonical taxonomy**. Door 2, the i18n resources, and the
+Portfolio component (`src/components/csw/Portfolio.tsx`,
+`src/i18n/locales/en.json` → `whatWeBuild.sectors` and `portfolio.companies[].sector`)
+must use these exact labels. Any drift is a Door 1 violation.
 
-**Primary domains (6)**
-1. Education & Opportunity
+Companies are tagged with **exactly one** primary domain. Status and Relationship
+are controlled vocabularies. No free text on these fields.
+
+**Primary domains (6 — canonical labels)**
+1. Access & Opportunity
 2. Financial Enablement
-3. Commerce & Consumer Systems
-4. Mobility & Transition
-5. AI & Operating Infrastructure
-6. Future Strategic Ventures
+3. Commerce & Consumer Platforms
+4. Mobility & Services
+5. AI & Digital Infrastructure
+6. Strategic Future Ventures
+
+> Earlier r2 wording ("Education & Opportunity", "Commerce & Consumer Systems",
+> "Mobility & Transition", "AI & Operating Infrastructure",
+> "Future Strategic Ventures") is **superseded** by the labels above as of r3.
 
 **Status**: In Development · In Operation · Scaling
 **Relationship**: Wholly owned subsidiary · Operated by CSW Global · Incubated by CSW Global
+
+**Filter taxonomy (Portfolio index)** — locked filter keys, each mapped 1:1 to a
+primary domain (or `all`):
+
+| Filter key | Maps to primary domain                |
+|------------|----------------------------------------|
+| `all`      | (no filter)                            |
+| `access`   | Access & Opportunity                   |
+| `financial`| Financial Enablement                   |
+| `commerce` | Commerce & Consumer Platforms          |
+| `mobility` | Mobility & Services                    |
+| `ai`       | AI & Digital Infrastructure            |
+| `future`   | Strategic Future Ventures              |
 
 **Entry shape (data contract)**
 ```
@@ -146,7 +170,7 @@ Single typed registry consumed by both Portfolio index and detail routes. No per
 
 ## 7. Approved master copy (v1)
 
-English copy lives in `src/i18n/locales/en.json` and is mirrored structurally (scaffolds) in the other 11 locale files. No visible string in any component may exist outside this resource.
+English copy lives in `src/i18n/locales/en.json` and is mirrored structurally (scaffolds) in the other 11 locale files. No visible string in any component may exist outside this resource. Structural parity is enforced at build time by `scripts/i18n-parity.ts` (Vite plugin in `vite.config.ts`).
 
 **Approved as launch copy**: brand, nav labels, Home, Thesis, sector cards, Our Model steps, Shared Capabilities list, Global Outlook, Founder note framing, Careers framing, Contact framing, Footer.
 
@@ -160,26 +184,25 @@ A scaffold flag must be visible in the data layer (e.g., `scaffold: true`) so QA
 
 ---
 
-## 8. Open confirmations (block Door 1 closure)
+## 8. Confirmations (resolved at r3)
 
-Door 1 cannot move to **CLOSED** until these three are explicitly answered:
-
-- **8.1 Portfolio names** — Confirm: keep placeholder venture names as internal scaffolds (not shipped to production) **OR** provide the cleared real names now.
-- **8.2 Leadership entries** — Confirm: scaffold-only for v1 launch (page exists, entries marked scaffold) **OR** provide real leadership entries now.
-- **8.3 Institutional contact email** — **Unresolved.** No real address has been provided. A placeholder may be used internally during build but must not ship to production. Provide the real address before launch.
+- **8.1 Portfolio names** — **Confirmed scaffold-only for v1.** Placeholder venture names remain as internal scaffolds. They render in non-production builds for structural review and must be replaced or explicitly cleared before production launch. Door 1 structure is not blocked by this.
+- **8.2 Leadership entries** — **Confirmed scaffold-only for v1.** The `/leadership` route exists as a nav-locked stub; entries will be added when cleared. Door 1 structure is not blocked by this.
+- **8.3 Institutional contact email** — **No real address provided.** Door 1 forbids shipping a fabricated address. Implementation rule: `src/components/csw/Contact.tsx` must NOT hardcode any `mailto:` until a cleared address exists. Until then, the CTA renders a non-shipping pending state driven by `contact.ctaPending` / `contact.pendingNote` i18n keys. The real address replaces this state by setting the single `CONTACT_EMAIL` constant in that component.
 
 ---
 
-## 9. What is truly locked vs deferred
+## 9. What is locked vs deferred (post r3)
 
-**Locked at Door 1 (r2)**
+**Locked at Door 1 (r3)**
 - Positioning, voice, non-negotiables (§1).
 - Multi-route sitemap (§2).
 - Top nav order and the exclusion of "Capabilities" as a route/nav item (§3).
 - Page purpose map (§4).
-- Portfolio taxonomy and data contract (§5).
+- Portfolio taxonomy, canonical labels, and filter mapping (§5).
 - v1 scope boundary (§6).
 - Approved master copy slots vs scaffold slots (§7).
+- Contact-email shipping rule (§8.3 implementation rule).
 - Deployment rule: **private environment only, no Lovable Cloud.**
 
 **Deferred**
@@ -189,6 +212,8 @@ Door 1 cannot move to **CLOSED** until these three are explicitly answered:
 
 ---
 
-## 10. Door 1 closure criteria
+## 10. Door 1 closure
 
-Door 1 closes only when §8.1, §8.2, and §8.3 each have an explicit answer recorded here. Until then: **NEAR-CLOSE.**
+Door 1 is **CLOSED** as of r3. Any future change to §1–§5, §8.3 implementation
+rule, or the deployment rule requires an explicit Door 1 re-open and a new
+revision entry in §0.
