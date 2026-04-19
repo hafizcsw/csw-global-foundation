@@ -29,7 +29,7 @@
     "primaryCta": "Explore Portfolio",
     "secondaryCta": "About CSW Global",
     "specMark": "एटेलियर · सटीक संस्थान",
-    "specSeries": "श्रृंखला — CSW.GLOBAL",
+    "specSeries": "श्रृंखला — I",
     "specRef": "संदर्भ · 2025/01",
     "specs": {
       "est": {
@@ -53,7 +53,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "CSW Global · The House of Intelligent Ventures",
+      "eyebrow": "The House of Intelligent Ventures",
       "headline": "Building the systems behind the next generation of global companies.",
       "subheadline": "CSW Global builds and operates ventures across AI, aerospace systems, institutions, infrastructure, and strategic global sectors.",
       "primaryCta": "Explore the Group",
@@ -61,7 +61,7 @@
       "scroll": "Scroll"
     },
     "world": {
-      "eyebrow": "The World of CSW Global",
+      "eyebrow": "विश्व",
       "title": "A house built to design, operate, and compound companies.",
       "body": "CSW Global is the parent. Its work is to bring ventures into the world with structural clarity, shared infrastructure, and a long horizon.",
       "marker": "I."

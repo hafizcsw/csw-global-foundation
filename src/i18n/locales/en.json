@@ -29,7 +29,7 @@
     "primaryCta": "Explore Portfolio",
     "secondaryCta": "About CSW Global",
     "specMark": "ATELIER · MOLSHEIM-INSPIRED INSTITUTION",
-    "specSeries": "SERIES — CSW.GLOBAL",
+    "specSeries": "SERIES — I",
     "specRef": "REF · 2025/01",
     "specs": {
       "est": {
@@ -53,7 +53,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "CSW Global · The House of Intelligent Ventures",
+      "eyebrow": "The House of Intelligent Ventures",
       "headline": "Building the systems behind the next generation of global companies.",
       "subheadline": "CSW Global builds and operates ventures across AI, aerospace systems, institutions, infrastructure, and strategic global sectors.",
       "primaryCta": "Explore the Group",
@@ -61,7 +61,7 @@
       "scroll": "Scroll"
     },
     "world": {
-      "eyebrow": "The World of CSW Global",
+      "eyebrow": "The World",
       "title": "A house built to design, operate, and compound companies.",
       "body": "CSW Global is the parent. Its work is to bring ventures into the world with structural clarity, shared infrastructure, and a long horizon.",
       "marker": "I."
@@ -72,12 +72,36 @@
       "body": "Narrative framing of the long-horizon arenas the parent company prioritizes. The canonical portfolio taxonomy is defined on the Portfolio page.",
       "note": "Narrative framing — not the canonical portfolio taxonomy.",
       "items": [
-        { "code": "01", "title": "Applied Intelligence", "body": "Inference, orchestration, and decision systems as a shared discipline." },
-        { "code": "02", "title": "Aerospace & Autonomous Systems", "body": "Long-horizon interest in airspace, control, and propulsion-grade engineering." },
-        { "code": "03", "title": "Education & Institutional Platforms", "body": "Access to learning, credentials, and global mobility at institutional scale." },
-        { "code": "04", "title": "Digital Infrastructure", "body": "The substrate ventures are built on — identity, data, and networks." },
-        { "code": "05", "title": "Commerce & Consumer Platforms", "body": "Modern commerce and consumer experiences run on intelligent operations." },
-        { "code": "06", "title": "Strategic Future Ventures", "body": "Categories under active research where the group will deploy next." }
+        {
+          "code": "01",
+          "title": "Applied Intelligence",
+          "body": "Inference, orchestration, and decision systems as a shared discipline."
+        },
+        {
+          "code": "02",
+          "title": "Aerospace & Autonomous Systems",
+          "body": "Long-horizon interest in airspace, control, and propulsion-grade engineering."
+        },
+        {
+          "code": "03",
+          "title": "Education & Institutional Platforms",
+          "body": "Access to learning, credentials, and global mobility at institutional scale."
+        },
+        {
+          "code": "04",
+          "title": "Digital Infrastructure",
+          "body": "The substrate ventures are built on — identity, data, and networks."
+        },
+        {
+          "code": "05",
+          "title": "Commerce & Consumer Platforms",
+          "body": "Modern commerce and consumer experiences run on intelligent operations."
+        },
+        {
+          "code": "06",
+          "title": "Strategic Future Ventures",
+          "body": "Categories under active research where the group will deploy next."
+        }
       ]
     },
     "ventures": {
@@ -87,10 +111,30 @@
       "statusLabel": "Discipline",
       "sectorLabel": "Arena",
       "items": [
-        { "name": "Applied Intelligence", "sector": "Applied Intelligence", "status": "Shared Capability", "description": "Decision systems, orchestration, and applied AI made available to ventures the group builds." },
-        { "name": "Shared Digital Infrastructure", "sector": "Digital Infrastructure", "status": "Shared Capability", "description": "Identity, data, and network primitives used as the substrate for new ventures." },
-        { "name": "Institutional & Education Platforms", "sector": "Education & Institutional Platforms", "status": "Strategic Discipline", "description": "Discipline focused on credentials, access, and institution-grade platforms." },
-        { "name": "Brand & Operating Standards", "sector": "Operating Discipline", "status": "Shared Capability", "description": "Brand architecture, governance, and operating standards held at the parent company." }
+        {
+          "name": "Applied Intelligence",
+          "sector": "Applied Intelligence",
+          "status": "Shared Capability",
+          "description": "Decision systems, orchestration, and applied AI made available to ventures the group builds."
+        },
+        {
+          "name": "Shared Digital Infrastructure",
+          "sector": "Digital Infrastructure",
+          "status": "Shared Capability",
+          "description": "Identity, data, and network primitives used as the substrate for new ventures."
+        },
+        {
+          "name": "Institutional & Education Platforms",
+          "sector": "Education & Institutional Platforms",
+          "status": "Strategic Discipline",
+          "description": "Discipline focused on credentials, access, and institution-grade platforms."
+        },
+        {
+          "name": "Brand & Operating Standards",
+          "sector": "Operating Discipline",
+          "status": "Shared Capability",
+          "description": "Brand architecture, governance, and operating standards held at the parent company."
+        }
       ]
     },
     "intelligence": {
@@ -98,11 +142,31 @@
       "title": "How a CSW Global venture is intended to come into the world.",
       "body": "Five disciplined movements. The model the parent company applies as it builds.",
       "steps": [
-        { "code": "I.", "title": "Identify", "body": "We study sectors where structural opportunity exists." },
-        { "code": "II.", "title": "Architect", "body": "We design the venture's framework before a single line of code." },
-        { "code": "III.", "title": "Build", "body": "We construct on top of the group's shared infrastructure." },
-        { "code": "IV.", "title": "Operate", "body": "We govern execution against parent-company standards." },
-        { "code": "V.", "title": "Scale", "body": "We extend across markets, languages, and adjacent sectors." }
+        {
+          "code": "I.",
+          "title": "Identify",
+          "body": "We study sectors where structural opportunity exists."
+        },
+        {
+          "code": "II.",
+          "title": "Architect",
+          "body": "We design the venture's framework before a single line of code."
+        },
+        {
+          "code": "III.",
+          "title": "Build",
+          "body": "We construct on top of the group's shared infrastructure."
+        },
+        {
+          "code": "IV.",
+          "title": "Operate",
+          "body": "We govern execution against parent-company standards."
+        },
+        {
+          "code": "V.",
+          "title": "Scale",
+          "body": "We extend across markets, languages, and adjacent sectors."
+        }
       ]
     },
     "reach": {
@@ -110,9 +174,18 @@
       "title": "Global by structural design.",
       "body": "Twelve languages. Six canonical portfolio domains. Every venture engineered for cross-border operation from inception.",
       "metrics": [
-        { "value": "12", "label": "Languages" },
-        { "value": "06", "label": "Portfolio Domains" },
-        { "value": "—", "label": "Long Horizon" }
+        {
+          "value": "12",
+          "label": "Languages"
+        },
+        {
+          "value": "06",
+          "label": "Portfolio Domains"
+        },
+        {
+          "value": "—",
+          "label": "Long Horizon"
+        }
       ]
     },
     "live": {
@@ -120,9 +193,21 @@
       "title": "Movement across the group.",
       "viewAll": "All updates",
       "items": [
-        { "category": "Group", "date": "Recent", "title": "CSW Global articulates its parent-company operating framework." },
-        { "category": "Capability", "date": "Recent", "title": "Shared infrastructure expanded across the group's ventures." },
-        { "category": "Capability", "date": "Recent", "title": "Multilingual readiness extended across the group." }
+        {
+          "category": "Group",
+          "date": "Recent",
+          "title": "CSW Global articulates its parent-company operating framework."
+        },
+        {
+          "category": "Capability",
+          "date": "Recent",
+          "title": "Shared infrastructure expanded across the group's ventures."
+        },
+        {
+          "category": "Capability",
+          "date": "Recent",
+          "title": "Multilingual readiness extended across the group."
+        }
       ]
     },
     "entry": {
