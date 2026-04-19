@@ -1,109 +1,119 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import heroImage from "@/assets/hero-hypercar.jpg";
 
 export const Hero = () => {
   const { t } = useTranslation();
   return (
     <section
       id="top"
-      className="relative overflow-hidden border-b border-hairline-soft"
+      className="relative w-full h-[100svh] min-h-[640px] overflow-hidden bg-obsidian text-ink -mt-20"
     >
-      {/* Two-tone diagonal split: ink left / Bugatti blue right */}
-      <div aria-hidden className="absolute inset-0 split-surface" />
+      {/* Full-bleed cinematic image */}
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 w-full h-full object-cover object-center select-none"
+        draggable={false}
+      />
 
-      {/* Ambient blue glow */}
+      {/* Tonal vignette — preserve image, deepen edges */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-50"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(circle at 80% 30%, hsl(var(--gold-glow) / 0.25), transparent 50%)",
+            "linear-gradient(180deg, hsl(220 30% 3% / 0.55) 0%, hsl(220 30% 3% / 0) 30%, hsl(220 30% 3% / 0) 60%, hsl(220 30% 3% / 0.85) 100%)",
         }}
       />
-
-      {/* Engineered grid texture */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
+        className="absolute inset-0"
         style={{
-          backgroundImage:
-            "linear-gradient(hsl(var(--ink)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--ink)) 1px, transparent 1px)",
-          backgroundSize: "80px 80px",
+          background:
+            "linear-gradient(90deg, hsl(220 30% 3% / 0.55) 0%, hsl(220 30% 3% / 0) 40%)",
         }}
       />
 
-      <div className="container-csw relative pt-32 pb-32 md:pt-44 md:pb-52 lg:pt-52 lg:pb-64">
-        {/* Top spec bar — atelier reference */}
-        <div
-          className="reveal-soft mb-16 flex items-center justify-between gap-6 border-t border-hairline pt-5"
-          style={{ animationDelay: "100ms" }}
-        >
-          <div className="flex items-center gap-4">
-            <span className="spec-label">{t("hero.specMark")}</span>
-            <span className="hidden sm:inline-block h-3 w-px bg-hairline" />
-            <span className="hidden sm:inline spec-label">{t("hero.specSeries")}</span>
-          </div>
-          <span className="spec-label">{t("hero.specRef")}</span>
-        </div>
-
-        <div
-          className="reveal-soft inline-flex items-center gap-4 mb-10"
-          style={{ animationDelay: "200ms" }}
-        >
-          <span className="h-px w-14 bg-gold" />
-          <span className="eyebrow">{t("hero.eyebrow")}</span>
-        </div>
-
-        <h1
-          className="display text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] max-w-6xl reveal"
-          style={{ animationDelay: "350ms" }}
-        >
-          {t("hero.headline")}
-        </h1>
-
-        <div
-          className="mt-12 flex items-start gap-6 reveal"
-          style={{ animationDelay: "550ms" }}
-        >
-          <span className="hidden md:block mt-2 h-px w-16 bg-gold shrink-0" />
-          <p className="max-w-2xl text-base md:text-lg text-ink-soft leading-[1.8]">
-            {t("hero.subheadline")}
-          </p>
-        </div>
-
-        <div
-          className="mt-16 flex flex-wrap items-center gap-5 reveal"
-          style={{ animationDelay: "750ms" }}
-        >
-          <Link to="/portfolio" className="btn-luxury group">
-            {t("hero.primaryCta")}
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-          <Link to="/about" className="btn-ghost-luxury group">
-            {t("hero.secondaryCta")}
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </div>
-
-        {/* Bottom precision spec strip */}
-        <div
-          className="reveal-soft mt-24 grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline border border-hairline"
-          style={{ animationDelay: "900ms" }}
-        >
-          {(["est", "ventures", "markets", "discipline"] as const).map((k) => (
-            <div key={k} className="bg-background/80 backdrop-blur-sm p-6">
-              <div className="spec-label mb-3">{t(`hero.specs.${k}.label`)}</div>
-              <div className="font-serif text-2xl md:text-3xl text-ink leading-none">
-                {t(`hero.specs.${k}.value`)}
-              </div>
+      {/* Top-left spec coordinate */}
+      <div className="absolute top-28 start-6 md:start-12 lg:start-20 z-10 reveal-soft" style={{ animationDelay: "200ms" }}>
+        <div className="flex items-start gap-3">
+          <span className="mt-[6px] h-px w-8 bg-ink/60" />
+          <div>
+            <div className="font-mono text-[10px] tracking-[0.3em] text-ink/60 uppercase">
+              {t("hero.specMark")}
             </div>
-          ))}
+            <div className="mt-1 font-mono text-[10px] tracking-[0.3em] text-ink/40">
+              {t("hero.specRef")}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-32 bg-gradient-fade" aria-hidden />
+      {/* Top-right series mark */}
+      <div className="absolute top-28 end-6 md:end-12 lg:end-20 z-10 reveal-soft text-end" style={{ animationDelay: "300ms" }}>
+        <div className="font-mono text-[10px] tracking-[0.3em] text-ink/60 uppercase">
+          {t("hero.specSeries")}
+        </div>
+        <div className="mt-1 font-mono text-[10px] tracking-[0.3em] text-ink/40">
+          48° 32′ N · 7° 28′ E
+        </div>
+      </div>
+
+      {/* Headline — bottom-left, hairline serif, massive */}
+      <div className="absolute inset-x-0 bottom-0 z-10">
+        <div className="container-csw pb-16 md:pb-20 lg:pb-24">
+          <div
+            className="reveal-soft mb-8 flex items-center gap-4"
+            style={{ animationDelay: "500ms" }}
+          >
+            <span className="h-px w-12 bg-ink" />
+            <span className="font-mono text-[10px] tracking-[0.36em] uppercase text-ink/80">
+              {t("hero.eyebrow")}
+            </span>
+          </div>
+
+          <h1
+            className="reveal display font-light text-ink tracking-[-0.035em] leading-[0.88] text-[3rem] sm:text-[5rem] md:text-[7rem] lg:text-[10rem] xl:text-[12rem] max-w-[18ch]"
+            style={{
+              animationDelay: "650ms",
+              fontWeight: 300,
+            }}
+          >
+            {t("hero.headline")}
+          </h1>
+
+          <div
+            className="reveal mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-10"
+            style={{ animationDelay: "950ms" }}
+          >
+            <p className="max-w-md text-sm md:text-base text-ink/70 leading-[1.8]">
+              {t("hero.subheadline")}
+            </p>
+            <div className="flex items-center gap-8">
+              <Link
+                to="/portfolio"
+                className="group inline-flex items-center gap-4 font-mono text-[11px] tracking-[0.32em] uppercase text-ink hover:text-gold-glow transition-colors duration-700"
+              >
+                <span className="relative">
+                  {t("hero.primaryCta")}
+                  <span className="absolute inset-x-0 -bottom-2 h-px bg-ink/40 group-hover:bg-gold-glow transition-colors duration-700" />
+                </span>
+                <span className="block w-10 h-px bg-ink group-hover:bg-gold-glow group-hover:w-14 transition-all duration-700" />
+              </Link>
+              <Link
+                to="/about"
+                className="group inline-flex items-center font-mono text-[11px] tracking-[0.32em] uppercase text-ink/60 hover:text-ink transition-colors duration-700"
+              >
+                {t("hero.secondaryCta")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
