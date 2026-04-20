@@ -1,6 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { CinematicBackdrop } from "./CinematicBackdrop";
-import skyline from "@/assets/cinema-skyline.jpg";
 
 interface Metric {
   value: string;
@@ -12,9 +10,8 @@ export const InstitutionalReach = () => {
   const metrics = t("home.reach.metrics", { returnObjects: true }) as Metric[];
 
   return (
-    <section className="relative bg-background text-ink overflow-hidden">
-      <CinematicBackdrop src={skyline} opacity={16} position="center 35%" />
-      <div className="container-csw relative py-32 md:py-44">
+    <section className="relative bg-background text-ink">
+      <div className="container-csw py-32 md:py-44">
         <div className="grid grid-cols-12 gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <div className="font-mono text-[10px] tracking-[0.36em] uppercase text-gold">

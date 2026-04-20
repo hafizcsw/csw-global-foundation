@@ -1,14 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LANGUAGES } from "@/i18n";
-import { CinematicBackdrop } from "./CinematicBackdrop";
-import globalNetwork from "@/assets/cinema-global-network.jpg";
 
 export const GlobalOutlook = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative bg-secondary/40 border-b border-hairline-soft overflow-hidden">
-      <CinematicBackdrop src={globalNetwork} opacity={14} />
-      <div className="container-csw relative py-32 md:py-44 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+    <section className="relative bg-secondary/40 border-b border-hairline-soft">
+      <div className="container-csw py-32 md:py-44 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         <div className="lg:col-span-6">
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-10 bg-ink/40" />
