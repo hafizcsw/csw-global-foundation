@@ -1062,5 +1062,28 @@
       "title": "Contact",
       "description": "Reach the CSW Global parent company directly — partnerships, institutions, media, and strategic inquiries."
     }
+  },
+  "architectureLayers": {
+    "eyebrow": "بنية المحفظة",
+    "title": "بنية محفظة من أربع طبقات.",
+    "body": "تنظّم CSW Global شركاتها ضمن بنية واحدة مدروسة من أربع طبقات. تخدم كل طبقة غرضاً مؤسسياً مميزاً، ومجتمعةً تشكّل الطريقة التي تُركّب بها المجموعة محفظتها.",
+    "layers": [
+      {
+        "label": "Global Platforms",
+        "body": "منصات عامة تعمل على نطاق واسع عبر الحدود والقطاعات والمستخدمين المؤسسيين."
+      },
+      {
+        "label": "Intelligence Engines",
+        "body": "أنظمة قرار وتصنيف تشغّل كيفية قراءة المجموعة لميادينها وتقييمها وتنسيقها."
+      },
+      {
+        "label": "Premium Markets & Communities",
+        "body": "شبكات خاصة وأسواق عالية القيمة تتراكم فيها الصفقات ورأس المال والعلاقات."
+      },
+      {
+        "label": "Frontier Ventures",
+        "body": "تقنيات حدودية وملكية فكرية تأسيسية موضوعة لقيمة طويلة الأمد تتجاوز المجموعة التشغيلية الحالية."
+      }
+    ]
   }
 }

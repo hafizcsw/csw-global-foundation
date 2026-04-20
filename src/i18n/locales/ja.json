@@ -1062,5 +1062,28 @@
       "title": "Contact",
       "description": "Reach the CSW Global parent company directly — partnerships, institutions, media, and strategic inquiries."
     }
+  },
+  "architectureLayers": {
+    "eyebrow": "Portfolio Architecture",
+    "title": "A four-layer portfolio architecture.",
+    "body": "CSW Global organizes its ventures into a single, deliberate architecture of four layers. Each layer answers a distinct institutional purpose; together they form how the group composes its portfolio.",
+    "layers": [
+      {
+        "label": "Global Platforms",
+        "body": "Public-facing platforms that operate at scale across borders, sectors, and institutional users."
+      },
+      {
+        "label": "Intelligence Engines",
+        "body": "Decision and ranking systems that power how the group reads, scores, and orchestrates its arenas."
+      },
+      {
+        "label": "Premium Markets & Communities",
+        "body": "Private networks and high-ticket markets where deal flow, capital, and relationships compound."
+      },
+      {
+        "label": "Frontier Ventures",
+        "body": "Future-tech and category-defining IP positioned for long-horizon value beyond the current operating set."
+      }
+    ]
   }
 }
