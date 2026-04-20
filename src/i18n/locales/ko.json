@@ -301,6 +301,7 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Companies operated under CSW Global.",
+    "intro": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
     "body": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
     "statusLabel": "Status",
     "sectorLabel": "Sector",
@@ -388,6 +389,11 @@
       "Market Expansion Support"
     ]
   },
+  "ourModel": {
+    "eyebrow": "Operating Model",
+    "title": "How CSW Global builds companies.",
+    "intro": "A repeatable system applied with discipline across every venture, supported by shared infrastructure held at the parent company."
+  },
   "global": {
     "eyebrow": "Global Outlook",
     "title": "Built for international markets from the foundation.",
@@ -457,6 +463,7 @@
   "contact": {
     "eyebrow": "Strategic Contact",
     "title": "For partnerships, media, careers, and strategic inquiries.",
+    "intro": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
     "body": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
     "lanes": {
       "partnerships": {
