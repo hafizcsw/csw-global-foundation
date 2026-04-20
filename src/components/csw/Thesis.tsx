@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "./SectionHeader";
-import { CinematicBackdrop } from "./CinematicBackdrop";
-import liquidGold from "@/assets/cinema-liquid-gold.jpg";
 
 interface Pillar { title: string; body: string }
 
@@ -9,9 +7,8 @@ export const Thesis = () => {
   const { t } = useTranslation();
   const pillars = t("thesis.pillars", { returnObjects: true }) as Pillar[];
   return (
-    <section id="thesis" className="relative border-b border-hairline-soft bg-background overflow-hidden">
-      <CinematicBackdrop src={liquidGold} opacity={10} position="right center" />
-      <div className="container-csw relative py-32 md:py-44">
+    <section id="thesis" className="relative border-b border-hairline-soft bg-background">
+      <div className="container-csw py-32 md:py-44">
         <SectionHeader
           eyebrow={t("thesis.eyebrow")}
           title={t("thesis.title")}
