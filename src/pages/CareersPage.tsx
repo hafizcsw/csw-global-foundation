@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { PageHeader } from "@/components/csw/PageHeader";
 import { PageTransition } from "@/components/csw/PageTransition";
+import { SectionEyebrow } from "@/components/csw/SectionEyebrow";
 import { SectionHeader } from "@/components/csw/SectionHeader";
 import { Seo } from "@/components/csw/Seo";
 import heroCareers from "@/assets/hero-careers.mp4.asset.json";
@@ -25,6 +26,7 @@ const CareersPage = () => {
         videoSrc={heroCareers.url}
       />
       <PageTransition />
+      <SectionEyebrow groupKey="nav.groups.engage" sectionKey="nav.careers" />
 
       {/* Why Join */}
       <section className="relative bg-background border-b border-hairline-soft">

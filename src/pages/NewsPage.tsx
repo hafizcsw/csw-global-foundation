@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "@/components/csw/PageHeader";
 import { PageTransition } from "@/components/csw/PageTransition";
+import { SectionEyebrow } from "@/components/csw/SectionEyebrow";
 import { SectionHeader } from "@/components/csw/SectionHeader";
 import { Seo } from "@/components/csw/Seo";
 import heroNews from "@/assets/hero-news.mp4.asset.json";
@@ -23,6 +24,7 @@ const NewsPage = () => {
         videoSrc={heroNews.url}
       />
       <PageTransition />
+      <SectionEyebrow groupKey="nav.groups.work" sectionKey="nav.news" />
 
       {/* Featured update */}
       <section className="relative bg-background border-b border-hairline-soft">

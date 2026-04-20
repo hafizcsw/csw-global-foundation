@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "@/components/csw/PageHeader";
 import { PageTransition } from "@/components/csw/PageTransition";
+import { SectionEyebrow } from "@/components/csw/SectionEyebrow";
 import { SectionHeader } from "@/components/csw/SectionHeader";
 import { FounderNote } from "@/components/csw/FounderNote";
 import { AboutDeep } from "@/components/csw/AboutDeep";
@@ -25,6 +26,7 @@ const AboutPage = () => {
         videoSrc={heroAbout.url}
       />
       <PageTransition />
+      <SectionEyebrow groupKey="nav.groups.house" sectionKey="nav.about" />
       <section className="relative bg-background border-b border-hairline-soft">
         <div className="container-csw py-32 md:py-44">
           <SectionHeader

@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/csw/PageHeader";
 import { PageTransition } from "@/components/csw/PageTransition";
+import { SectionEyebrow } from "@/components/csw/SectionEyebrow";
 import { OperatingModel } from "@/components/csw/OperatingModel";
 import { Capabilities } from "@/components/csw/Capabilities";
 import { GlobalOutlook } from "@/components/csw/GlobalOutlook";
@@ -17,6 +18,7 @@ const OurModelPage = () => (
       videoSrc={heroOurModel.url}
     />
     <PageTransition />
+    <SectionEyebrow groupKey="nav.groups.house" sectionKey="nav.ourModel" />
     <OurModelDeep />
     <OperatingModel />
     <Capabilities />

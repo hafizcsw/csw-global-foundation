@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/csw/PageHeader";
 import { PageTransition } from "@/components/csw/PageTransition";
+import { SectionEyebrow } from "@/components/csw/SectionEyebrow";
 import { Contact } from "@/components/csw/Contact";
 import { ContactDeep } from "@/components/csw/ContactDeep";
 import { Seo } from "@/components/csw/Seo";
@@ -15,6 +16,7 @@ const ContactPage = () => (
       videoSrc={heroContact.url}
     />
     <PageTransition />
+    <SectionEyebrow groupKey="nav.groups.engage" sectionKey="nav.contact" />
     <Contact />
     <ContactDeep />
   </>
