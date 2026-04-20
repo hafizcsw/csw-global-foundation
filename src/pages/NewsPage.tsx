@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "@/components/csw/PageHeader";
+import { PageTransition } from "@/components/csw/PageTransition";
 import { SectionHeader } from "@/components/csw/SectionHeader";
+import { Seo } from "@/components/csw/Seo";
 import heroNews from "@/assets/hero-news.mp4.asset.json";
 
 interface NewsItem { category: string; date: string; title: string; body: string }
@@ -13,12 +15,14 @@ const NewsPage = () => {
 
   return (
     <>
+      <Seo titleKey="seo.news.title" descriptionKey="seo.news.description" />
       <PageHeader
         eyebrowKey="news.eyebrow"
         titleKey="news.title"
         bodyKey="news.intro"
         videoSrc={heroNews.url}
       />
+      <PageTransition />
 
       {/* Featured update */}
       <section className="relative bg-background border-b border-hairline-soft">

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { Seo } from "@/components/csw/Seo";
 import { HeroFilm } from "@/components/csw/HeroFilm";
 import { SnapChapter } from "@/components/csw/SnapChapter";
 import { CinematicBackdrop } from "@/components/csw/CinematicBackdrop";
@@ -27,6 +28,7 @@ const Home = () => {
 
   return (
     <div className="snap-stage bg-obsidian text-parchment">
+      <Seo titleKey="seo.home.title" descriptionKey="seo.home.description" />
       {/* Chapter 01 — Sovereign Hero */}
       <HeroFilm />
 

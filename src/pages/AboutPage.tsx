@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "@/components/csw/PageHeader";
+import { PageTransition } from "@/components/csw/PageTransition";
 import { SectionHeader } from "@/components/csw/SectionHeader";
 import { FounderNote } from "@/components/csw/FounderNote";
 import { AboutDeep } from "@/components/csw/AboutDeep";
+import { Seo } from "@/components/csw/Seo";
 import heroAbout from "@/assets/hero-about.mp4.asset.json";
 
 interface Principle {

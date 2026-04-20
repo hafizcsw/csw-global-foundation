@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { PageHeader } from "@/components/csw/PageHeader";
+import { PageTransition } from "@/components/csw/PageTransition";
 import { SectionHeader } from "@/components/csw/SectionHeader";
+import { Seo } from "@/components/csw/Seo";
 import heroCareers from "@/assets/hero-careers.mp4.asset.json";
 
 interface Item { title: string; body: string }
@@ -15,12 +17,14 @@ const CareersPage = () => {
 
   return (
     <>
+      <Seo titleKey="seo.careers.title" descriptionKey="seo.careers.description" />
       <PageHeader
         eyebrowKey="careersPage.eyebrow"
         titleKey="careersPage.title"
         bodyKey="careersPage.intro"
         videoSrc={heroCareers.url}
       />
+      <PageTransition />
 
       {/* Why Join */}
       <section className="relative bg-background border-b border-hairline-soft">
