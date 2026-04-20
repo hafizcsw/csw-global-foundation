@@ -25,9 +25,10 @@ export const SiteLayout = () => {
   }, [t, pathname]);
 
   if (isHome) {
-    // Homepage owns its own scroll (snap-stage). No global header offset, no footer.
+    // Homepage owns its own scroll (snap-stage). Theme-driven (light/dark)
+    // via the global ThemeProvider — do NOT force the cinematic palette here.
     return (
-      <div className="cinematic-dark bg-obsidian text-parchment">
+      <div className="bg-background text-foreground">
         <Header />
         <main>
           <Outlet />
