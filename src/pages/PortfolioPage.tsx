@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/csw/PageHeader";
 import { PageTransition } from "@/components/csw/PageTransition";
+import { SectionEyebrow } from "@/components/csw/SectionEyebrow";
 import { Portfolio } from "@/components/csw/Portfolio";
 import { PortfolioPrelude, PortfolioDeep } from "@/components/csw/PortfolioDeep";
 import { Seo } from "@/components/csw/Seo";
@@ -15,6 +16,7 @@ const PortfolioPage = () => (
       videoSrc={heroPortfolio.url}
     />
     <PageTransition />
+    <SectionEyebrow groupKey="nav.groups.work" sectionKey="nav.portfolio" />
     <PortfolioPrelude />
     <Portfolio showFilters showViewAll={false} />
     <PortfolioDeep />
