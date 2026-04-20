@@ -37,8 +37,8 @@ export const Seo = ({ titleKey, descriptionKey }: SeoProps) => {
       <meta property="og:site_name" content={brand} />
       <meta property="og:locale" content={i18n.language} />
       <meta property="og:image" content={ogUrl} />
-      <meta property="og:image:width" content="1216" />
-      <meta property="og:image:height" content="640" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={brand} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
