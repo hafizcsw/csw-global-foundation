@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import capStrategy from "@/assets/cap-strategy.jpg";
-import capExecution from "@/assets/cap-execution.jpg";
-import capStewardship from "@/assets/cap-stewardship.jpg";
+import capProductDevelopment from "@/assets/cap-product-development.jpg";
+import capAiSystems from "@/assets/cap-ai-systems.jpg";
 
 /**
  * Bugatti-pattern Capabilities: three monumental visual cards on pure ground,
@@ -12,7 +12,7 @@ import capStewardship from "@/assets/cap-stewardship.jpg";
 export const Capabilities = () => {
   const { t } = useTranslation();
   const items = t("capabilities.items", { returnObjects: true }) as string[];
-  const images = [capStrategy, capExecution, capStewardship];
+  const images = [capStrategy, capProductDevelopment, capAiSystems];
   const captions = t("capabilities.captions", { returnObjects: true }) as
     | string[]
     | Record<string, never>;
