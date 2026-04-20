@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "CSW Global — Building the next generation of global companies",
-    "description": "CSW Global is the parent company behind a growing portfolio of AI-native ventures built for long-term value, operational leverage, and intelligent global expansion."
+    "description": "CSW Global is the parent company behind a growing portfolio of AI-native ventures built for long-term value, operational leverage, and intelligent global expansion.",
+    "tagline": "Building the next generation of global companies"
   },
   "nav": {
     "about": "About",
@@ -967,5 +968,39 @@
     "toDark": "切换到深色模式",
     "light": "浅色",
     "dark": "深色"
+  },
+  "seo": {
+    "home": {
+      "title": "CSW Global — Building the next generation of global companies",
+      "description": "CSW Global is the parent company behind a growing portfolio of AI-native ventures, built for long-term value, operational leverage, and intelligent global expansion."
+    },
+    "about": {
+      "title": "About CSW Global",
+      "description": "The institutional house behind CSW Global — why it exists, what it builds, and the role of the parent company."
+    },
+    "ourModel": {
+      "title": "Our Operating Model",
+      "description": "How CSW Global designs, operates, and compounds ventures through shared infrastructure and disciplined execution."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "The deliberately composed group of CSW Global ventures — the logic that connects them and the principles held constant across them."
+    },
+    "leadership": {
+      "title": "Leadership",
+      "description": "The leadership posture of CSW Global — philosophy, responsibilities, and governance discipline at the parent company."
+    },
+    "news": {
+      "title": "Newsroom",
+      "description": "An institutional record of what CSW Global and its ventures are doing — published with restraint, written for the long horizon."
+    },
+    "careers": {
+      "title": "Careers",
+      "description": "Areas of contribution at CSW Global — the parent company and its ventures hire selectively for long-horizon work."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Reach the CSW Global parent company directly — partnerships, institutions, media, and strategic inquiries."
+    }
   }
 }
