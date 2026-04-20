@@ -498,11 +498,9 @@
   font-variant-numeric: tabular-nums lining-nums;
 }
 
-/* ===== Cinematic surfaces — force the dark palette regardless of theme.
-   The homepage snap-stage and any explicit `.cinematic-dark` zone keep
-   true obsidian + parchment so footage, video overlays, and gold accents
-   register correctly even when the user has chosen Day mode. ===== */
-.snap-stage,
+/* ===== Cinematic surfaces — only `.cinematic-dark` zones force the dark
+   palette (e.g. PageHeader, FounderNote). The homepage snap-stage now
+   follows the global theme so Day mode actually flips the page. ===== */
 .cinematic-dark {
   --parchment: 30 14% 98%;
   --obsidian: 220 22% 4%;
