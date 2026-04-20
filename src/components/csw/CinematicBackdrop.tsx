@@ -20,10 +20,16 @@ export const CinematicBackdrop = ({
   tone = "light",
   position = "center",
 }: CinematicBackdropProps) => {
+  // Day mode needs a much stronger wash because the cinema-* source images
+  // are graded near-black; a soft veil leaves muddy dark blotches behind
+  // dark ink type. We push the light veil to near-opaque and desaturate
+  // the underlying image via CSS filter so it reads as a faint texture.
   const veil =
     tone === "dark"
       ? "linear-gradient(180deg, hsl(220 30% 3% / 0.55) 0%, hsl(220 30% 3% / 0.92) 100%)"
-      : "linear-gradient(180deg, hsl(var(--background) / 0.82) 0%, hsl(var(--background) / 0.96) 100%)";
+      : "linear-gradient(180deg, hsl(var(--background) / 0.94) 0%, hsl(var(--background) / 0.985) 100%)";
+  const imgFilter =
+    tone === "dark" ? undefined : "grayscale(0.6) contrast(0.85) brightness(1.15)";
 
   return (
     <>
@@ -35,7 +41,7 @@ export const CinematicBackdrop = ({
         width={1920}
         height={1080}
         className="pointer-events-none absolute inset-0 w-full h-full object-cover select-none"
-        style={{ opacity: opacity / 100, objectPosition: position }}
+        style={{ opacity: opacity / 100, objectPosition: position, filter: imgFilter }}
       />
       <div aria-hidden className="absolute inset-0" style={{ background: veil }} />
     </>
