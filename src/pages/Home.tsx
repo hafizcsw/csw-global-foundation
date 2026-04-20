@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="snap-stage bg-background text-foreground">
       <Seo titleKey="seo.home.title" descriptionKey="seo.home.description" />
-      {/* Chapter 01 — Sovereign Hero (video, locked dark) */}
+      {/* Chapter 01 — Sovereign Hero (video, theme-aware) */}
       <HeroFilm />
 
       {/* Chapter 02 — Enter the World */}
