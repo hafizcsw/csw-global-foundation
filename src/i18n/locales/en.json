@@ -389,7 +389,11 @@
       "Market Expansion Support"
     ]
   },
-  "global": {
+  "ourModel": {
+    "eyebrow": "Operating Model",
+    "title": "How CSW Global builds companies.",
+    "intro": "A repeatable system applied with discipline across every venture, supported by shared infrastructure held at the parent company."
+  },
     "eyebrow": "Global Outlook",
     "title": "Built for international markets from the foundation.",
     "body": "Every venture is engineered for multilingual readiness and cross-border operation. Global ambition is not a later phase — it is part of the structural design."
@@ -458,6 +462,7 @@
   "contact": {
     "eyebrow": "Strategic Contact",
     "title": "For partnerships, media, careers, and strategic inquiries.",
+    "intro": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
     "body": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
     "lanes": {
       "partnerships": {
