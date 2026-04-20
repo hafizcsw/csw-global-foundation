@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { SectionHeader } from "./SectionHeader";
+import { ArchitectureLayers } from "./ArchitectureLayers";
 
 interface Item { title: string; body: string }
 interface Snap { label: string; value: string }
@@ -69,6 +70,9 @@ export const AboutDeep = () => {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Architecture (truth-link) */}
+      <ArchitectureLayers />
 
       {/* Group Snapshot */}
       <section className="relative bg-background border-b border-hairline-soft">

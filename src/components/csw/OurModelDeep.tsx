@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SectionHeader } from "./SectionHeader";
+import { ArchitectureLayers } from "./ArchitectureLayers";
 
 interface Item { title: string; body: string }
 
@@ -86,6 +87,9 @@ export const OurModelDeep = () => {
           />
         </div>
       </section>
+
+      {/* Portfolio Architecture (truth-link) */}
+      <ArchitectureLayers />
 
       {/* Portfolio Coherence */}
       <section className="relative bg-background border-b border-hairline-soft">
