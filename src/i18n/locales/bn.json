@@ -301,52 +301,112 @@
   },
   "portfolio": {
     "eyebrow": "Portfolio",
-    "title": "Companies operated under CSW Global.",
-    "intro": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
-    "body": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
-    "statusLabel": "Status",
-    "sectorLabel": "Sector",
-    "relationshipLabel": "Relationship",
+    "title": "The CSW Global portfolio.",
+    "intro": "Each entity is built, supported, or held under the parent company through shared capabilities, capital structure, and strategic oversight.",
+    "body": "The portfolio is composed across four layers — global platforms, intelligence engines, premium markets and communities, and frontier ventures.",
     "viewAll": "View full portfolio",
-    "filters": {
-      "all": "All Domains",
-      "access": "Access & Opportunity",
-      "mobility": "Mobility & Services",
-      "commerce": "Commerce & Consumer Platforms",
-      "financial": "Financial Enablement",
-      "ai": "AI & Digital Infrastructure",
-      "future": "Strategic Future Ventures"
-    },
-    "companies": [
-      {
-        "name": "Venture One",
-        "sector": "Access & Opportunity",
-        "status": "In Operation",
-        "description": "An AI-native platform expanding access to learning and verifiable credentials.",
-        "relationship": "Wholly owned subsidiary"
+    "groups": {
+      "global_platforms": {
+        "title": "Global Platforms",
+        "tagline": "Public-facing flagship platforms operated by the group."
       },
-      {
-        "name": "Venture Two",
-        "sector": "Financial Enablement",
-        "status": "Scaling",
-        "description": "Infrastructure broadening access to financial products across emerging markets.",
-        "relationship": "Operated by CSW Global"
+      "intelligence_engines": {
+        "title": "Intelligence Engines",
+        "tagline": "Decision and ranking systems that power the platforms."
       },
-      {
-        "name": "Venture Three",
-        "sector": "Commerce & Consumer Platforms",
-        "status": "In Operation",
-        "description": "A consumer commerce business built on intelligent operations and brand depth.",
-        "relationship": "Wholly owned subsidiary"
+      "premium_markets": {
+        "title": "Premium Markets & Communities",
+        "tagline": "High-ticket commerce and curated network layers."
       },
-      {
-        "name": "Venture Four",
-        "sector": "Mobility & Services",
-        "status": "In Development",
-        "description": "Services supporting cross-border relocation and life transition workflows.",
-        "relationship": "Incubated by CSW Global"
+      "frontier_ventures": {
+        "title": "Frontier Ventures",
+        "tagline": "Future-tech IP and category-creating ventures."
       }
-    ]
+    },
+    "filters": {
+      "all": "All Groups",
+      "pending": "Pending Disclosure"
+    },
+    "labels": {
+      "sector": "Sector",
+      "stage": "Stage",
+      "type": "Type",
+      "audience": "Audience",
+      "role": "Role in group"
+    },
+    "stage": {
+      "concept": "Concept",
+      "in_development": "In Development",
+      "operating": "Operating",
+      "scaling": "Scaling"
+    },
+    "type": {
+      "company": "Company",
+      "brand": "Brand",
+      "platform": "Platform",
+      "intelligence_engine": "Intelligence Engine",
+      "community": "Community",
+      "IP_future_venture": "Frontier IP"
+    },
+    "sector": {
+      "education_and_institutional_access": "Education & Institutional Access",
+      "investor_communications": "Investor Communications",
+      "investor_presentation_runtime": "Investor Presentation Runtime",
+      "luxury_real_estate_and_ai_concierge": "Luxury Real Estate & AI Concierge",
+      "education_intelligence_and_future_readiness": "Education Intelligence & Future-Readiness",
+      "elite_business_community_and_deal_flow": "Elite Business Community & Deal Flow",
+      "future_sports_drones_and_entertainment": "Future Sports, Drones & Entertainment",
+      "ai_diagnostics_services_and_marketplace": "AI Diagnostics, Services & Marketplace"
+    },
+    "audience": {
+      "students_and_institutions": "Students & institutions",
+      "founders_operators_and_investors": "Founders, operators & investors",
+      "investors_and_founders": "Investors & founders",
+      "investors_buyers_and_agents": "Investors, buyers & agents",
+      "students_institutions_and_admins": "Students, institutions & admins",
+      "entrepreneurs_investors_and_executives": "Entrepreneurs, investors & executives",
+      "audiences_sponsors_and_future_partners": "Audiences, sponsors & future partners",
+      "homeowners_technicians_and_local_suppliers": "Homeowners, technicians & local suppliers"
+    },
+    "entities": {
+      "csw_world": {
+        "description": "A global platform for universities, programs, student comparison, and institutional participation.",
+        "role": "Public-facing flagship platform for the education and mobility layer of the group."
+      },
+      "orx_rank": {
+        "description": "A future-readiness scoring and ranking engine for countries, universities, and programs.",
+        "role": "Decision and ranking engine inside the CSW World ecosystem."
+      },
+      "oryxa_pitch_studio": {
+        "description": "A pitch-generation platform for creating presentation assets and structured investor-facing materials.",
+        "role": "Capital-communication platform within the group."
+      },
+      "investor_room": {
+        "description": "A structured runtime environment for presenting pitch materials scene-by-scene to investors.",
+        "role": "Investor-facing runtime layer attached to the pitch infrastructure."
+      },
+      "luxury_real_estate_ai": {
+        "description": "A luxury real-estate platform combining listings, CRM workflows, and an AI investment concierge.",
+        "role": "High-ticket flagship platform in the premium asset commerce layer of the group."
+      },
+      "all_to_one": {
+        "description": "A private luxury business club and war-room environment for entrepreneurs, investors, and decision-makers in Dubai.",
+        "role": "Premium network and relationship layer for deal flow, partnerships, and investment opportunities."
+      },
+      "sky_battle": {
+        "description": "A future sport built around organized drone combat competitions inside a formal competitive framework.",
+        "role": "Frontier IP venture in the group's future-tech and drone domain."
+      },
+      "ai_plumbing": {
+        "description": "An AI-powered plumbing platform combining camera-based diagnosis, guided repair, parts/tools access, and technician dispatch.",
+        "role": "Service marketplace venture combining AI diagnostics with commerce and field-service operations."
+      }
+    },
+    "disclosure": {
+      "eyebrow": "Held Under Disclosure",
+      "title": "Additional initiatives held under institutional disclosure.",
+      "body": "A further set of ventures, platforms, and IP positions is operated or held by the group and is disclosed only inside qualified institutional engagements."
+    }
   },
   "operatingModel": {
     "eyebrow": "Operating Model",
