@@ -301,6 +301,7 @@
   "portfolio": {
     "eyebrow": "Portfolio",
     "title": "Companies operated under CSW Global.",
+    "intro": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
     "body": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
     "statusLabel": "Status",
     "sectorLabel": "Sector",
