@@ -10,7 +10,9 @@ import PortfolioPage from "./pages/PortfolioPage";
 import OurModelPage from "./pages/OurModelPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import StubPage from "./pages/StubPage";
+import LeadershipPage from "./pages/LeadershipPage";
+import NewsPage from "./pages/NewsPage";
+import CareersPage from "./pages/CareersPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -29,10 +31,9 @@ const App = () => (
               <Route path="/our-model" element={<OurModelPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              {/* Door 1 nav lock: routes exist but Priority B/C content deferred */}
-              <Route path="/leadership" element={<StubPage titleKey="nav.leadership" />} />
-              <Route path="/news" element={<StubPage titleKey="nav.news" />} />
-              <Route path="/careers" element={<StubPage titleKey="nav.careers" />} />
+              <Route path="/leadership" element={<LeadershipPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/careers" element={<CareersPage />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

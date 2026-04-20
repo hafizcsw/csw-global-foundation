@@ -2,6 +2,7 @@ import { PageHeader } from "@/components/csw/PageHeader";
 import { OperatingModel } from "@/components/csw/OperatingModel";
 import { Capabilities } from "@/components/csw/Capabilities";
 import { GlobalOutlook } from "@/components/csw/GlobalOutlook";
+import { OurModelDeep } from "@/components/csw/OurModelDeep";
 import heroOurModel from "@/assets/hero-our-model.mp4.asset.json";
 
 const OurModelPage = () => (
@@ -12,6 +13,7 @@ const OurModelPage = () => (
       bodyKey="ourModel.intro"
       videoSrc={heroOurModel.url}
     />
+    <OurModelDeep />
     <OperatingModel />
     <Capabilities />
     <GlobalOutlook />

@@ -301,6 +301,7 @@
   "portfolio": {
     "eyebrow": "المحفظة",
     "title": "الشركات المُشغَّلة ضمن CSW Global.",
+    "intro": "Each venture is built and supported by the parent company through shared capabilities, capital structure, and strategic oversight.",
     "body": "تُبنى كل شركة وتُدعَم من قِبل الشركة الأم عبر القدرات المشتركة، وهيكل رأس المال، والإشراف الاستراتيجي.",
     "statusLabel": "الحالة",
     "sectorLabel": "القطاع",
@@ -388,6 +389,11 @@
       "دعم التوسع في الأسواق"
     ]
   },
+  "ourModel": {
+    "eyebrow": "Operating Model",
+    "title": "How CSW Global builds companies.",
+    "intro": "A repeatable system applied with discipline across every venture, supported by shared infrastructure held at the parent company."
+  },
   "global": {
     "eyebrow": "نظرة عالمية",
     "title": "مبنية للأسواق الدولية منذ التأسيس.",
@@ -457,6 +463,7 @@
   "contact": {
     "eyebrow": "تواصل استراتيجي",
     "title": "للشراكات، والإعلام، والوظائف، والاستفسارات الاستراتيجية.",
+    "intro": "We engage selectively with institutions, investors, operators, and prospective team members whose work aligns with the group's long-term direction.",
     "body": "نتعامل بانتقائية مع المؤسسات والمستثمرين والمشغّلين وأعضاء الفريق المحتملين الذين تتوافق أعمالهم مع التوجه طويل الأمد للمجموعة.",
     "lanes": {
       "partnerships": {
@@ -482,6 +489,473 @@
     "cta": "ابدأ محادثة",
     "ctaPending": "قناة التواصل المؤسسية — قيد الإعداد",
     "pendingNote": "يجري إنهاء عنوان التواصل المؤسسي وسيُنشر قبل الإطلاق."
+  },
+  "leadership": {
+    "eyebrow": "Leadership",
+    "title": "The discipline behind the group.",
+    "intro": "Leadership at CSW Global is the work of carrying the parent company's standards into every venture — strategy, governance, capital, and the long horizon.",
+    "philosophyEyebrow": "Leadership Philosophy",
+    "philosophyTitle": "Leadership as architecture, not personality.",
+    "philosophyBody": "We treat leadership as the operating spine of the group. It is concentrated at the parent, exercised with restraint, and measured by what compounds across the portfolio over time.",
+    "responsibilitiesEyebrow": "Leadership Responsibilities",
+    "responsibilitiesTitle": "What the parent company owns.",
+    "responsibilities": [
+      {
+        "title": "Strategic Direction",
+        "body": "Setting the long-horizon arenas in which the group operates and the order in which it deploys."
+      },
+      {
+        "title": "Capital Stewardship",
+        "body": "Allocating capital across ventures with discipline, patience, and structural intent."
+      },
+      {
+        "title": "Governance & Standards",
+        "body": "Defining the operating standards, controls, and reporting that hold across every venture."
+      },
+      {
+        "title": "Talent & Succession",
+        "body": "Building the operator bench at the parent and inside each portfolio company."
+      }
+    ],
+    "founderEyebrow": "Founder Note · Leadership",
+    "founderBody": "Leadership in this house is not a stage. It is the quiet discipline of carrying a long-horizon institution forward — and of making sure each venture inherits more structure than it was born with.",
+    "founderAttribution": "Founder, CSW Global",
+    "profilesEyebrow": "Leadership Profiles",
+    "profilesTitle": "The leadership architecture.",
+    "profilesBody": "Named leadership profiles will be published in this section as the group's institutional disclosures are finalized. The seats below describe the leadership architecture of the parent company.",
+    "profiles": [
+      {
+        "role": "Founder & Group Chief Executive",
+        "scope": "Overall direction of the parent company and the portfolio."
+      },
+      {
+        "role": "Group Strategy",
+        "scope": "Long-horizon arenas, sequencing, and structural opportunity."
+      },
+      {
+        "role": "Group Operations",
+        "scope": "Operating standards, shared infrastructure, and venture execution."
+      },
+      {
+        "role": "Group Capital",
+        "scope": "Capital structure, allocation discipline, and stewardship."
+      }
+    ],
+    "profilesPending": "Profile · pending institutional disclosure",
+    "governanceEyebrow": "Decision-Making",
+    "governanceTitle": "How decisions move through the group.",
+    "governanceBody": "Decisions concentrate at the parent for strategy, capital, and standards. Ventures lead on execution within those frames. The interface between the two is governed, documented, and held to a long horizon.",
+    "governancePoints": [
+      {
+        "title": "Concentrated where it must be",
+        "body": "Strategy, capital, brand, and governance live with the parent company."
+      },
+      {
+        "title": "Distributed where it should be",
+        "body": "Operating decisions sit close to each venture and its market."
+      },
+      {
+        "title": "Reviewed on a long cadence",
+        "body": "Direction is set against multi-year horizons, not quarterly noise."
+      }
+    ]
+  },
+  "news": {
+    "eyebrow": "Newsroom",
+    "title": "Movement across the group.",
+    "intro": "An institutional record of what the parent company and its ventures are doing — published with restraint, written for the long horizon.",
+    "featuredEyebrow": "Featured Update",
+    "featuredCategory": "Group",
+    "featuredDate": "Recent",
+    "featuredTitle": "CSW Global articulates its parent-company operating framework.",
+    "featuredBody": "An overview of how the group structures venture creation, shared capabilities, and long-term governance — and what that means for partners and operators engaging with the house.",
+    "latestEyebrow": "Latest",
+    "latestTitle": "Recent updates from the house.",
+    "latest": [
+      {
+        "category": "Group",
+        "date": "Recent",
+        "title": "Parent-company operating framework articulated.",
+        "body": "How the group structures venture creation, shared capabilities, and long-term governance."
+      },
+      {
+        "category": "Capability",
+        "date": "Recent",
+        "title": "Shared infrastructure expanded across the group.",
+        "body": "Centralized capabilities deepened to support the next wave of venture deployment."
+      },
+      {
+        "category": "Capability",
+        "date": "Recent",
+        "title": "Multilingual readiness extended across the group.",
+        "body": "Twelve-language architecture rolled out across institutional surfaces."
+      },
+      {
+        "category": "Portfolio",
+        "date": "Recent",
+        "title": "A portfolio venture moves into operating phase.",
+        "body": "A company transitions from build to active operation under the parent."
+      }
+    ],
+    "insightsEyebrow": "Insights",
+    "insightsTitle": "Notes from the house.",
+    "insightsBody": "Editorial notes on operating the parent company — strategy, capital, governance, and the long horizon. Published when there is something institutional to say.",
+    "insights": [
+      {
+        "category": "Leadership Note",
+        "title": "On building a parent company before a portfolio.",
+        "body": "Why the institution comes first, and the ventures inherit it."
+      },
+      {
+        "category": "Operating Note",
+        "title": "Shared infrastructure as competitive geometry.",
+        "body": "What the group concentrates at the parent — and why."
+      },
+      {
+        "category": "Strategy Note",
+        "title": "The long horizon as an operating discipline.",
+        "body": "Cadence, capital, and governance under a multi-year frame."
+      }
+    ],
+    "archiveEyebrow": "Archive",
+    "archiveTitle": "An institutional record.",
+    "archiveBody": "A complete archive of group communications will live in this section. The structure is in place; the public record is being curated for institutional release."
+  },
+  "careersPage": {
+    "eyebrow": "Careers",
+    "title": "For builders, operators, and specialists.",
+    "intro": "We work with people who take long-horizon problems seriously and execute with precision. CSW Global hires across the parent company and its ventures.",
+    "whyEyebrow": "Why Join",
+    "whyTitle": "Work that compounds.",
+    "whyBody": "Joining the group means working inside an institution designed to outlast any single venture — with shared infrastructure, real standards, and a long horizon to build against.",
+    "whyPoints": [
+      {
+        "title": "An institution, not a project",
+        "body": "You join a parent company built to compound, not a single product cycle."
+      },
+      {
+        "title": "Shared infrastructure",
+        "body": "Strategy, AI systems, brand, and operating standards are already concentrated at the parent."
+      },
+      {
+        "title": "A long horizon",
+        "body": "Time to build the right thing, supported by the discipline to actually finish it."
+      }
+    ],
+    "whoEyebrow": "Who We Look For",
+    "whoTitle": "Operators and specialists.",
+    "whoBody": "We hire people whose craft is visible in their work and whose judgment is steady under long-cycle problems.",
+    "who": [
+      {
+        "title": "Builders",
+        "body": "Engineers, designers, and product operators who ship at high standard."
+      },
+      {
+        "title": "Operators",
+        "body": "Leaders who can hold both the system and the day-to-day with discipline."
+      },
+      {
+        "title": "Specialists",
+        "body": "Domain experts in AI systems, capital, brand, and institutional operations."
+      }
+    ],
+    "areasEyebrow": "Areas of Contribution",
+    "areasTitle": "Where the work happens.",
+    "areas": [
+      {
+        "title": "Parent Company",
+        "body": "Strategy, capital, governance, brand, and shared infrastructure roles."
+      },
+      {
+        "title": "Portfolio Ventures",
+        "body": "Build and operating roles inside the group's portfolio companies."
+      },
+      {
+        "title": "Applied Intelligence",
+        "body": "AI, data, and orchestration roles serving the entire group."
+      },
+      {
+        "title": "Institutional Platforms",
+        "body": "Education, credentials, and access platforms across markets."
+      }
+    ],
+    "rolesEyebrow": "Open Roles",
+    "rolesTitle": "Open roles will be published here.",
+    "rolesBody": "Specific open roles are not published yet. The careers architecture is in place; institutional listings will be released as the group opens its hiring lanes.",
+    "rolesPending": "Roles · pending publication",
+    "talentEyebrow": "Talent Network",
+    "talentTitle": "Stay in contact with the house.",
+    "talentBody": "Builders, operators, and specialists who want to be considered for future work across the group can express interest through the institutional careers lane on the contact page.",
+    "valuesEyebrow": "Work Principles",
+    "valuesTitle": "How we work.",
+    "values": [
+      {
+        "title": "High standard",
+        "body": "We hold each piece of work to a level the institution can stand behind."
+      },
+      {
+        "title": "Long horizon",
+        "body": "We choose the right thing over the fast thing, and we finish what we start."
+      },
+      {
+        "title": "Quiet discipline",
+        "body": "We let the work speak; we do not perform around it."
+      },
+      {
+        "title": "Shared house",
+        "body": "We build for the group, not for individual flags."
+      }
+    ]
+  },
+  "aboutExt": {
+    "whyEyebrow": "Why We Exist",
+    "whyTitle": "To build companies the way they should be built.",
+    "whyBody": "CSW Global exists to bring ventures into the world with structural clarity from inception — with shared infrastructure, real governance, and the patience to compound over a long horizon.",
+    "buildEyebrow": "What We Build",
+    "buildTitle": "Companies, not products.",
+    "buildBody": "We build companies designed to operate at institutional standard — engineered for durability, intelligent operations, and cross-border readiness from day one.",
+    "buildPoints": [
+      {
+        "title": "AI-native ventures",
+        "body": "Built on applied intelligence as a discipline, not an add-on."
+      },
+      {
+        "title": "Institutional platforms",
+        "body": "Access, credentials, and infrastructure for long-cycle sectors."
+      },
+      {
+        "title": "Operating leverage",
+        "body": "Each venture inherits the group's shared capabilities."
+      }
+    ],
+    "parentEyebrow": "The Role of the Parent Company",
+    "parentTitle": "What the parent company holds.",
+    "parentBody": "CSW Global is the parent. It concentrates strategy, capital, brand, and governance at the institutional level so that each venture inherits structure rather than having to invent it.",
+    "parentPoints": [
+      {
+        "title": "Strategy & sequencing",
+        "body": "Which arenas, which order, which horizon."
+      },
+      {
+        "title": "Capital structure",
+        "body": "Allocation, ownership, and patience held at the parent."
+      },
+      {
+        "title": "Brand & standards",
+        "body": "House identity and operating standards across the group."
+      },
+      {
+        "title": "Governance",
+        "body": "Reporting, controls, and reviews under a long-horizon frame."
+      }
+    ],
+    "snapshotEyebrow": "Group Snapshot",
+    "snapshotTitle": "The group at a glance.",
+    "snapshot": [
+      {
+        "label": "Founded",
+        "value": "2024"
+      },
+      {
+        "label": "Discipline",
+        "value": "AI-Native"
+      },
+      {
+        "label": "Languages",
+        "value": "12"
+      },
+      {
+        "label": "Horizon",
+        "value": "Long"
+      }
+    ],
+    "ctaEyebrow": "Engage With The House",
+    "ctaTitle": "Begin a strategic conversation.",
+    "ctaBody": "Institutional partners, operators, and prospective team members can engage through the contact lanes.",
+    "ctaButton": "Go to Contact"
+  },
+  "portfolioExt": {
+    "logicEyebrow": "Portfolio Logic",
+    "logicTitle": "How the portfolio is composed.",
+    "logicBody": "The portfolio is not a collection of bets. It is a deliberately composed group of ventures, each chosen because it sits inside the parent company's long-horizon arenas and benefits from shared infrastructure.",
+    "featuredEyebrow": "Featured Ventures",
+    "featuredTitle": "Featured work from the group.",
+    "featuredBody": "Specific named ventures are surfaced below as the group opens institutional disclosure. The featured slot reflects the parent's current operating focus.",
+    "featuredPending": "Featured venture · pending institutional disclosure",
+    "connectEyebrow": "What Connects The Portfolio",
+    "connectTitle": "The thread that runs through every venture.",
+    "connect": [
+      {
+        "title": "Applied intelligence",
+        "body": "Decision systems and orchestration as a shared discipline."
+      },
+      {
+        "title": "Shared infrastructure",
+        "body": "Identity, data, and operating substrate held at the parent."
+      },
+      {
+        "title": "Institutional standard",
+        "body": "Governance, brand, and reporting at parent-company level."
+      },
+      {
+        "title": "Global readiness",
+        "body": "Multilingual and cross-border operation by design."
+      }
+    ],
+    "principlesEyebrow": "Portfolio Principles",
+    "principlesTitle": "What we hold constant across ventures.",
+    "principles": [
+      {
+        "title": "Long-horizon ownership",
+        "body": "We own ventures to compound them, not to flip them."
+      },
+      {
+        "title": "Structural fit",
+        "body": "Every venture sits inside an arena the parent has chosen."
+      },
+      {
+        "title": "Shared spine",
+        "body": "Each venture builds on the group's centralized capabilities."
+      },
+      {
+        "title": "Disciplined cadence",
+        "body": "We deploy in sequence, not in noise."
+      }
+    ],
+    "evolutionEyebrow": "Portfolio Evolution",
+    "evolutionTitle": "How the portfolio is intended to grow.",
+    "evolution": [
+      {
+        "phase": "I.",
+        "title": "Foundation",
+        "body": "Establish the parent company's operating spine and first ventures."
+      },
+      {
+        "phase": "II.",
+        "title": "Deepening",
+        "body": "Strengthen the existing ventures and the shared infrastructure underneath them."
+      },
+      {
+        "phase": "III.",
+        "title": "Expansion",
+        "body": "Open adjacent arenas through new ventures launched on the same spine."
+      },
+      {
+        "phase": "IV.",
+        "title": "Compounding",
+        "body": "Operate the portfolio as an institution measured over a long horizon."
+      }
+    ]
+  },
+  "ourModelExt": {
+    "whyEyebrow": "Why This Model Exists",
+    "whyTitle": "An operating model designed to compound.",
+    "whyBody": "CSW Global was structured as a parent company because the kind of work it intends to do — building durable, AI-native, globally-ready companies — requires institutional infrastructure from day one rather than after the fact.",
+    "logicEyebrow": "Core Logic",
+    "logicTitle": "The logic behind the structure.",
+    "logic": [
+      {
+        "title": "Concentrate the institution",
+        "body": "Strategy, capital, governance, and brand live at the parent."
+      },
+      {
+        "title": "Distribute the execution",
+        "body": "Each venture operates close to its market with parent-company support."
+      },
+      {
+        "title": "Compound the spine",
+        "body": "Shared infrastructure deepens with every venture launched."
+      }
+    ],
+    "infraEyebrow": "Shared Infrastructure",
+    "infraTitle": "The spine every venture inherits.",
+    "infra": [
+      {
+        "title": "Strategy & Capital",
+        "body": "Long-horizon thinking, allocation, and stewardship at the parent."
+      },
+      {
+        "title": "Brand & Standards",
+        "body": "House identity, operating standards, and institutional voice."
+      },
+      {
+        "title": "AI & Data",
+        "body": "Applied intelligence, data, and orchestration as a shared layer."
+      },
+      {
+        "title": "Operations & Governance",
+        "body": "Shared playbooks, reviews, and controls across ventures."
+      }
+    ],
+    "parentRoleEyebrow": "Parent Company Role",
+    "parentRoleTitle": "What the parent does, every day.",
+    "parentRoleBody": "The parent company is not a holding label. It is the active operator of the institution — directing strategy, allocating capital, holding the brand, and governing how each venture is built.",
+    "leverageEyebrow": "AI & Operating Leverage",
+    "leverageTitle": "Intelligence as operating leverage.",
+    "leverageBody": "The group treats applied intelligence as part of the operating spine. AI is concentrated at the parent so that each venture inherits leverage — in product, in operations, and in decision-making — from inception.",
+    "coherenceEyebrow": "Portfolio Coherence",
+    "coherenceTitle": "Why the portfolio holds together.",
+    "coherenceBody": "Coherence is not aesthetic. The portfolio holds together because every venture is chosen against the same arenas, runs on the same spine, and is governed under the same long-horizon frame."
+  },
+  "contactExt": {
+    "responseEyebrow": "Response Expectations",
+    "responseTitle": "How we respond.",
+    "responseBody": "Inquiries are reviewed against institutional priority. Strategic, partnership, and senior operator conversations receive direct response. Other inquiries are acknowledged and routed when appropriate.",
+    "responsePoints": [
+      {
+        "title": "Selective engagement",
+        "body": "We engage where there is structural alignment with the group's direction."
+      },
+      {
+        "title": "Considered cadence",
+        "body": "Replies are written, not automated. Response time reflects review, not delay."
+      },
+      {
+        "title": "Confidentiality by default",
+        "body": "Sensitive conversations are held in confidence, including before any contract."
+      }
+    ],
+    "principlesEyebrow": "Communication Principles",
+    "principlesTitle": "How we communicate.",
+    "principles": [
+      {
+        "title": "Quiet by design",
+        "body": "We communicate with restraint and let the work carry the institution."
+      },
+      {
+        "title": "Plain and exact",
+        "body": "Plain language, exact meaning, no theatre."
+      },
+      {
+        "title": "Long horizon",
+        "body": "We write for the institutional record, not for the moment."
+      }
+    ],
+    "corporateEyebrow": "Corporate Context",
+    "corporateTitle": "About the institution you are contacting.",
+    "corporateBody": "CSW Global is the parent company behind a growing portfolio of AI-native ventures. Inquiries received here reach the parent company directly.",
+    "corporatePoints": [
+      {
+        "label": "Entity",
+        "value": "CSW Global · Parent Company"
+      },
+      {
+        "label": "Discipline",
+        "value": "AI-Native Venture Builder"
+      },
+      {
+        "label": "Reach",
+        "value": "12 Languages · Global"
+      },
+      {
+        "label": "Horizon",
+        "value": "Long"
+      }
+    ],
+    "instInfoEyebrow": "Institutional Information",
+    "instInfoTitle": "Formal institutional details.",
+    "instInfoBody": "Formal institutional details — registered name, corporate address, and official channels — will be published in this block once the group's institutional disclosures are finalized.",
+    "instInfoPending": "Institutional details · pending publication"
   },
   "footer": {
     "rights": "جميع الحقوق محفوظة.",
