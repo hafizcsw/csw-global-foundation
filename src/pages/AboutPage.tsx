@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { PageHeader } from "@/components/csw/PageHeader";
 import { SectionHeader } from "@/components/csw/SectionHeader";
 import { FounderNote } from "@/components/csw/FounderNote";
+import { AboutDeep } from "@/components/csw/AboutDeep";
 import heroAbout from "@/assets/hero-about.mp4.asset.json";
 
 interface Principle {
@@ -50,6 +51,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      <AboutDeep />
       <FounderNote />
     </>
   );
