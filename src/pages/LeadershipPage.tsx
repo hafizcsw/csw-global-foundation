@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "@/components/csw/PageHeader";
+import { PageTransition } from "@/components/csw/PageTransition";
 import { SectionHeader } from "@/components/csw/SectionHeader";
+import { Seo } from "@/components/csw/Seo";
 import heroLeadership from "@/assets/hero-leadership.mp4.asset.json";
 import atmosphereSilk from "@/assets/atmosphere-silk.mp4.asset.json";
 
@@ -15,12 +17,14 @@ const LeadershipPage = () => {
 
   return (
     <>
+      <Seo titleKey="seo.leadership.title" descriptionKey="seo.leadership.description" />
       <PageHeader
         eyebrowKey="leadership.eyebrow"
         titleKey="leadership.title"
         bodyKey="leadership.intro"
         videoSrc={heroLeadership.url}
       />
+      <PageTransition />
 
       {/* Philosophy */}
       <section className="relative bg-background border-b border-hairline-soft">
