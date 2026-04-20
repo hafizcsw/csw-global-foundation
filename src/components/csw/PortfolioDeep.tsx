@@ -85,35 +85,18 @@ export const PortfolioDeep = () => {
   );
 };
 
-/** Top-of-page intro sections for /portfolio. */
+/** Top-of-page intro section for /portfolio. */
 export const PortfolioPrelude = () => {
   const { t } = useTranslation();
   return (
-    <>
-      <section className="relative bg-background border-b border-hairline-soft">
-        <div className="container-csw py-32 md:py-44">
-          <SectionHeader
-            eyebrow={t("portfolioExt.logicEyebrow")}
-            title={t("portfolioExt.logicTitle")}
-            body={t("portfolioExt.logicBody")}
-          />
-        </div>
-      </section>
-
-      <section className="relative bg-background border-b border-hairline-soft">
-        <div className="container-csw py-32 md:py-44">
-          <SectionHeader
-            eyebrow={t("portfolioExt.featuredEyebrow")}
-            title={t("portfolioExt.featuredTitle")}
-            body={t("portfolioExt.featuredBody")}
-          />
-          <div className="mt-12 inline-flex border border-ink/30 px-8 py-5">
-            <span className="font-mono text-[11px] uppercase tracking-[0.32em] text-ink">
-              {t("portfolioExt.featuredPending")}
-            </span>
-          </div>
-        </div>
-      </section>
-    </>
+    <section className="relative bg-background border-b border-hairline-soft">
+      <div className="container-csw py-32 md:py-44">
+        <SectionHeader
+          eyebrow={t("portfolioExt.logicEyebrow")}
+          title={t("portfolioExt.logicTitle")}
+          body={t("portfolioExt.logicBody")}
+        />
+      </div>
+    </section>
   );
 };

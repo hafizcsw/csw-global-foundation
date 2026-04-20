@@ -18,7 +18,7 @@ const PortfolioPage = () => (
     <PageTransition />
     <SectionEyebrow groupKey="nav.groups.work" sectionKey="nav.portfolio" />
     <PortfolioPrelude />
-    <Portfolio showFilters showViewAll={false} />
+    <Portfolio />
     <PortfolioDeep />
   </>
 );
