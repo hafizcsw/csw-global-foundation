@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTheme } from "./ThemeProvider";
 import heroVideoAsset from "@/assets/hero-cinematic-hd.mp4.asset.json";
 
 const heroVideoUrl = heroVideoAsset.url;
@@ -12,7 +13,9 @@ const heroVideoUrl = heroVideoAsset.url;
  */
 export const HeroFilm = () => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
   const [reduce, setReduce] = useState(false);
+  const isDark = theme === "dark";
 
   useEffect(() => {
     const m = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -25,7 +28,7 @@ export const HeroFilm = () => {
   return (
     <section
       id="top"
-      className="snap-chapter relative w-full bg-obsidian text-parchment"
+      className="snap-chapter relative w-full bg-background text-parchment"
       data-chapter="01"
     >
       {!reduce && (
@@ -36,7 +39,7 @@ export const HeroFilm = () => {
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover object-center select-none"
+          className={`absolute inset-0 h-full w-full object-cover object-center select-none transition-all duration-700 ${isDark ? "opacity-100" : "opacity-35 saturate-[0.7]"}`}
           aria-hidden="true"
         />
       )}
@@ -45,16 +48,18 @@ export const HeroFilm = () => {
         aria-hidden
         className="absolute inset-0"
         style={{
-          background:
-            "linear-gradient(180deg, hsl(220 25% 3% / 0.68) 0%, hsl(220 25% 3% / 0.18) 28%, hsl(220 25% 3% / 0.28) 58%, hsl(220 25% 3% / 0.96) 100%)",
+          background: isDark
+            ? "linear-gradient(180deg, hsl(220 25% 3% / 0.68) 0%, hsl(220 25% 3% / 0.18) 28%, hsl(220 25% 3% / 0.28) 58%, hsl(220 25% 3% / 0.96) 100%)"
+            : "linear-gradient(180deg, hsl(var(--background) / 0.9) 0%, hsl(var(--background) / 0.5) 28%, hsl(var(--background) / 0.46) 58%, hsl(var(--background) / 0.94) 100%)",
         }}
       />
       <div
         aria-hidden
         className="absolute inset-0"
         style={{
-          background:
-            "linear-gradient(90deg, hsl(220 25% 3% / 0.78) 0%, hsl(220 25% 3% / 0.2) 42%, hsl(220 25% 3% / 0.08) 62%, hsl(220 25% 3% / 0.42) 100%)",
+          background: isDark
+            ? "linear-gradient(90deg, hsl(220 25% 3% / 0.78) 0%, hsl(220 25% 3% / 0.2) 42%, hsl(220 25% 3% / 0.08) 62%, hsl(220 25% 3% / 0.42) 100%)"
+            : "linear-gradient(90deg, hsl(var(--background) / 0.82) 0%, hsl(var(--background) / 0.34) 42%, hsl(var(--background) / 0.18) 62%, hsl(var(--background) / 0.58) 100%)",
         }}
       />
 
