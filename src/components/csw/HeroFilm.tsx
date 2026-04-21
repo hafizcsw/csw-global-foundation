@@ -16,6 +16,11 @@ export const HeroFilm = () => {
   const { theme } = useTheme();
   const [reduce, setReduce] = useState(false);
   const isDark = theme === "dark";
+  const heroText = isDark ? "text-parchment" : "text-ink";
+  const eyebrowText = isDark ? "text-parchment/85" : "text-ink-soft";
+  const bodyText = isDark ? "text-parchment/72" : "text-ink-soft";
+  const secondaryLink = isDark ? "text-parchment/65 hover:text-parchment" : "text-ink-soft hover:text-ink";
+  const scrollText = isDark ? "text-parchment/45" : "text-ink-muted";
 
   useEffect(() => {
     const m = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -28,7 +33,7 @@ export const HeroFilm = () => {
   return (
     <section
       id="top"
-      className="snap-chapter relative w-full bg-background text-parchment"
+      className={`snap-chapter relative w-full bg-background ${heroText}`}
       data-chapter="01"
     >
       {!reduce && (
@@ -39,7 +44,7 @@ export const HeroFilm = () => {
           muted
           playsInline
           preload="auto"
-          className={`absolute inset-0 h-full w-full object-cover object-center select-none transition-all duration-700 ${isDark ? "opacity-100" : "opacity-35 saturate-[0.7]"}`}
+          className={`absolute inset-0 h-full w-full object-cover object-center select-none transition-all duration-700 ${isDark ? "opacity-100" : "opacity-18 saturate-[0.45] brightness-[1.18]"}`}
           aria-hidden="true"
         />
       )}
@@ -73,13 +78,13 @@ export const HeroFilm = () => {
             style={{ animationDelay: "600ms" }}
           >
             <span className="h-px w-12 bg-gold" />
-            <span className="font-mono text-[10px] tracking-[0.36em] uppercase text-parchment/85">
+            <span className={`font-mono text-[10px] tracking-[0.36em] uppercase ${eyebrowText}`}>
               {t("home.hero.eyebrow")}
             </span>
           </div>
 
           <h1
-            className="reveal display font-light text-parchment tracking-[-0.03em] leading-[0.92] text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6.5rem] xl:text-[7.5rem] max-w-[20ch]"
+            className={`reveal display font-light ${heroText} tracking-[-0.03em] leading-[0.92] text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6.5rem] xl:text-[7.5rem] max-w-[20ch]`}
             style={{ animationDelay: "800ms", fontWeight: 300 }}
           >
             {t("home.hero.headline")}
@@ -89,13 +94,13 @@ export const HeroFilm = () => {
             className="reveal mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-10"
             style={{ animationDelay: "1100ms" }}
           >
-            <p className="max-w-md text-sm md:text-base text-parchment/72 leading-[1.8]">
+            <p className={`max-w-md text-sm md:text-base leading-[1.8] ${bodyText}`}>
               {t("home.hero.subheadline")}
             </p>
             <div className="flex items-center gap-8">
               <Link
                 to="/portfolio"
-                className="group inline-flex items-center gap-4 font-mono text-[11px] tracking-[0.32em] uppercase text-parchment hover:text-gold-glow transition-colors duration-700"
+                className={`group inline-flex items-center gap-4 font-mono text-[11px] tracking-[0.32em] uppercase ${heroText} hover:text-gold-glow transition-colors duration-700`}
               >
                 <span className="relative">
                   {t("home.hero.primaryCta")}
@@ -105,7 +110,7 @@ export const HeroFilm = () => {
               </Link>
               <Link
                 to="/our-model"
-                className="group inline-flex items-center font-mono text-[11px] tracking-[0.32em] uppercase text-parchment/65 hover:text-parchment transition-colors duration-700"
+                className={`group inline-flex items-center font-mono text-[11px] tracking-[0.32em] uppercase transition-colors duration-700 ${secondaryLink}`}
               >
                 {t("home.hero.secondaryCta")}
               </Link>
@@ -119,7 +124,7 @@ export const HeroFilm = () => {
         style={{ animationDelay: "1400ms" }}
         aria-hidden
       >
-        <div className="font-mono text-[9px] tracking-[0.4em] uppercase text-parchment/45">
+        <div className={`font-mono text-[9px] tracking-[0.4em] uppercase ${scrollText}`}>
           {t("home.hero.scroll")} ↓
         </div>
       </div>

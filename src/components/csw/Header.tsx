@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
+import { useTheme } from "./ThemeProvider";
 
 import imgAbout from "@/assets/cinema-architecture-1.jpg";
 import imgPortfolio from "@/assets/cinema-skyline.jpg";
@@ -48,11 +49,15 @@ const ALL_ITEMS = NAV_GROUPS.flatMap((g) => g.items);
 export const Header = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
+  const { theme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoverImage, setHoverImage] = useState<string>(imgBrand);
   const [hoverKey, setHoverKey] = useState<string | null>(null);
   const isFilmHero = pathname === "/";
+  const isDark = theme === "dark";
+  const homeText = isDark ? "text-parchment" : "text-ink";
+  const homeTextHover = isDark ? "group-hover:text-parchment/80" : "group-hover:text-ink/70";
 
   useEffect(() => {
     const onScroll = () => {
@@ -105,7 +110,7 @@ export const Header = () => {
               type="button"
               onClick={() => setMenuOpen(true)}
               aria-label={t("nav.menu", { defaultValue: "Menu" }) as string}
-              className="group inline-flex items-center gap-3 text-parchment hover:text-parchment/70 transition-colors duration-500"
+              className={`group inline-flex items-center gap-3 transition-colors duration-500 ${homeText} ${isDark ? "hover:text-parchment/70" : "hover:text-ink-soft"}`}
             >
               <span className="flex flex-col gap-[5px]" aria-hidden>
                 <span className="block h-px w-7 bg-current" />
@@ -121,14 +126,14 @@ export const Header = () => {
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group"
             >
               <span
-                className="font-display text-2xl md:text-3xl uppercase text-parchment group-hover:text-parchment/80 transition-colors duration-500 whitespace-nowrap"
+                className={`font-display text-2xl md:text-3xl uppercase transition-colors duration-500 whitespace-nowrap ${homeText} ${homeTextHover}`}
                 style={{ fontWeight: 700, letterSpacing: "0.18em" }}
               >
                 {t("brand.name")}
               </span>
             </Link>
 
-            <div className="flex items-center gap-3 text-parchment">
+            <div className={`flex items-center gap-3 ${homeText}`}>
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
