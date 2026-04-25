@@ -105,7 +105,7 @@ export const Header = () => {
             scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
-          <div className="container-csw relative flex items-center justify-between h-24">
+          <div className="container-csw relative grid h-24 grid-cols-[auto_1fr_auto] items-center gap-3 md:flex md:items-center md:justify-between">
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
@@ -123,17 +123,17 @@ export const Header = () => {
 
             <Link
               to="/"
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group"
+              className="group justify-self-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
             >
               <span
-                className={`font-display text-2xl md:text-3xl uppercase transition-colors duration-500 whitespace-nowrap ${homeText} ${homeTextHover}`}
+                className={`font-display text-[1.7rem] md:text-3xl uppercase transition-colors duration-500 whitespace-nowrap ${homeText} ${homeTextHover}`}
                 style={{ fontWeight: 700, letterSpacing: "0.18em" }}
               >
                 {t("brand.name")}
               </span>
             </Link>
 
-            <div className={`flex items-center gap-3 ${homeText}`}>
+            <div className={`flex items-center justify-end gap-2 md:gap-3 ${homeText}`}>
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
