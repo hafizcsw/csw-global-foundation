@@ -105,18 +105,18 @@ export const Header = () => {
             scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
-          <div className="container-csw relative grid h-24 grid-cols-[auto_1fr_auto] items-center gap-3 md:flex md:items-center md:justify-between">
+          <div className="container-csw relative grid h-16 grid-cols-[auto_1fr_auto] items-center gap-2 md:h-24 md:flex md:items-center md:justify-between">
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
               aria-label={t("nav.menu", { defaultValue: "Menu" }) as string}
-              className={`group inline-flex items-center gap-3 transition-colors duration-500 ${homeText} ${isDark ? "hover:text-parchment/70" : "hover:text-ink-soft"}`}
+              className={`group inline-flex items-center gap-2 md:gap-3 transition-colors duration-500 ${homeText} ${isDark ? "hover:text-parchment/70" : "hover:text-ink-soft"}`}
             >
               <span className="flex flex-col gap-[5px]" aria-hidden>
-                <span className="block h-px w-7 bg-current" />
-                <span className="block h-px w-7 bg-current" />
+                <span className="block h-px w-5 md:w-7 bg-current" />
+                <span className="block h-px w-5 md:w-7 bg-current" />
               </span>
-              <span className="font-mono text-[11px] tracking-[0.32em] uppercase">
+              <span className="hidden sm:inline font-mono text-[10px] md:text-[11px] tracking-[0.32em] uppercase">
                 {t("nav.menu", { defaultValue: "Menu" })}
               </span>
             </button>
@@ -126,14 +126,14 @@ export const Header = () => {
               className="group justify-self-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
             >
               <span
-                className={`font-display text-[1.7rem] md:text-3xl uppercase transition-colors duration-500 whitespace-nowrap ${homeText} ${homeTextHover}`}
-                style={{ fontWeight: 700, letterSpacing: "0.18em" }}
+                className={`font-display text-[1.05rem] md:text-3xl uppercase transition-colors duration-500 whitespace-nowrap ${homeText} ${homeTextHover}`}
+                style={{ fontWeight: 700, letterSpacing: "0.16em" }}
               >
                 {t("brand.name")}
               </span>
             </Link>
 
-            <div className={`flex items-center justify-end gap-2 md:gap-3 ${homeText}`}>
+            <div className={`flex items-center justify-end gap-1.5 md:gap-3 ${homeText}`}>
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
@@ -141,32 +141,35 @@ export const Header = () => {
         </header>
       ) : (
         <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-xl border-b border-hairline-soft">
-          <div className="container-csw flex items-center justify-between h-20">
+          <div className="container-csw relative grid h-14 grid-cols-[auto_1fr_auto] items-center gap-2 md:h-20 md:flex md:items-center md:justify-between">
             <button
               type="button"
               onClick={() => setMenuOpen(true)}
               aria-label={t("nav.menu", { defaultValue: "Menu" }) as string}
-              className="group inline-flex items-center gap-3 text-ink hover:text-ink-soft transition-colors duration-500"
+              className="group inline-flex items-center gap-2 md:gap-3 text-ink hover:text-ink-soft transition-colors duration-500"
             >
               <span className="flex flex-col gap-[5px]" aria-hidden>
-                <span className="block h-px w-7 bg-current" />
-                <span className="block h-px w-7 bg-current" />
+                <span className="block h-px w-5 md:w-7 bg-current" />
+                <span className="block h-px w-5 md:w-7 bg-current" />
               </span>
-              <span className="font-mono text-[11px] tracking-[0.32em] uppercase">
+              <span className="hidden sm:inline font-mono text-[10px] md:text-[11px] tracking-[0.32em] uppercase">
                 {t("nav.menu", { defaultValue: "Menu" })}
               </span>
             </button>
 
-            <Link to="/" className="absolute left-1/2 -translate-x-1/2 group">
+            <Link
+              to="/"
+              className="group justify-self-center md:absolute md:left-1/2 md:-translate-x-1/2"
+            >
               <span
-                className="font-display text-xl md:text-2xl uppercase text-ink group-hover:text-ink/70 transition-colors duration-500"
-                style={{ fontWeight: 700, letterSpacing: "0.18em" }}
+                className="font-display text-[1rem] md:text-2xl uppercase text-ink group-hover:text-ink/70 transition-colors duration-500 whitespace-nowrap"
+                style={{ fontWeight: 700, letterSpacing: "0.16em" }}
               >
                 {t("brand.name")}
               </span>
             </Link>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-end gap-1.5 md:gap-3">
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
