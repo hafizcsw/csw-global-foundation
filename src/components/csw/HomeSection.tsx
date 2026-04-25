@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, forwardRef } from "react";
 import { ImageStrip } from "./ImageStrip";
 
 interface HomeSectionProps {
@@ -15,21 +15,25 @@ interface HomeSectionProps {
   id?: string;
 }
 
-export const HomeSection = ({
-  index,
-  eyebrow,
-  title,
-  body,
-  imageSrc,
-  imageAlt,
-  imageAspect = "aspect-[21/6]",
-  imagePosition = "center",
-  children,
-  tone = "default",
-  id,
-}: HomeSectionProps) => {
+export const HomeSection = forwardRef<HTMLElement, HomeSectionProps>(function HomeSection(
+  {
+    index,
+    eyebrow,
+    title,
+    body,
+    imageSrc,
+    imageAlt,
+    imageAspect = "aspect-[21/6]",
+    imagePosition = "center",
+    children,
+    tone = "default",
+    id,
+  },
+  ref,
+) {
   return (
     <section
+      ref={ref}
       id={id}
       className={`border-t border-border/70 ${tone === "muted" ? "bg-secondary/35" : "bg-background"}`}
     >
@@ -78,4 +82,4 @@ export const HomeSection = ({
       </div>
     </section>
   );
-};
+});
