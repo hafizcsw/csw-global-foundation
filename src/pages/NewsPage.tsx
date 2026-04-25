@@ -8,11 +8,13 @@ import heroNews from "@/assets/hero-news.mp4.asset.json";
 
 interface NewsItem { category: string; date: string; title: string; body: string }
 interface Insight { category: string; title: string; body: string }
+interface ArchiveEntry { year: string; title: string; body: string; category: string }
 
 const NewsPage = () => {
   const { t } = useTranslation();
   const latest = t("news.latest", { returnObjects: true }) as NewsItem[];
   const insights = t("news.insights", { returnObjects: true }) as Insight[];
+  const archive = t("news.archiveEntries", { returnObjects: true }) as ArchiveEntry[];
 
   return (
     <>
@@ -109,6 +111,27 @@ const NewsPage = () => {
             title={t("news.archiveTitle")}
             body={t("news.archiveBody")}
           />
+          <div className="mt-12 font-mono text-[10px] uppercase tracking-[0.32em] text-ink-muted">
+            {t("news.archiveCount")}
+          </div>
+          <ul className="mt-10 border-y border-hairline-soft divide-y divide-hairline-soft">
+            {archive.map((entry, i) => (
+              <li key={i} className="grid grid-cols-12 gap-6 py-7 md:py-8">
+                <div className="col-span-12 md:col-span-1 font-mono text-[11px] uppercase tracking-[0.32em] text-ink-muted pt-1">
+                  {entry.year}
+                </div>
+                <div className="col-span-12 md:col-span-2 font-mono text-[10px] uppercase tracking-[0.32em] text-ink-muted pt-1">
+                  {entry.category}
+                </div>
+                <div className="col-span-12 md:col-span-9">
+                  <h4 className="font-display uppercase text-ink leading-[1.1] text-base md:text-lg mb-3" style={{ fontWeight: 600, letterSpacing: "0.005em" }}>
+                    {entry.title}
+                  </h4>
+                  <p className="text-sm text-ink-soft leading-[1.85] max-w-3xl">{entry.body}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>
