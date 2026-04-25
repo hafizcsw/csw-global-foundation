@@ -8,12 +8,14 @@ import heroLeadership from "@/assets/hero-leadership.mp4.asset.json";
 import atmosphereSilk from "@/assets/atmosphere-silk.mp4.asset.json";
 
 interface Item { title: string; body: string }
-interface Profile { role: string; scope: string }
+interface ProfileNamed { role: string; name: string; scope: string; based: string }
+interface AdvisorySeat { area: string; scope: string }
 
 const LeadershipPage = () => {
   const { t } = useTranslation();
   const responsibilities = t("leadership.responsibilities", { returnObjects: true }) as Item[];
-  const profiles = t("leadership.profiles", { returnObjects: true }) as Profile[];
+  const profiles = t("leadership.profilesNames", { returnObjects: true }) as ProfileNamed[];
+  const advisory = t("leadership.advisorySeats", { returnObjects: true }) as AdvisorySeat[];
   const governance = t("leadership.governancePoints", { returnObjects: true }) as Item[];
 
   return (
@@ -105,13 +107,40 @@ const LeadershipPage = () => {
           <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-px bg-hairline-soft border border-hairline-soft">
             {profiles.map((p, i) => (
               <div key={i} className="bg-background p-10 md:p-14">
-                <span className="inline-block font-mono text-[10px] uppercase tracking-[0.28em] px-3 py-2 border border-ink/30 text-ink-muted mb-8">
-                  {t("leadership.profilesPending")}
-                </span>
-                <h3 className="font-display uppercase text-ink leading-[1.05] text-xl md:text-2xl mb-4" style={{ fontWeight: 600, letterSpacing: "0.005em" }}>
-                  {p.role}
+                <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-ink-muted mb-6">
+                  {String(i + 1).padStart(2, "0")} · {p.role}
+                </div>
+                <h3 className="font-display uppercase text-ink leading-[1.05] text-2xl md:text-3xl mb-5" style={{ fontWeight: 600, letterSpacing: "0.005em" }}>
+                  {p.name}
                 </h3>
-                <p className="text-sm text-ink-soft leading-[1.85]">{p.scope}</p>
+                <p className="text-sm text-ink-soft leading-[1.85] mb-6">{p.scope}</p>
+                <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-ink-muted pt-5 border-t border-hairline-soft">
+                  {p.based}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Advisory */}
+      <section className="relative bg-background border-b border-hairline-soft">
+        <div className="container-csw py-32 md:py-44">
+          <SectionHeader
+            eyebrow={t("leadership.advisoryEyebrow")}
+            title={t("leadership.advisoryTitle")}
+            body={t("leadership.advisoryBody")}
+          />
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-hairline-soft border border-hairline-soft">
+            {advisory.map((a, i) => (
+              <div key={i} className="bg-background p-8 md:p-10">
+                <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-ink-muted mb-4">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="font-display uppercase text-ink leading-[1.1] text-base md:text-lg mb-4" style={{ fontWeight: 600, letterSpacing: "0.005em" }}>
+                  {a.area}
+                </h3>
+                <p className="text-xs text-ink-soft leading-[1.85]">{a.scope}</p>
               </div>
             ))}
           </div>

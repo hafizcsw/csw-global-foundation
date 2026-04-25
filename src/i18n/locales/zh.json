@@ -619,6 +619,53 @@
         "title": "Reviewed on a long cadence",
         "body": "Direction is set against multi-year horizons, not quarterly noise."
       }
+    ],
+    "profilesNames": [
+      {
+        "role": "FOUNDER & GROUP CHIEF EXECUTIVE",
+        "name": "HASSAN AL-SWEID",
+        "scope": "Sets long-horizon arenas, capital posture, and institutional standards for the group. Carries final accountability for the parent company's direction and disclosure.",
+        "based": "Based in the Gulf · Operating globally"
+      },
+      {
+        "role": "GROUP CHIEF STRATEGY OFFICER",
+        "name": "PROFILE · OPEN SEAT",
+        "scope": "Owns thesis development, arena selection, and the long-form research that shapes which ventures the group builds, supports, or holds.",
+        "based": "Reports to the Group CEO"
+      },
+      {
+        "role": "GROUP CHIEF OPERATING OFFICER",
+        "name": "PROFILE · OPEN SEAT",
+        "scope": "Runs shared operating infrastructure — engineering, design, brand, governance, and the standards every venture inherits from the parent.",
+        "based": "Reports to the Group CEO"
+      },
+      {
+        "role": "GROUP CHIEF CAPITAL OFFICER",
+        "name": "PROFILE · OPEN SEAT",
+        "scope": "Allocates and stewards group capital across ventures, partnerships, and reserves. Maintains the patient, disciplined posture the parent is built around.",
+        "based": "Reports to the Group CEO"
+      }
+    ],
+    "advisoryEyebrow": "顾问 · 机构顾问",
+    "advisoryTitle": "母公司顾问。",
+    "advisoryBody": "一个小型且刻意低调的资深运营者与机构顾问圈,在治理、资本与长期战略方面为集团提供支持。",
+    "advisorySeats": [
+      {
+        "area": "GOVERNANCE & RISK",
+        "scope": "Institutional governance, regulatory posture, group-wide controls."
+      },
+      {
+        "area": "CAPITAL & MARKETS",
+        "scope": "Capital structure, partnership architecture, long-horizon allocation."
+      },
+      {
+        "area": "TECHNOLOGY & AI",
+        "scope": "Frontier systems, applied intelligence, infrastructure standards."
+      },
+      {
+        "area": "INSTITUTIONAL RELATIONS",
+        "scope": "Sovereign, family-office, and strategic counterpart engagement."
+      }
     ]
   },
   "news": {
@@ -680,7 +727,46 @@
     ],
     "archiveEyebrow": "Archive",
     "archiveTitle": "An institutional record.",
-    "archiveBody": "A complete archive of group communications will live in this section. The structure is in place; the public record is being curated for institutional release."
+    "archiveBody": "A complete archive of group communications will live in this section. The structure is in place; the public record is being curated for institutional release.",
+    "archiveEntries": [
+      {
+        "year": "2025",
+        "title": "GROUP FORMATION — PARENT COMPANY ACTIVATED.",
+        "body": "CSW Global is established as the parent company; first arenas, governance, and capital posture are codified.",
+        "category": "FORMATION"
+      },
+      {
+        "year": "2025",
+        "title": "ORYXA PITCH STUDIO — INTERNAL BUILD INITIATED.",
+        "body": "Studio platform enters internal build; first institutional pilots prepared under disclosure.",
+        "category": "VENTURE"
+      },
+      {
+        "year": "2025",
+        "title": "ORX RANK — INTELLIGENCE ENGINE V0.",
+        "body": "First version of the group ranking and decision engine deployed inside portfolio ventures.",
+        "category": "INTELLIGENCE"
+      },
+      {
+        "year": "2025",
+        "title": "INVESTOR ROOM — INSTITUTIONAL CHANNEL OPENED.",
+        "body": "Private channel for qualified institutions opens for selective engagement with the group.",
+        "category": "INSTITUTIONAL"
+      },
+      {
+        "year": "2025",
+        "title": "LUXURY REAL ESTATE AI — CONCEPT FORMALIZED.",
+        "body": "Vertical AI thesis for the global ultra-prime real estate market formalized within the group.",
+        "category": "VENTURE"
+      },
+      {
+        "year": "2025",
+        "title": "ALL TO ONE — PREMIUM NETWORK CHARTERED.",
+        "body": "Curated, high-trust network layer chartered as a portfolio venture under the parent company.",
+        "category": "COMMUNITY"
+      }
+    ],
+    "archiveCount": "06 条记录 · 2025 年档案"
   },
   "careersPage": {
     "eyebrow": "Careers",
@@ -766,7 +852,53 @@
         "title": "Shared house",
         "body": "We build for the group, not for individual flags."
       }
-    ]
+    ],
+    "rolesList": [
+      {
+        "code": "CSW-001",
+        "title": "STRATEGY ASSOCIATE — PARENT COMPANY",
+        "location": "REMOTE · GULF FRIENDLY HOURS",
+        "type": "FULL-TIME",
+        "scope": "Long-form thesis work, arena research, and decision memos for the Group CEO and CSO."
+      },
+      {
+        "code": "CSW-002",
+        "title": "SENIOR FULL-STACK ENGINEER — PLATFORMS",
+        "location": "REMOTE · GLOBAL",
+        "type": "FULL-TIME",
+        "scope": "Build the shared platform layer that powers Oryxa, Investor Room, and the next group ventures."
+      },
+      {
+        "code": "CSW-003",
+        "title": "APPLIED AI ENGINEER — INTELLIGENCE ENGINES",
+        "location": "REMOTE · GLOBAL",
+        "type": "FULL-TIME",
+        "scope": "Design and ship ranking, decision, and evaluation systems for portfolio ventures."
+      },
+      {
+        "code": "CSW-004",
+        "title": "DESIGN LEAD — INSTITUTIONAL BRAND",
+        "location": "REMOTE · GLOBAL",
+        "type": "FULL-TIME",
+        "scope": "Carry the parent company's design standards across the group's surfaces, products, and disclosures."
+      },
+      {
+        "code": "CSW-005",
+        "title": "INSTITUTIONAL RELATIONS — INVESTOR ROOM",
+        "location": "GULF · PART-TIME",
+        "type": "PART-TIME",
+        "scope": "Manage qualified counterpart engagement, briefings, and institutional disclosure."
+      },
+      {
+        "code": "CSW-006",
+        "title": "OPERATIONS MANAGER — GROUP STANDARDS",
+        "location": "REMOTE · GLOBAL",
+        "type": "FULL-TIME",
+        "scope": "Operationalize governance, controls, and shared services across portfolio ventures."
+      }
+    ],
+    "rolesNote": "职位归属于母公司。部分被投企业可按集团标准进行自主招聘。",
+    "rolesApply": "表达意向"
   },
   "aboutExt": {
     "whyEyebrow": "Why We Exist",

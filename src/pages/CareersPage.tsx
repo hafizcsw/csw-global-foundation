@@ -8,6 +8,7 @@ import { Seo } from "@/components/csw/Seo";
 import heroCareers from "@/assets/hero-careers.mp4.asset.json";
 
 interface Item { title: string; body: string }
+interface RoleEntry { code: string; title: string; location: string; type: string; scope: string }
 
 const CareersPage = () => {
   const { t } = useTranslation();
@@ -15,6 +16,7 @@ const CareersPage = () => {
   const who = t("careersPage.who", { returnObjects: true }) as Item[];
   const areas = t("careersPage.areas", { returnObjects: true }) as Item[];
   const values = t("careersPage.values", { returnObjects: true }) as Item[];
+  const roles = t("careersPage.rolesList", { returnObjects: true }) as RoleEntry[];
 
   return (
     <>
@@ -101,11 +103,35 @@ const CareersPage = () => {
             title={t("careersPage.rolesTitle")}
             body={t("careersPage.rolesBody")}
           />
-          <div className="mt-12 inline-flex border border-ink/30 px-8 py-5">
-            <span className="font-mono text-[11px] uppercase tracking-[0.32em] text-ink">
-              {t("careersPage.rolesPending")}
-            </span>
-          </div>
+          <ul className="mt-16 border-y border-hairline-soft divide-y divide-hairline-soft">
+            {roles.map((r) => (
+              <li key={r.code} className="grid grid-cols-12 gap-4 md:gap-6 py-7 md:py-8 items-start">
+                <div className="col-span-12 md:col-span-2 font-mono text-[10px] uppercase tracking-[0.32em] text-ink-muted pt-1">
+                  {r.code}
+                </div>
+                <div className="col-span-12 md:col-span-6">
+                  <h4 className="font-display uppercase text-ink leading-[1.1] text-lg md:text-xl mb-3" style={{ fontWeight: 600, letterSpacing: "0.005em" }}>
+                    {r.title}
+                  </h4>
+                  <p className="text-xs md:text-sm text-ink-soft leading-[1.85] max-w-2xl">{r.scope}</p>
+                </div>
+                <div className="col-span-6 md:col-span-2 font-mono text-[10px] uppercase tracking-[0.32em] text-ink-muted pt-1">
+                  {r.location}
+                </div>
+                <div className="col-span-6 md:col-span-2 flex md:justify-end pt-1">
+                  <Link
+                    to="/contact#careers"
+                    className="font-mono text-[10px] uppercase tracking-[0.32em] text-ink border-b border-ink/40 hover:border-ink pb-1 transition-colors"
+                  >
+                    {t("careersPage.rolesApply")} →
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-10 text-xs text-ink-muted leading-[1.85] max-w-2xl">
+            {t("careersPage.rolesNote")}
+          </p>
         </div>
       </section>
 
