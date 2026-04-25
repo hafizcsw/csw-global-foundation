@@ -63,9 +63,13 @@ export const HomeSection = ({
                 </h2>
               </div>
 
-              <p className="max-w-xl text-sm leading-[1.9] text-muted-foreground md:text-base lg:pt-1">
-                {body}
-              </p>
+              {body ? (
+                <p className="max-w-xl text-sm leading-[1.9] text-muted-foreground md:text-base lg:pt-1">
+                  {body}
+                </p>
+              ) : (
+                <div />
+              )}
             </div>
 
             {children ? <div>{children}</div> : null}
